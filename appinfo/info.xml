@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<info>
+	<id>twofactor_nextcloud_notification</id>
+	<name>TwoFactor nextcloud notification</name>
+	<namespace>TwoFactorNextcloudNotification</namespace>
+	<description><![CDATA[]]></description>
+
+	<licence>AGPL</licence>
+	<author>Joas Schilling</author>
+	<author>Roeland Jago Douma</author>
+	<version>0.1.0</version>
+
+
+	<website>https://github.com/nickv-nextcloud/twofactor_nextcloud_notification</website>
+	<bugs>https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/issues</bugs>
+	<repository type="git">https://github.com/nickv-nextcloud/twofactor_nextcloud_notification.git</repository>
+
+	<dependencies>
+		<nextcloud min-version="13" max-version="14" />
+	</dependencies>
+</info>

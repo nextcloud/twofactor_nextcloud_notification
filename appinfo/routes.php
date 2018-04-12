@@ -39,5 +39,14 @@ return [
 				'attemptId' => '\d+',
 			],
 		],
+		[
+			'name' => 'API#poll',
+			'url' => '/api/{apiVersion}/poll/{token}',
+			'verb' => 'DELETE',
+			'requirements' => [
+				'apiVersion' => 'v1',
+				'attemptId' => '[a-zA-Z0-9]{40}',
+			],
+		],
 	],
 ];

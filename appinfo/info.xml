@@ -8,7 +8,7 @@
 	<licence>AGPL</licence>
 	<author>Joas Schilling</author>
 	<author>Roeland Jago Douma</author>
-	<version>0.1.0</version>
+	<version>0.1.2</version>
 
 
 	<website>https://github.com/nickv-nextcloud/twofactor_nextcloud_notification</website>
@@ -18,4 +18,8 @@
 	<dependencies>
 		<nextcloud min-version="13" max-version="14" />
 	</dependencies>
+
+	<two-factor-providers>
+		<provider>OCA\TwoFactorNextcloudNotification\Provider\NotificationProvider</provider>
+	</two-factor-providers>
 </info>

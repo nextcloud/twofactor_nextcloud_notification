@@ -21,24 +21,38 @@ declare(strict_types=1);
  *
  */
 
-namespace OCA\TwoFactorBackupCodes\Provider;
+namespace OCA\TwoFactorNextcloudNotification\Provider;
 
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
+use OCA\TwoFactorNextcloudNotification\Db\Token;
+use OCA\TwoFactorNextcloudNotification\Db\TokenMapper;
+use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\Authentication\TwoFactorAuth\IProvider;
 use OCP\IL10N;
 use OCP\IUser;
+use OCP\Notification\IManager;
 use OCP\Template;
 
 class NotificationProvider implements IProvider {
 
 	/** @var IL10N */
 	private $l10n;
+	/** @var TokenMapper */
+	private $tokenMapper;
+	/** @var ITimeFactory */
+	private $timeFactory;
+	/** @var IManager */
+	private  $notificationManager;
 
-	/**
-	 * @param IL10N $l10n
-	 */
-	public function __construct(IL10N $l10n) {
+	public function __construct(IL10N $l10n,
+								TokenMapper $tokenMapper,
+								ITimeFactory $timeFactory,
+								IManager $notificationManager) {
 		$this->l10n = $l10n;
+		$this->tokenMapper = $tokenMapper;
+		$this->timeFactory = $timeFactory;
+		$this->notificationManager = $notificationManager;
 	}
 
 	/**
@@ -56,7 +70,7 @@ class NotificationProvider implements IProvider {
 	 * @return string
 	 */
 	public function getDisplayName(): string {
-		return $this->l10n->t('…');
+		return $this->l10n->t('Nextcloud Notifications');
 	}
 
 	/**
@@ -65,7 +79,7 @@ class NotificationProvider implements IProvider {
 	 * @return string
 	 */
 	public function getDescription(): string {
-		return $this->l10n->t('…');
+		return $this->l10n->t('Authenticate using a device that is already logged in to your account');
 	}
 
 	/**
@@ -75,7 +89,21 @@ class NotificationProvider implements IProvider {
 	 * @return Template
 	 */
 	public function getTemplate(IUser $user): Template {
-		return new Template(Application::APP_ID, 'challenge');
+		$token = $this->tokenMapper->generate($user->getUID());
+
+		//Send notificcation
+		$notification = $this->notificationManager->createNotification();
+		$notification->setApp(Application::APP_ID)
+			->setSubject('login_attempt')
+			->setObject('2fa_id', $token->getId())
+			->setUser($user->getUID())
+			->setDateTime(new \DateTime());
+		$notification->
+
+		$tmpl = new Template(Application::APP_ID, 'challenge');
+		$tmpl->assign('token', $token->getToken());
+
+		return $tmpl;
 	}
 
 	/**
@@ -86,7 +114,17 @@ class NotificationProvider implements IProvider {
 	 * @return bool
 	 */
 	public function verifyChallenge(IUser $user, string $challenge): bool {
-		return true;//$this->storage->validateCode($user, $challenge);
+		try {
+			$token = $this->tokenMapper->getBytoken($challenge);
+		} catch (DoesNotExistException $e) {
+			return false;
+		}
+
+		$this->tokenMapper->delete($token);
+
+		return $token->getStatus() === Token::ACCEPTED &&
+			($this->timeFactory->getTime() - $token->getTimestamp()) <= 60 * 10 &&
+			$token->getUserId() === $user->getUID();
 	}
 
 	/**
@@ -97,31 +135,6 @@ class NotificationProvider implements IProvider {
 	 */
 	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
 		return true;//$this->storage->hasBackupCodes($user);
-	}
-
-	/**
-	 * Determine whether backup codes should be active or not
-	 *
-	 * Backup codes only make sense if at least one 2FA provider is active,
-	 * hence this method checks all enabled apps on whether they provide 2FA
-	 * functionality or not. If there's at least one app, backup codes are
-	 * enabled on the personal settings page.
-	 *
-	 * @param IUser $user
-	 * @return boolean
-	 */
-	public function isActive(IUser $user): bool {
-//		$appIds = array_filter($this->appManager->getEnabledAppsForUser($user), function($appId) {
-//			return $appId !== $this->appName;
-//		});
-//		foreach ($appIds as $appId) {
-//			$info = $this->appManager->getAppInfo($appId);
-//			if (isset($info['two-factor-providers']) && count($info['two-factor-providers']) > 0) {
-//				return true;
-//			}
-//		}
-//		return false;
-		return true;
 	}
 
 }

@@ -22,12 +22,37 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\Controller;
 
-
+use OCA\TwoFactorNextcloudNotification\Db\Token;
+use OCA\TwoFactorNextcloudNotification\Db\TokenMapper;
+use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
+use OCP\AppFramework\Utility\ITimeFactory;
+use OCP\IRequest;
 
 class APIController extends OCSController {
+
+	/** @var TokenMapper */
+	private $tokenMapper;
+	
+	/** @var string */
+	private $userId;
+
+	/** @var ITimeFactory */
+	private $timeFactory;
+
+	public function __construct(string $appName,
+								IRequest $request,
+								TokenMapper $tokenMapper,
+								ITimeFactory $timeFactory,
+								string $userId) {
+		parent::__construct($appName, $request);
+
+		$this->tokenMapper = $tokenMapper;
+		$this->timeFactory = $timeFactory;
+		$this->userId = $userId;
+	}
 
 	/**
 	 * @NoAdminRequired
@@ -35,6 +60,24 @@ class APIController extends OCSController {
 	 * @return DataResponse
 	 */
 	public function approve(int $attemptId): DataResponse {
+		try {
+			$token = $this->tokenMapper->getById($attemptId);
+		} catch (DoesNotExistException $e) {
+			return new DataResponse([], Http::STATUS_NOT_FOUND);
+		}
+
+		if ($token->getUserId() !== $this->userId) {
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
+		}
+
+		if (($this->timeFactory->getTime() - $token->getTimestamp()) > 60*10) {
+			$this->tokenMapper->delete($token);
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
+		}
+
+		$token->setStatus(Token::ACCEPTED);
+		$this->tokenMapper->update($token);
+
 		return new DataResponse([], Http::STATUS_ACCEPTED);
 	}
 
@@ -44,6 +87,54 @@ class APIController extends OCSController {
 	 * @return DataResponse
 	 */
 	public function disapprove(int $attemptId): DataResponse {
-		return new DataResponse();
+		try {
+			$token = $this->tokenMapper->getById($attemptId);
+		} catch (DoesNotExistException $e) {
+			return new DataResponse([], Http::STATUS_NOT_FOUND);
+		}
+
+		if ($token->getUserId() !== $this->userId) {
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
+		}
+
+		if (($this->timeFactory->getTime() - $token->getTimestamp()) > 60*10) {
+			$this->tokenMapper->delete($token);
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
+		}
+
+		$token->setStatus(Token::REJECTED);
+		$this->tokenMapper->update($token);
+
+		return new DataResponse([], Http::STATUS_OK);
+	}
+
+	/**
+	 * @PublicPage
+	 * @param string $token
+	 * @return DataResponse
+	 */
+	public function poll(string $token) {
+		try {
+			$token = $this->tokenMapper->getBytoken($token);
+		} catch (DoesNotExistException $e) {
+			return new DataResponse([], Http::STATUS_NOT_FOUND);
+		}
+
+		if (($this->timeFactory->getTime() - $token->getTimestamp()) > 60*10) {
+			$this->tokenMapper->delete($token);
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
+		}
+
+		if ($token->getStatus() === Token::PENDING) {
+			return new DataResponse(['status' => 'pending']);
+		}
+		if ($token->getStatus() === Token::ACCEPTED) {
+			return new DataResponse(['status' => 'accepted']);
+		}
+		if ($token->getStatus() === Token::REJECTED) {
+			return new DataResponse(['status' => 'rejected']);
+		}
+
+		return new DataResponse([], Http::STATUS_FORBIDDEN);
 	}
 }

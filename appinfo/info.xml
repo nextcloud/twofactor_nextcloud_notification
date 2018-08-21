@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <info>
 	<id>twofactor_nextcloud_notification</id>
-	<name>TwoFactor nextcloud notification</name>
+	<name>TwoFactor via nextcloud notification</name>
 	<namespace>TwoFactorNextcloudNotification</namespace>
 	<description><![CDATA[]]></description>
 
@@ -16,7 +16,7 @@
 	<repository type="git">https://github.com/nickv-nextcloud/twofactor_nextcloud_notification.git</repository>
 
 	<dependencies>
-		<nextcloud min-version="13" max-version="14" />
+		<nextcloud min-version="14" max-version="14" />
 	</dependencies>
 
 	<two-factor-providers>

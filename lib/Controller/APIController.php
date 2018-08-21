@@ -24,6 +24,7 @@ namespace OCA\TwoFactorNextcloudNotification\Controller;
 
 use OCA\TwoFactorNextcloudNotification\Db\Token;
 use OCA\TwoFactorNextcloudNotification\Db\TokenMapper;
+use OCP\AppFramework\Controller;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
@@ -31,7 +32,7 @@ use OCP\AppFramework\OCSController;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\IRequest;
 
-class APIController extends OCSController {
+class APIController extends Controller {
 
 	/** @var TokenMapper */
 	private $tokenMapper;
@@ -113,7 +114,7 @@ class APIController extends OCSController {
 	 * @param string $token
 	 * @return DataResponse
 	 */
-	public function poll(string $token) {
+	public function poll(string $token): DataResponse {
 		try {
 			$token = $this->tokenMapper->getBytoken($token);
 		} catch (DoesNotExistException $e) {

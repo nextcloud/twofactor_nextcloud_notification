@@ -66,8 +66,8 @@ class Notifier implements INotifier {
 			->setParsedLabel($l->t('Approve'))
 			->setPrimary(true)
 			->setLink(
-				$this->urlGenerator->linkToRouteAbsolute(Application::APP_ID . '.api.approve', [
-					'apiVersion' => 1,
+				$this->urlGenerator->linkToRouteAbsolute(Application::APP_ID . '.API.approve', [
+					'apiVersion' => 'v1',
 					'attemptId' => $attemptId,
 				]),
 				'POST'
@@ -75,10 +75,10 @@ class Notifier implements INotifier {
 
 		$disapproveAction = $notification->createAction()
 			->setParsedLabel($l->t('Cancel'))
-			->setPrimary(true)
+			->setPrimary(false)
 			->setLink(
-				$this->urlGenerator->linkToRouteAbsolute(Application::APP_ID . '.api.disapprove', [
-					'apiVersion' => 1,
+				$this->urlGenerator->linkToRouteAbsolute(Application::APP_ID . '.API.disapprove', [
+					'apiVersion' => 'v1',
 					'attemptId' => $attemptId,
 				]),
 				'DELETE'

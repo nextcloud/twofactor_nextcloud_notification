@@ -20,7 +20,7 @@
  */
 
 return [
-	'ocs' => [
+	'routes' => [
 		[
 			'name' => 'API#approve',
 			'url' => '/api/{apiVersion}/attempt/{attemptId}',
@@ -42,7 +42,7 @@ return [
 		[
 			'name' => 'API#poll',
 			'url' => '/api/{apiVersion}/poll/{token}',
-			'verb' => 'DELETE',
+			'verb' => 'GET',
 			'requirements' => [
 				'apiVersion' => 'v1',
 				'attemptId' => '[a-zA-Z0-9]{40}',

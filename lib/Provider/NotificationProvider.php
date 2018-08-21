@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
-
 /**
- * @author Christoph Wurst <christoph@winzerhof-wurst.at>
+ * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
+ *
+ * @author Roeland Jago Douma <roeland@famdouma.nl>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -43,7 +44,7 @@ class NotificationProvider implements IProvider {
 	/** @var ITimeFactory */
 	private $timeFactory;
 	/** @var IManager */
-	private  $notificationManager;
+	private $notificationManager;
 
 	public function __construct(IL10N $l10n,
 								TokenMapper $tokenMapper,
@@ -70,7 +71,7 @@ class NotificationProvider implements IProvider {
 	 * @return string
 	 */
 	public function getDisplayName(): string {
-		return $this->l10n->t('Nextcloud Notifications');
+		return $this->l10n->t('Nextcloud Notification');
 	}
 
 	/**
@@ -98,7 +99,7 @@ class NotificationProvider implements IProvider {
 			->setObject('2fa_id', $token->getId())
 			->setUser($user->getUID())
 			->setDateTime(new \DateTime());
-		$notification->
+		$this->notificationManager->notify($notification);
 
 		$tmpl = new Template(Application::APP_ID, 'challenge');
 		$tmpl->assign('token', $token->getToken());
@@ -106,13 +107,6 @@ class NotificationProvider implements IProvider {
 		return $tmpl;
 	}
 
-	/**
-	 * Verify the given challenge
-	 *
-	 * @param IUser $user
-	 * @param string $challenge
-	 * @return bool
-	 */
 	public function verifyChallenge(IUser $user, string $challenge): bool {
 		try {
 			$token = $this->tokenMapper->getBytoken($challenge);
@@ -127,14 +121,8 @@ class NotificationProvider implements IProvider {
 			$token->getUserId() === $user->getUID();
 	}
 
-	/**
-	 * Decides whether 2FA is enabled for the given user
-	 *
-	 * @param IUser $user
-	 * @return boolean
-	 */
 	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
-		return true;//$this->storage->hasBackupCodes($user);
+		return true;
 	}
 
 }

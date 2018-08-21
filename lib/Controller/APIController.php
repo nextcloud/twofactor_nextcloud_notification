@@ -22,6 +22,7 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\Controller;
 
+use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCA\TwoFactorNextcloudNotification\Db\Token;
 use OCA\TwoFactorNextcloudNotification\Db\TokenMapper;
 use OCP\AppFramework\Controller;
@@ -31,6 +32,7 @@ use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\IRequest;
+use OCP\Notification\IManager;
 
 class APIController extends Controller {
 
@@ -43,16 +45,21 @@ class APIController extends Controller {
 	/** @var ITimeFactory */
 	private $timeFactory;
 
+	/** @var IManager */
+	private $notificationManager;
+
 	public function __construct(string $appName,
 								IRequest $request,
 								TokenMapper $tokenMapper,
 								ITimeFactory $timeFactory,
-								string $userId) {
+								string $userId,
+								IManager $notificationManager) {
 		parent::__construct($appName, $request);
 
 		$this->tokenMapper = $tokenMapper;
 		$this->timeFactory = $timeFactory;
 		$this->userId = $userId;
+		$this->notificationManager = $notificationManager;
 	}
 
 	/**
@@ -78,6 +85,7 @@ class APIController extends Controller {
 
 		$token->setStatus(Token::ACCEPTED);
 		$this->tokenMapper->update($token);
+		$this->markNotification($token);
 
 		return new DataResponse([], Http::STATUS_ACCEPTED);
 	}
@@ -105,8 +113,17 @@ class APIController extends Controller {
 
 		$token->setStatus(Token::REJECTED);
 		$this->tokenMapper->update($token);
+		$this->markNotification($token);
 
 		return new DataResponse([], Http::STATUS_OK);
+	}
+
+	private function markNotification(Token $token) {
+		$notification = $this->notificationManager->createNotification();
+		$notification->setApp(Application::APP_ID)
+			->setSubject('login_attempt')
+			->setObject('2fa_id', $token->getId());
+		$this->notificationManager->markProcessed($notification);
 	}
 
 	/**

@@ -31,6 +31,7 @@ use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\Authentication\TwoFactorAuth\IProvider;
 use OCP\IL10N;
+use OCP\IRequest;
 use OCP\IUser;
 use OCP\Notification\IManager;
 use OCP\Template;
@@ -45,12 +46,16 @@ class NotificationProvider implements IProvider {
 	private $timeFactory;
 	/** @var IManager */
 	private $notificationManager;
+	/** @var IRequest */
+	private $request;
 
 	public function __construct(IL10N $l10n,
+								IRequest $request,
 								TokenMapper $tokenMapper,
 								ITimeFactory $timeFactory,
 								IManager $notificationManager) {
 		$this->l10n = $l10n;
+		$this->request = $request;
 		$this->tokenMapper = $tokenMapper;
 		$this->timeFactory = $timeFactory;
 		$this->notificationManager = $notificationManager;
@@ -95,7 +100,9 @@ class NotificationProvider implements IProvider {
 		//Send notificcation
 		$notification = $this->notificationManager->createNotification();
 		$notification->setApp(Application::APP_ID)
-			->setSubject('login_attempt')
+			->setSubject('login_attempt', [
+				'ip' => $this->request->getRemoteAddress(),
+			])
 			->setObject('2fa_id', $token->getId())
 			->setUser($user->getUID())
 			->setDateTime(new \DateTime());

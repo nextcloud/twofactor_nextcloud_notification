@@ -95,20 +95,10 @@ class Notifier implements INotifier {
 						'name' => $param['ip'],
 					],
 				])
+			->setMessage($l->t('Please approve or cancel the login.'))
 			->setRichMessage(
-				$l->t('{client} is trying to login into your account. Please approve or cancel the login.'),
-				[
-					'client' => [
-						'type' => 'highlight',
-						'id' => $notification->getObjectId(),
-						'name' => $param['client'],
-					],
-					'ip' => [
-						'type' => 'highlight',
-						'id' => $notification->getObjectId(),
-						'name' => $param['ip'],
-					],
-				])
+				$l->t('Please approve or cancel the login.'),
+				[])
 			->setParsedSubject(str_replace('{ip}', $param['ip'], $l->t('Login attempt from {ip}')));
 		return $notification;
 	}

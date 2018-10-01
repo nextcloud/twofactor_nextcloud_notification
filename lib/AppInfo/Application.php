@@ -36,7 +36,7 @@ class Application extends App {
 	public function register() {
 		$notificationManager = $this->getContainer()->getServer()->getNotificationManager();
 		$notificationManager->registerNotifier(function() {
-			return $this->getContainer()->getServer()->query(Notifier::class);
+			return $this->getContainer()->query(Notifier::class);
 		}, function() {
 			$l = $this->getContainer()->getServer()->getL10N(self::APP_ID);
 			return [

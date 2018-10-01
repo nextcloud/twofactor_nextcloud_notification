@@ -89,9 +89,7 @@ class TokenMapper extends QBMapper {
 		$token->setTimestamp($this->timeFactory->getTime());
 		$token->setToken($this->random->generate(40, ISecureRandom::CHAR_DIGITS.ISecureRandom::CHAR_LOWER.ISecureRandom::CHAR_UPPER));
 
-		/** @var Token
-		 * $token
-		 */
+		/** @var Token $token */
 		$token = $this->insert($token);
 		return $token;
 	}

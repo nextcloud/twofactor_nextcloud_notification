@@ -27,9 +27,12 @@ namespace OCA\TwoFactorNextcloudNotification\Provider;
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCA\TwoFactorNextcloudNotification\Db\Token;
 use OCA\TwoFactorNextcloudNotification\Db\TokenMapper;
+use OCA\TwoFactorNextcloudNotification\Settings\Personal;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Utility\ITimeFactory;
+use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
 use OCP\Authentication\TwoFactorAuth\IProvider;
+use OCP\Authentication\TwoFactorAuth\IProvidesPersonalSettings;
 use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IRequest;
@@ -37,7 +40,7 @@ use OCP\IUser;
 use OCP\Notification\IManager;
 use OCP\Template;
 
-class NotificationProvider implements IProvider {
+class NotificationProvider implements IProvider, IProvidesPersonalSettings {
 
 	/** @var IL10N */
 	private $l10n;
@@ -137,4 +140,7 @@ class NotificationProvider implements IProvider {
 		return $this->config->getAppValue(Application::APP_ID, $user->getUID() . '_enabled', '0') === '0';
 	}
 
+	public function getPersonalSettings(IUser $user): IPersonalProviderSettings {
+		return new Personal();
+	}
 }

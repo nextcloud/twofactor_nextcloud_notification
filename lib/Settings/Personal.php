@@ -31,7 +31,7 @@ use OCP\Template;
 class Personal implements IPersonalProviderSettings {
 
 	public function getBody(): Template {
-		return new Template(Application::class, 'personal');
+		return new Template(Application::APP_ID, 'personal');
 	}
 
 }

@@ -69,7 +69,7 @@ class Notifier implements INotifier {
 				$this->urlGenerator->getAbsoluteURL(
 					$this->urlGenerator->linkTo(
 						'',
-						'ocs/v2.php/apps/twofactor_nextcloud_notification/api/v1/attempts/' . $attemptId
+						'ocs/v2.php/apps/twofactor_nextcloud_notification/api/v1/attempt/' . $attemptId
 					)
 				),
 				'POST'
@@ -82,7 +82,7 @@ class Notifier implements INotifier {
 				$this->urlGenerator->getAbsoluteURL(
 					$this->urlGenerator->linkTo(
 						'',
-						'ocs/v2.php/apps/twofactor_nextcloud_notification/api/v1/attempts/' . $attemptId
+						'ocs/v2.php/apps/twofactor_nextcloud_notification/api/v1/attempt/' . $attemptId
 					)
 				),
 				'DELETE'

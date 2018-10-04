@@ -66,10 +66,12 @@ class Notifier implements INotifier {
 			->setParsedLabel($l->t('Approve'))
 			->setPrimary(true)
 			->setLink(
-				$this->urlGenerator->linkToRouteAbsolute(Application::APP_ID . '.API.approve', [
-					'apiVersion' => 'v1',
-					'attemptId' => $attemptId,
-				]),
+				$this->urlGenerator->getAbsoluteURL(
+					$this->urlGenerator->linkTo(
+						'',
+						'ocs/v2.php/apps/twofactor_nextcloud_notification/api/v1/attempts/' . $attemptId
+					)
+				),
 				'POST'
 			);
 
@@ -77,10 +79,12 @@ class Notifier implements INotifier {
 			->setParsedLabel($l->t('Cancel'))
 			->setPrimary(false)
 			->setLink(
-				$this->urlGenerator->linkToRouteAbsolute(Application::APP_ID . '.API.disapprove', [
-					'apiVersion' => 'v1',
-					'attemptId' => $attemptId,
-				]),
+				$this->urlGenerator->getAbsoluteURL(
+					$this->urlGenerator->linkTo(
+						'',
+						'ocs/v2.php/apps/twofactor_nextcloud_notification/api/v1/attempts/' . $attemptId
+					)
+				),
 				'DELETE'
 			);
 

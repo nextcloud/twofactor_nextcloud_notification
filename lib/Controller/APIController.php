@@ -34,7 +34,7 @@ use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\IRequest;
 use OCP\Notification\IManager;
 
-class APIController extends Controller {
+class APIController extends OCSController {
 
 	/** @var TokenMapper */
 	private $tokenMapper;

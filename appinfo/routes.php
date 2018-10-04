@@ -22,6 +22,18 @@
 return [
 	'routes' => [
 		[
+			'name' => 'Settings#getState',
+			'url' => '/settings/state',
+			'verb' => 'GET',
+		],
+		[
+			'name' => 'Settings#setState',
+			'url' => '/settings/state',
+			'verb' => 'POST',
+		],
+	],
+	'ocs' => [
+		[
 			'name' => 'API#approve',
 			'url' => '/api/{apiVersion}/attempt/{attemptId}',
 			'verb' => 'POST',
@@ -48,16 +60,5 @@ return [
 				'attemptId' => '[a-zA-Z0-9]{40}',
 			],
 		],
-
-		[
-			'name' => 'Settings#getState',
-			'url' => '/settings/state',
-			'verb' => 'GET',
-		],
-		[
-			'name' => 'Settings#setState',
-			'url' => '/settings/state',
-			'verb' => 'POST',
-		],
-	],
+	]
 ];

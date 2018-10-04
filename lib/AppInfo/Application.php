@@ -23,8 +23,13 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\AppInfo;
 
+use OCA\TwoFactorNextcloudNotification\Event\StateChanged;
+use OCA\TwoFactorNextcloudNotification\Listener\IListener;
+use OCA\TwoFactorNextcloudNotification\Listener\RegistryUpdater;
 use OCA\TwoFactorNextcloudNotification\Notification\Notifier;
 use OCP\AppFramework\App;
+use Symfony\Component\EventDispatcher\Event;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class Application extends App {
 	const APP_ID = 'twofactor_nextcloud_notification';
@@ -34,7 +39,9 @@ class Application extends App {
 	}
 
 	public function register() {
-		$notificationManager = $this->getContainer()->getServer()->getNotificationManager();
+		$container = $this->getContainer();
+
+		$notificationManager = $container->getServer()->getNotificationManager();
 		$notificationManager->registerNotifier(function() {
 			return $this->getContainer()->query(Notifier::class);
 		}, function() {
@@ -43,6 +50,19 @@ class Application extends App {
 				'id' => self::APP_ID,
 				'name' => $l->t('TwoFactor Nextcloud notification'),
 			];
+		});
+
+		/** @var EventDispatcherInterface $dispatcher */
+		$dispatcher = $container->query(EventDispatcherInterface::class);
+		$dispatcher->addListener(StateChanged::class, function(StateChanged $event) use ($container) {
+			/** @var IListener[] $listeners */
+			$listeners = [
+				$container->query(RegistryUpdater::class)
+			];
+
+			foreach ($listeners as $listener) {
+				$listener->handle($event);
+			}
 		});
 	}
 }

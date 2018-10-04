@@ -30,6 +30,7 @@ use OCA\TwoFactorNextcloudNotification\Db\TokenMapper;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\Authentication\TwoFactorAuth\IProvider;
+use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IRequest;
 use OCP\IUser;
@@ -48,17 +49,21 @@ class NotificationProvider implements IProvider {
 	private $notificationManager;
 	/** @var IRequest */
 	private $request;
+	/** @var IConfig */
+	private $config;
 
 	public function __construct(IL10N $l10n,
 								IRequest $request,
 								TokenMapper $tokenMapper,
 								ITimeFactory $timeFactory,
-								IManager $notificationManager) {
+								IManager $notificationManager,
+								IConfig $config) {
 		$this->l10n = $l10n;
 		$this->request = $request;
 		$this->tokenMapper = $tokenMapper;
 		$this->timeFactory = $timeFactory;
 		$this->notificationManager = $notificationManager;
+		$this->config = $config;
 	}
 
 	/**
@@ -129,7 +134,7 @@ class NotificationProvider implements IProvider {
 	}
 
 	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
-		return true;
+		return $this->config->getAppValue(Application::APP_ID, $user->getUID() . '_enabled', '0') === '0';
 	}
 
 }

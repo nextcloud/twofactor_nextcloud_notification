@@ -8,7 +8,7 @@
 	<licence>AGPL</licence>
 	<author>Joas Schilling</author>
 	<author>Roeland Jago Douma</author>
-	<version>0.1.2</version>
+	<version>0.2.0</version>
 
 
 	<website>https://github.com/nickv-nextcloud/twofactor_nextcloud_notification</website>
@@ -16,8 +16,12 @@
 	<repository type="git">https://github.com/nickv-nextcloud/twofactor_nextcloud_notification.git</repository>
 
 	<dependencies>
-		<nextcloud min-version="14" max-version="15" />
+		<nextcloud min-version="15" max-version="15" />
 	</dependencies>
+
+	<background-jobs>
+		<job>OCA\TwoFactorNextcloudNotification\BackgroundJob\CleanupTokens</job>
+	</background-jobs>
 
 	<two-factor-providers>
 		<provider>OCA\TwoFactorNextcloudNotification\Provider\NotificationProvider</provider>

@@ -56,7 +56,7 @@ class TokenMapper extends QBMapper {
 		$qb = $this->db->getQueryBuilder();
 
 		$qb->select('*')
-			->from(Application::APP_ID . '_tokens')
+			->from($this->getTableName())
 			->where(
 				$qb->expr()->eq('token', $qb->createNamedParameter($token))
 			);
@@ -73,7 +73,7 @@ class TokenMapper extends QBMapper {
 		$qb = $this->db->getQueryBuilder();
 
 		$qb->select('*')
-			->from(Application::APP_ID . '_tokens')
+			->from($this->getTableName())
 			->where(
 				$qb->expr()->eq('id', $qb->createNamedParameter($id))
 			);
@@ -92,5 +92,15 @@ class TokenMapper extends QBMapper {
 		/** @var Token $token */
 		$token = $this->insert($token);
 		return $token;
+	}
+
+	public function cleanupTokens() {
+		// Clear all tokens older than 10 minutes
+		$time = $this->timeFactory->getTime() - (60 * 10);
+
+		$qb = $this->db->getQueryBuilder();
+		$qb->delete($this->getTableName())
+			->where($qb->expr()->lt('timestamp', $qb->createNamedParameter($time)));
+		$qb->execute();
 	}
 }

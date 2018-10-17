@@ -1,5 +1,5 @@
 <?php
-
+script('twofactor_nextcloud_notification', 'main');
 ?>
 
 <form method="POST" class="2fa-notification-form">

@@ -52,7 +52,7 @@ class APIController extends OCSController {
 								IRequest $request,
 								TokenMapper $tokenMapper,
 								ITimeFactory $timeFactory,
-								string $userId,
+								string $userId = null,
 								IManager $notificationManager) {
 		parent::__construct($appName, $request);
 

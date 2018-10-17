@@ -137,7 +137,7 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings {
 	}
 
 	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
-		return $this->config->getAppValue(Application::APP_ID, $user->getUID() . '_enabled', '0') === '0';
+		return $this->config->getAppValue(Application::APP_ID, $user->getUID() . '_enabled', '0') === '1';
 	}
 
 	public function getPersonalSettings(IUser $user): IPersonalProviderSettings {

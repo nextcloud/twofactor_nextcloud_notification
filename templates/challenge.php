@@ -1,9 +1,11 @@
 <?php
-
+script('twofactor_nextcloud_notification', 'main');
 ?>
 
-<form method="POST" class="2fa-notification-form">
-	<input type="input" name="challenge" value="<?php p($_['token']); ?>">
+<input type="hidden" id="challenge-poll-token" value="<?php p($_['token']); ?>">
+
+<form method="POST" class="2fa-notification-form" id="twofactor-form">
+	<input type="hidden" name="challenge" value="<?php p($_['token']); ?>">
 	<button type="submit">
 		<span><?php p($l->t('Continue!')); ?></span>
 	</button>

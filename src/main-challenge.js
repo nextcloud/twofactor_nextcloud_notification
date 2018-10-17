@@ -37,7 +37,7 @@ const poll = (url) => () => {
 const token = document.getElementById('challenge-poll-token').value
 console.debug('starting challenge polling', token)
 
-const url = OC.linkToOCS('apps/twofactor_nextcloud_notifications/api/v1/poll/' + token, 2)
+const url = OC.linkToOCS('apps/twofactor_nextcloud_notification/api/v1/poll', 2) + token
 const poller = promisPoller({
 	taskFn: poll(url),
 	interval: 300,

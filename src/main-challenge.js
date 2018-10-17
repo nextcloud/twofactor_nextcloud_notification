@@ -23,14 +23,12 @@ import Axios from 'nextcloud-axios'
 import promisPoller from 'promise-poller'
 
 const poll = (url) => () => {
-	return Axios.get(url, {
-		headers: {
-			'OCS-APIRequest': 'true'
-		}
-	})
-		.then(() => {
-			// TODO: Magic
-			return Promise.reject('nope')
+	return Axios.get(url, {})
+		.then(resp => resp.data)
+		.then(({ocs}) => {
+			if (ocs.data.status === 'pending') {
+				return Promise.reject(ocs.data.status)
+			}
 		})
 }
 
@@ -40,8 +38,8 @@ console.debug('starting challenge polling', token)
 const url = OC.linkToOCS('apps/twofactor_nextcloud_notification/api/v1/poll', 2) + token
 const poller = promisPoller({
 	taskFn: poll(url),
-	interval: 300,
-	retries: 5,
+	interval: 800,
+	retries: -1,
 	progressCallback: (retries, error) => {
 		console.debug('polling', retries, error)
 	}
@@ -49,6 +47,7 @@ const poller = promisPoller({
 
 poller.then(r => {
 	console.debug('polling finished', r)
+	document.getElementById("twofactor-form").submit()
 }).catch(err => {
 	console.error('polling failed', err)
 })

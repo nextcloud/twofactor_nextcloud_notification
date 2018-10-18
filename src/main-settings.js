@@ -1,9 +1,7 @@
-<?php
-declare(strict_types=1);
-/**
- * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
+/*
+ * @copyright 2018 Christoph Wurst <christoph@winzerhof-wurst.at>
  *
- * @author Roeland Jago Douma <roeland@famdouma.nl>
+ * @author 2018 Christoph Wurst <christoph@winzerhof-wurst.at>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -19,30 +17,25 @@ declare(strict_types=1);
  *
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
  */
 
-namespace OCA\TwoFactorNextcloudNotification\Settings;
+import Vue from 'vue'
 
-use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
-use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
-use OCP\IConfig;
-use OCP\IUser;
-use OCP\Template;
+import Nextcloud from './mixins/Nextcloud'
+import PersonalSettings from './components/PersonalSettings.vue'
+import store from './store'
 
-class Personal implements IPersonalProviderSettings {
+Vue.mixin(Nextcloud)
 
-	/** @var bool */
-	private $enabled;
-
-	public function __construct(bool $enabled) {
-		$this->enabled = $enabled;
-	}
-
-	public function getBody(): Template {
-		$template = new Template(Application::APP_ID, 'personal');
-		$template->assign('enabled', $this->enabled);
-		return $template;
-	}
-
+const initialStateElem = document.getElementById('twofactor-notifications-initial-state')
+if (initialStateElem) {
+	const enabled = initialStateElem.value === 'true'
+	store.replaceState({
+		enabled
+	})
 }
+
+const View = Vue.extend(PersonalSettings)
+new View({
+	store
+}).$mount('#twofactor-notification-settings')

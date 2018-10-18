@@ -1,0 +1,17 @@
+[package]
+exclude = [
+	".drone",
+	".git",
+	".github",
+	".gitignore",
+	".scrutinizer.yml",
+	".travis.yml",
+	"krankerl.toml",
+	"build",
+	"node_modules"
+]
+
+before_cmds = [
+	"npm install --deps",
+	"npm run build",
+]

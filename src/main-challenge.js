@@ -45,9 +45,6 @@ const poller = promisPoller({
 	taskFn: poll(url),
 	interval: 800,
 	retries: -1,
-	progressCallback: (retries, error) => {
-		console.debug('polling', retries, error)
-	}
 })
 
 poller.then(r => {

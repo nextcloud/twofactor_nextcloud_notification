@@ -7,7 +7,6 @@ exclude = [
 	".scrutinizer.yml",
 	".travis.yml",
 	"krankerl.toml",
-	"build",
 	"node_modules"
 ]
 

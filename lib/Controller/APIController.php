@@ -22,44 +22,31 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\Controller;
 
-use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCA\TwoFactorNextcloudNotification\Db\Token;
-use OCA\TwoFactorNextcloudNotification\Db\TokenMapper;
-use OCP\AppFramework\Controller;
+use OCA\TwoFactorNextcloudNotification\Exception\TokenExpireException;
+use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
-use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\IRequest;
-use OCP\Notification\IManager;
 
 class APIController extends OCSController {
 
-	/** @var TokenMapper */
-	private $tokenMapper;
-	
 	/** @var string */
 	private $userId;
 
-	/** @var ITimeFactory */
-	private $timeFactory;
-
-	/** @var IManager */
-	private $notificationManager;
+	/** @var TokenManager */
+	private $tokenManager;
 
 	public function __construct(string $appName,
 								IRequest $request,
-								TokenMapper $tokenMapper,
-								ITimeFactory $timeFactory,
-								string $userId = null,
-								IManager $notificationManager) {
+								TokenManager $tokenManager,
+								string $userId = null) {
 		parent::__construct($appName, $request);
 
-		$this->tokenMapper = $tokenMapper;
-		$this->timeFactory = $timeFactory;
+		$this->tokenManager = $tokenManager;
 		$this->userId = $userId;
-		$this->notificationManager = $notificationManager;
 	}
 
 	/**
@@ -69,23 +56,19 @@ class APIController extends OCSController {
 	 */
 	public function approve(int $attemptId): DataResponse {
 		try {
-			$token = $this->tokenMapper->getById($attemptId);
+			$token = $this->tokenManager->getById($attemptId);
 		} catch (DoesNotExistException $e) {
 			return new DataResponse([], Http::STATUS_NOT_FOUND);
+		} catch (TokenExpireException $e) {
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
 		if ($token->getUserId() !== $this->userId) {
 			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
-		if (($this->timeFactory->getTime() - $token->getTimestamp()) > 60*10) {
-			$this->tokenMapper->delete($token);
-			return new DataResponse([], Http::STATUS_FORBIDDEN);
-		}
-
 		$token->setStatus(Token::ACCEPTED);
-		$this->tokenMapper->update($token);
-		$this->markNotification($token);
+		$this->tokenManager->update($token);
 
 		return new DataResponse([], Http::STATUS_ACCEPTED);
 	}
@@ -97,33 +80,21 @@ class APIController extends OCSController {
 	 */
 	public function disapprove(int $attemptId): DataResponse {
 		try {
-			$token = $this->tokenMapper->getById($attemptId);
+			$token = $this->tokenManager->getById($attemptId);
 		} catch (DoesNotExistException $e) {
 			return new DataResponse([], Http::STATUS_NOT_FOUND);
+		} catch (TokenExpireException $e) {
+			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
 		if ($token->getUserId() !== $this->userId) {
 			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
-		if (($this->timeFactory->getTime() - $token->getTimestamp()) > 60*10) {
-			$this->tokenMapper->delete($token);
-			return new DataResponse([], Http::STATUS_FORBIDDEN);
-		}
-
 		$token->setStatus(Token::REJECTED);
-		$this->tokenMapper->update($token);
-		$this->markNotification($token);
+		$this->tokenManager->update($token);
 
 		return new DataResponse([], Http::STATUS_OK);
-	}
-
-	private function markNotification(Token $token) {
-		$notification = $this->notificationManager->createNotification();
-		$notification->setApp(Application::APP_ID)
-			->setSubject('login_attempt')
-			->setObject('2fa_id', $token->getId());
-		$this->notificationManager->markProcessed($notification);
 	}
 
 	/**
@@ -133,13 +104,10 @@ class APIController extends OCSController {
 	 */
 	public function poll(string $token): DataResponse {
 		try {
-			$token = $this->tokenMapper->getBytoken($token);
+			$token = $this->tokenManager->getByToken($token);
 		} catch (DoesNotExistException $e) {
 			return new DataResponse([], Http::STATUS_NOT_FOUND);
-		}
-
-		if (($this->timeFactory->getTime() - $token->getTimestamp()) > 60*10) {
-			$this->tokenMapper->delete($token);
+		} catch (TokenExpireException $e) {
 			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 

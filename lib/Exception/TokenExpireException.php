@@ -22,25 +22,8 @@ declare(strict_types=1);
  *
  */
 
-namespace OCA\TwoFactorNextcloudNotification\BackgroundJob;
+namespace OCA\TwoFactorNextcloudNotification\Exception;
 
-use OC\BackgroundJob\TimedJob;
-use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
-
-class CleanupTokens extends TimedJob {
-
-	/** @var TokenManager */
-	private $tokenManager;
-
-	public function __construct(TokenManager $tokenManager) {
-		// Run once a day
-		$this->setInterval(3600);
-
-		$this->tokenManager = $tokenManager;
-	}
-
-	protected function run($argument) {
-		$this->tokenManager->cleanupTokens();
-	}
+class TokenExpireException extends \Exception {
 
 }

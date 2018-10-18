@@ -25,24 +25,36 @@ declare(strict_types=1);
 namespace OCA\TwoFactorNextcloudNotification\Settings;
 
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
-use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
+use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IConfig;
-use OCP\IUser;
-use OCP\Template;
+use OCP\Settings\ISettings;
 
-class Personal implements IPersonalProviderSettings {
+class Personal implements ISettings {
 
-	/** @var bool */
-	private $enabled;
+	/** @var IConfig */
+	private $config;
+	/** @var string */
+	private $userId;
 
-	public function __construct(bool $enabled) {
-		$this->enabled = $enabled;
+	public function __construct(IConfig $config, string $userId) {
+		$this->config = $config;
+		$this->userId = $userId;
 	}
 
-	public function getBody(): Template {
-		$template = new Template(Application::APP_ID, 'personal');
-		$template->assign('enabled', $this->enabled);
-		return $template;
+	public function getForm(): TemplateResponse {
+		$response = new TemplateResponse(Application::APP_ID, 'personal');
+		$response->setParams([
+			'enabled' => $this->config->getAppValue(Application::APP_ID, $this->userId . '_enabled', '0') === '1'
+		]);
+		return $response;
+	}
+
+	public function getSection(): string {
+		return 'security';
+	}
+
+	public function getPriority() {
+		return 70;
 	}
 
 }

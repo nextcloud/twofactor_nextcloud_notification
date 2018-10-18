@@ -52,7 +52,7 @@ class TokenMapper extends QBMapper {
 	 * @return Token
 	 * @throws DoesNotExistException
 	 */
-	public function getBytoken(string $token): Token {
+	public function getByToken(string $token): Token {
 		$qb = $this->db->getQueryBuilder();
 
 		$qb->select('*')
@@ -94,13 +94,15 @@ class TokenMapper extends QBMapper {
 		return $token;
 	}
 
-	public function cleanupTokens() {
+	public function getTokensForCleanup() {
 		// Clear all tokens older than 10 minutes
 		$time = $this->timeFactory->getTime() - (60 * 10);
 
 		$qb = $this->db->getQueryBuilder();
-		$qb->delete($this->getTableName())
+		$qb->select('*')
+			->from($this->getTableName())
 			->where($qb->expr()->lt('timestamp', $qb->createNamedParameter($time)));
-		$qb->execute();
+
+		return $this->findEntities($qb);
 	}
 }

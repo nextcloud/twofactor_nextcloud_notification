@@ -26,13 +26,9 @@ namespace OCA\TwoFactorNextcloudNotification\Provider;
 
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCA\TwoFactorNextcloudNotification\Db\Token;
-use OCA\TwoFactorNextcloudNotification\Db\TokenMapper;
-use OCA\TwoFactorNextcloudNotification\Settings\Personal;
+use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
 use OCP\AppFramework\Db\DoesNotExistException;
-use OCP\AppFramework\Utility\ITimeFactory;
-use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
 use OCP\Authentication\TwoFactorAuth\IProvider;
-use OCP\Authentication\TwoFactorAuth\IProvidesPersonalSettings;
 use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IRequest;
@@ -44,29 +40,25 @@ class NotificationProvider implements IProvider {
 
 	/** @var IL10N */
 	private $l10n;
-	/** @var TokenMapper */
-	private $tokenMapper;
-	/** @var ITimeFactory */
-	private $timeFactory;
 	/** @var IManager */
 	private $notificationManager;
 	/** @var IRequest */
 	private $request;
 	/** @var IConfig */
 	private $config;
+	/** @var TokenManager */
+	private $tokenManager;
 
 	public function __construct(IL10N $l10n,
 								IRequest $request,
-								TokenMapper $tokenMapper,
-								ITimeFactory $timeFactory,
 								IManager $notificationManager,
-								IConfig $config) {
+								IConfig $config,
+								TokenManager $tokenManager) {
 		$this->l10n = $l10n;
 		$this->request = $request;
-		$this->tokenMapper = $tokenMapper;
-		$this->timeFactory = $timeFactory;
 		$this->notificationManager = $notificationManager;
 		$this->config = $config;
+		$this->tokenManager = $tokenManager;
 	}
 
 	/**
@@ -103,7 +95,7 @@ class NotificationProvider implements IProvider {
 	 * @return Template
 	 */
 	public function getTemplate(IUser $user): Template {
-		$token = $this->tokenMapper->generate($user->getUID());
+		$token = $this->tokenManager->generate($user->getUID());
 
 		//Send notificcation
 		$notification = $this->notificationManager->createNotification();
@@ -124,15 +116,14 @@ class NotificationProvider implements IProvider {
 
 	public function verifyChallenge(IUser $user, string $challenge): bool {
 		try {
-			$token = $this->tokenMapper->getBytoken($challenge);
+			$token = $this->tokenManager->getByToken($challenge);
 		} catch (DoesNotExistException $e) {
 			return false;
 		}
 
-		$this->tokenMapper->delete($token);
+		$this->tokenManager->delete($token);
 
 		return $token->getStatus() === Token::ACCEPTED &&
-			($this->timeFactory->getTime() - $token->getTimestamp()) <= 60 * 10 &&
 			$token->getUserId() === $user->getUID();
 	}
 

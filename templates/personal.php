@@ -1,7 +1,7 @@
 <?php
-
+script('twofactor_nextcloud_notification', 'settings');
 ?>
 
-<div id="twofactor-notification-settings">
+<input type="hidden" id="twofactor-notifications-initial-state" value="<?php p($_['enabled'] ? 'true' : 'false'); ?>">
 
-</div>
+<div id="twofactor-notification-settings"></div>

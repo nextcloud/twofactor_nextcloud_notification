@@ -141,6 +141,8 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings {
 	}
 
 	public function getPersonalSettings(IUser $user): IPersonalProviderSettings {
-		return new Personal();
+		return new Personal(
+			$this->config->getAppValue(Application::APP_ID, $user->getUID() . '_enabled', '0') === '1'
+		);
 	}
 }

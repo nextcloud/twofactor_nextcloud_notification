@@ -27,6 +27,7 @@ namespace OCA\TwoFactorNextcloudNotification\Controller;
 use OCA\TwoFactorNextcloudNotification\Event\StateChanged;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\Http\JSONResponse;
 use OCP\IConfig;
 use OCP\IRequest;
 use OCP\IUserSession;
@@ -55,15 +56,14 @@ class SettingsController extends Controller {
 		$this->userSession = $userSession;
 	}
 
-	public function getState(): DataResponse {
-		return new DataResponse([
-			'enabled' => $this->config->getAppValue($this->appName, $this->userSession->getUser()->getUID() . '_enabled', '0') === '1',
-		]);
-	}
-
-	public function setState(bool $state): DataResponse {
+	/**
+	 * @NoAdminRequired
+	 */
+	public function setState(bool $state): JSONResponse {
 		$this->config->setAppValue($this->appName, $this->userSession->getUser()->getUID() . '_enabled', $state ? '1' : '0');
 		$this->dispatcher->dispatch(StateChanged::class, new StateChanged($this->userSession->getUser(), $state));
-		return new DataResponse();
+		return new JSONResponse([
+			'enabled' => $state
+		]);
 	}
 }

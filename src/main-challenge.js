@@ -21,6 +21,11 @@
 
 import Axios from 'nextcloud-axios'
 import promisPoller from 'promise-poller'
+import Vue from "vue";
+
+import Nextcloud from './mixins/Nextcloud'
+
+Vue.mixin(Nextcloud)
 
 const poll = (url) => () => {
 	return Axios.get(url, {})

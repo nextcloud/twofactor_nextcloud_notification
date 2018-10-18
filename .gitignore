@@ -61,3 +61,6 @@ nbproject
 /tests/Integration/composer.lock
 /tests/Integration/output
 /tests/Integration/vendor
+
+# Build
+/build

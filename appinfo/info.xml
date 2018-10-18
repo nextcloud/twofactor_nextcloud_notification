@@ -2,14 +2,17 @@
 <info>
 	<id>twofactor_nextcloud_notification</id>
 	<name>TwoFactor via nextcloud notification</name>
-	<namespace>TwoFactorNextcloudNotification</namespace>
-	<description><![CDATA[]]></description>
+	<summary>Allows using any of your logged in devices as second factor</summary>
+	<description>Allows using any of your logged in devices as second factor</description>
+	<version>0.2.1</version>
+	<licence>agpl</licence>
 
-	<licence>AGPL</licence>
 	<author>Joas Schilling</author>
 	<author>Roeland Jago Douma</author>
-	<version>0.2.0</version>
+	<author>Christoph Wurst</author>
 
+	<namespace>TwoFactorNextcloudNotification</namespace>
+	<category>security</category>
 
 	<website>https://github.com/nickv-nextcloud/twofactor_nextcloud_notification</website>
 	<bugs>https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/issues</bugs>

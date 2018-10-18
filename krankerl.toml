@@ -8,6 +8,7 @@ exclude = [
 	".travis.yml",
 	"krankerl.toml",
 	"node_modules",
+	"screenshots",
 	"src"
 ]
 

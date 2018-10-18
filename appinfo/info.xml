@@ -17,6 +17,7 @@
 	<website>https://github.com/nickv-nextcloud/twofactor_nextcloud_notification</website>
 	<bugs>https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/issues</bugs>
 	<repository type="git">https://github.com/nickv-nextcloud/twofactor_nextcloud_notification.git</repository>
+	<screenshot>https://raw.githubusercontent.com/nickv-nextcloud/twofactor_nextcloud_notification/master/screenshots/android.png</screenshot>
 
 	<dependencies>
 		<nextcloud min-version="14" max-version="15" />

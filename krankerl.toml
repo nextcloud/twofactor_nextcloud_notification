@@ -6,6 +6,7 @@ exclude = [
 	".gitignore",
 	".scrutinizer.yml",
 	".travis.yml",
+	".tx",
 	"krankerl.toml",
 	"node_modules",
 	"screenshots",

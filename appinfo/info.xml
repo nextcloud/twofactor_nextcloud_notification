@@ -4,7 +4,7 @@
 	<name>TwoFactor via nextcloud notification</name>
 	<summary>Allows using any of your logged in devices as second factor</summary>
 	<description>Allows using any of your logged in devices as second factor</description>
-	<version>0.2.1</version>
+	<version>0.2.2</version>
 	<licence>agpl</licence>
 
 	<author>Joas Schilling</author>

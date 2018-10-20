@@ -44,7 +44,11 @@ class RegistryUpdater implements IListener {
 
 	public function handle(Event $event) {
 		if ($event instanceof StateChanged) {
-			$this->registry->enableProviderFor($this->provider, $event->getUser());
+			if ($event->isEnabled()) {
+				$this->registry->enableProviderFor($this->provider, $event->getUser());
+			} else {
+				$this->registry->disableProviderFor($this->provider, $event->getUser());
+			}
 		}
 	}
 }

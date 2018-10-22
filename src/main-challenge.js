@@ -21,9 +21,11 @@
 
 import Axios from 'nextcloud-axios'
 import promisPoller from 'promise-poller'
-import Vue from "vue";
+import Vue from 'vue'
 
+import Challenge from './components/Challenge.vue'
 import Nextcloud from './mixins/Nextcloud'
+import store from "./store";
 
 Vue.mixin(Nextcloud)
 
@@ -37,6 +39,11 @@ const poll = (url) => () => {
 		})
 }
 
+const View = Vue.extend(Challenge)
+const view = new View({
+	store
+}).$mount('#twofactor-notification-challenge')
+
 const token = document.getElementById('challenge-poll-token').value
 console.debug('starting challenge polling', token)
 
@@ -49,6 +56,7 @@ const poller = promisPoller({
 
 poller.then(r => {
 	console.debug('polling finished', r)
+	view.state++
 	document.getElementById("twofactor-form").submit()
 }).catch(err => {
 	console.error('polling failed', err)

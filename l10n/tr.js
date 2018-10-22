@@ -1,0 +1,18 @@
+OC.L10N.register(
+    "twofactor_nextcloud_notification",
+    {
+    "TwoFactor Nextcloud notification" : "Nextcloud iki aşamalı kimlik doğrulama bildirimi",
+    "Approve" : "Onayla",
+    "Cancel" : "İptal",
+    "Login attempt from {ip}" : "{ip} adresinden oturum açma girişimi",
+    "Please approve or cancel the login." : "Lütfen oturum açmayı onaylayın ya da iptal edin.",
+    "Nextcloud Notification" : "Nextcloud Bildirimi",
+    "Authenticate using a device that is already logged in to your account" : "Kimliğinizi hesabınızda oturum açmış bir aygıtı kullanarak doğrulayın",
+    "TwoFactor via nextcloud notification" : "Nextcloud bildirimi ile iki aşamalı kimlik doğrulaması",
+    "Allows using any of your logged in devices as second factor" : "İkinci aşama olarak oturum açmış aygıtlarınızdan biri kullanılır",
+    "Nextcloud notification second-factor auth" : "Nextcloud iki aşamalı kimlik doğrulama bildirimi",
+    "Use two-factor authentication via Nextcloud notifications" : "Nextcloud bildirimi ile iki aşamalı kimlik doğrulaması kullanılsın",
+    "Please accept the request on one of your logged in devices." : "Lütfen oturum açmış aygıtlarınızın birinden isteği onaylayın.",
+    "You will be redirected automatically once this login has been accepted." : "Oturum açma isteği onaylandığında otomatik olarak yönlendirileceksiniz."
+},
+"nplurals=2; plural=(n > 1);");

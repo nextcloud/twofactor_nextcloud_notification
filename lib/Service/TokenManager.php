@@ -24,13 +24,11 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\Service;
 
-use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCA\TwoFactorNextcloudNotification\Db\Token;
 use OCA\TwoFactorNextcloudNotification\Db\TokenMapper;
 use OCA\TwoFactorNextcloudNotification\Exception\TokenExpireException;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Utility\ITimeFactory;
-use OCP\Notification\IManager as NotificationManager;
 
 class TokenManager {
 
@@ -75,7 +73,7 @@ class TokenManager {
 	 * @param Token $token
 	 */
 	public function delete(Token $token) {
-		$this->clearNotification($token);
+		$this->notificationManager->clearNotification($token);
 		$this->mapper->delete($token);
 	}
 
@@ -84,7 +82,7 @@ class TokenManager {
 	 * @return Token
 	 */
 	public function update(Token $token): Token {
-		$this->clearNotification($token);
+		$this->notificationManager->clearNotification($token);
 		return $this->mapper->update($token);
 	}
 
@@ -97,18 +95,9 @@ class TokenManager {
 	}
 
 	public function generate(string $userId): Token {
-		return $this->mapper->generate($userId);
-	}
-
-	/**
-	 * @param Token $token
-	 */
-	protected function clearNotification(Token $token) {
-		$notification = $this->notificationManager->createNotification();
-		$notification->setApp(Application::APP_ID)
-			->setSubject('login_attempt')
-			->setObject('2fa_id', $token->getId());
-		$this->notificationManager->markProcessed($notification);
+		$token = $this->mapper->generate($userId);
+		$this->notificationManager->newNotification($token);
+		return $token;
 	}
 
 	/**

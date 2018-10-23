@@ -31,32 +31,22 @@ use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\Authentication\TwoFactorAuth\IProvider;
 use OCP\IConfig;
 use OCP\IL10N;
-use OCP\IRequest;
 use OCP\IUser;
-use OCP\Notification\IManager;
 use OCP\Template;
 
 class NotificationProvider implements IProvider {
 
 	/** @var IL10N */
 	private $l10n;
-	/** @var IManager */
-	private $notificationManager;
-	/** @var IRequest */
-	private $request;
 	/** @var IConfig */
 	private $config;
 	/** @var TokenManager */
 	private $tokenManager;
 
 	public function __construct(IL10N $l10n,
-								IRequest $request,
-								IManager $notificationManager,
 								IConfig $config,
 								TokenManager $tokenManager) {
 		$this->l10n = $l10n;
-		$this->request = $request;
-		$this->notificationManager = $notificationManager;
 		$this->config = $config;
 		$this->tokenManager = $tokenManager;
 	}
@@ -96,17 +86,6 @@ class NotificationProvider implements IProvider {
 	 */
 	public function getTemplate(IUser $user): Template {
 		$token = $this->tokenManager->generate($user->getUID());
-
-		//Send notificcation
-		$notification = $this->notificationManager->createNotification();
-		$notification->setApp(Application::APP_ID)
-			->setSubject('login_attempt', [
-				'ip' => $this->request->getRemoteAddress(),
-			])
-			->setObject('2fa_id', $token->getId())
-			->setUser($user->getUID())
-			->setDateTime(new \DateTime());
-		$this->notificationManager->notify($notification);
 
 		$tmpl = new Template(Application::APP_ID, 'challenge');
 		$tmpl->assign('token', $token->getToken());

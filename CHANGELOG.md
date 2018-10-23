@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.4] - 2018-10-23
+## Added
+- Added Notification Manager [#28](https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/pull/28)
+- Feedback when the login is approved on waiting screen [#29](https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/issues/29)
+
 ## [0.2.3] - 2018-10-21
 ## Fixed
 - Allow to disable provider properly as well [#27](https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/pull/27)

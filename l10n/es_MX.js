@@ -10,9 +10,9 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "Autenticar usando un dispositivo que ya esta conectado en su cuenta",
     "TwoFactor via nextcloud notification" : "Notificación vía Nextcloud de dos factores",
     "Allows using any of your logged in devices as second factor" : "Permitir usando cualquiera de sus dispositivos previamente conectados como segundo factor de autenticación",
-    "Nextcloud notification second-factor auth" : "Notificación Nextcloud de autenticación de dos pasos",
-    "Use two-factor authentication via Nextcloud notifications" : "Usar autenticación de dos pasos vía notificaciones de Nextcloud",
     "Please accept the request on one of your logged in devices." : "Por favor acepte las solicitudes en uno de sus dispositivos conectados.",
-    "You will be redirected automatically once this login has been accepted." : "Usted será re-direccionado automáticamente una vez que este accesos sea aceptado."
+    "You will be redirected automatically once this login has been accepted." : "Usted será re-direccionado automáticamente una vez que este accesos sea aceptado.",
+    "Nextcloud notification second-factor auth" : "Notificación Nextcloud de autenticación de dos pasos",
+    "Use two-factor authentication via Nextcloud notifications" : "Usar autenticación de dos pasos vía notificaciones de Nextcloud"
 },
 "nplurals=2; plural=(n != 1);");

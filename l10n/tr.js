@@ -12,6 +12,7 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "İkinci aşama olarak oturum açmış aygıtlarınızdan biri kullanılır",
     "Please accept the request on one of your logged in devices." : "Lütfen oturum açmış aygıtlarınızın birinden isteği onaylayın.",
     "You will be redirected automatically once this login has been accepted." : "Oturum açma isteği onaylandığında otomatik olarak yönlendirileceksiniz.",
+    "Please wait …" : "Lütfen bekleyin…",
     "Nextcloud notification second-factor auth" : "Nextcloud iki aşamalı kimlik doğrulama bildirimi",
     "Use two-factor authentication via Nextcloud notifications" : "Nextcloud bildirimi ile iki aşamalı kimlik doğrulaması kullanılsın"
 },

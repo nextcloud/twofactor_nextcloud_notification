@@ -1,14 +1,19 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "TwoFactor Nextcloud notification" : "TwoFactor Notificación de Nextcloud",
+    "TwoFactor Nextcloud notification" : "Notificaciones TwoFactor en Nextcloud",
     "Approve" : "Aprobar",
     "Cancel" : "Cancelar",
-    "Login attempt from {ip}" : "Intento de inicio de sesion de {ip}",
+    "Login attempt from {ip}" : "Intento de inicio de sesión desde {ip}",
     "Please approve or cancel the login." : "Por favor apruebe o cancele el inicio de sesión",
     "Nextcloud Notification" : "Notificación Nextcloud",
-    "You will be redirected automatically once this login has been accepted." : "Seras automáticamente redirigido una vez este incio de sesión haya sido aceptado",
+    "Authenticate using a device that is already logged in to your account" : "Autenticar usando un dispositivo en el que esté iniciada sesión su cuenta",
+    "TwoFactor via nextcloud notification" : "TwoFactor a través de notificaciones de NextCloud",
+    "Allows using any of your logged in devices as second factor" : "Permitir que cualquier dispositivo en el que haya iniciado sesión se use como segundo paso.",
+    "Please accept the request on one of your logged in devices." : "Por favor, acepta la solicitud de acceso en uno de sus dispositivos donde haya iniciado sesión anteriormente.",
+    "You will be redirected automatically once this login has been accepted." : "Serás redirigido automáticamente cuando este inicio de sesión haya sido aceptado",
     "Please wait …" : "Por favor espera...",
-    "Nextcloud notification second-factor auth" : "Autenticación en dos pasos por las notificaciones de nextcloud"
+    "Nextcloud notification second-factor auth" : "Autenticación en dos pasos por las notificaciones de NextCloud",
+    "Use two-factor authentication via Nextcloud notifications" : "Usar autenticación en dos pasos a través de notificaciones NextCloud"
 },
 "nplurals=2; plural=(n != 1);");

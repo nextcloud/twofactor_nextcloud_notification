@@ -10,6 +10,7 @@
     "Allows using any of your logged in devices as second factor" : "Gebruik apparaten waarop je reeds bent ingelogd als tweede factor",
     "Please accept the request on one of your logged in devices." : "Accepteer de aanvraag op een van je ingelogde apparaten.",
     "You will be redirected automatically once this login has been accepted." : "Je wordt automatisch doorgestuurd als deze inlog is geaccepteerd.",
+    "Please wait …" : "Even geduld...",
     "Nextcloud notification second-factor auth" : "Nextcloud melding tweede-factor auth",
     "Use two-factor authentication via Nextcloud notifications" : "Gebruik twee-factor authenticatie via Nextcloud meldingen"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

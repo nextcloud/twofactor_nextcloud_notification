@@ -13,7 +13,6 @@ OC.L10N.register(
     "Please accept the request on one of your logged in devices." : "Přijměte požadavek na některém ze zařízení, na kterém jste přihlášení.",
     "You will be redirected automatically once this login has been accepted." : "Jakmile bude přihlášení schváleno, budete automaticky přesměrováni.",
     "Please wait …" : "Čekejte…",
-    "Nextcloud notification second-factor auth" : "Druhý faktor ověřování prostřednictvím oznámení v Nextcloud",
     "Use two-factor authentication via Nextcloud notifications" : "Použít dvoufázové ověřování prostřednictvím oznámení v Nextcloud"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

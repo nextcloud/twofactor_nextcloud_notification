@@ -13,7 +13,6 @@ OC.L10N.register(
     "Please accept the request on one of your logged in devices." : "로그인한 다른 장치에서 요청을 수락해 주세요.",
     "You will be redirected automatically once this login has been accepted." : "로그인이 수락되면 자동으로 리다이렉션 됩니다.",
     "Please wait …" : "잠시 기다려주세요 ...",
-    "Nextcloud notification second-factor auth" : "Nextcloud 알림 2단계 인증",
     "Use two-factor authentication via Nextcloud notifications" : "Nextcloud 알림을 통해 2단계 인증 사용하기"
 },
 "nplurals=1; plural=0;");

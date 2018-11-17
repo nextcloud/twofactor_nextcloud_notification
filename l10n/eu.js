@@ -12,7 +12,6 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "Aukera ematen dizu konektatutako edozein gailu egiaztapenaren bigarren urrats gisa erabiltzeko",
     "Please accept the request on one of your logged in devices." : "Onartu konektatutako gailuaren eskaera",
     "You will be redirected automatically once this login has been accepted." : "Automatikoki birbideratuko zaitu behin saio hasiera onartu ondoren",
-    "Nextcloud notification second-factor auth" : "Nextcloud jakinarazpena bigarren urratseko egiaztapena",
     "Use two-factor authentication via Nextcloud notifications" : "Erabili bi urratseko egiaztapena Nextcloud jakinarazpenen bidez"
 },
 "nplurals=2; plural=(n != 1);");

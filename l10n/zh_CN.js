@@ -13,7 +13,6 @@ OC.L10N.register(
     "Please accept the request on one of your logged in devices." : "请在任一已登录的设备上接受请求。",
     "You will be redirected automatically once this login has been accepted." : "登录通过时会自动跳转。",
     "Please wait …" : "请稍候……",
-    "Nextcloud notification second-factor auth" : "Nextcloud 两步验证通知",
     "Use two-factor authentication via Nextcloud notifications" : "通过 Nextcloud 通知使用两步验证"
 },
 "nplurals=1; plural=0;");

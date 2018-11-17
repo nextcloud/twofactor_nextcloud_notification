@@ -11,7 +11,6 @@
     "Please accept the request on one of your logged in devices." : "Veuillez accepter la demande sur un de vos appareils identifiés.",
     "You will be redirected automatically once this login has been accepted." : "Vous serez redirigé automatiquement une fois que cette connexion aura été acceptée.",
     "Please wait …" : "Veuillez patienter…",
-    "Nextcloud notification second-factor auth" : "Notification Nextcloud d'authentification second-factor",
     "Use two-factor authentication via Nextcloud notifications" : "Utiliser l’authentification en deux étapes via les notifications de Nextcloud "
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

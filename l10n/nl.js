@@ -13,7 +13,6 @@ OC.L10N.register(
     "Please accept the request on one of your logged in devices." : "Accepteer de aanvraag op een van je ingelogde apparaten.",
     "You will be redirected automatically once this login has been accepted." : "Je wordt automatisch doorgestuurd als deze inlog is geaccepteerd.",
     "Please wait …" : "Even geduld...",
-    "Nextcloud notification second-factor auth" : "Nextcloud melding tweede-factor auth",
     "Use two-factor authentication via Nextcloud notifications" : "Gebruik twee-factor authenticatie via Nextcloud meldingen"
 },
 "nplurals=2; plural=(n != 1);");

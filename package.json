@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/nickv-nextcloud/twofactor_nextcloud_notification#readme",
   "dependencies": {
-    "nextcloud-axios": "^0.1.2",
+    "nextcloud-axios": "^0.1.3",
     "promise-poller": "^1.7.0",
     "vue": "^2.5.17",
     "vuex": "^3.0.1"

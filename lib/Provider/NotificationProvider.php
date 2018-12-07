@@ -45,17 +45,13 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings {
 	private $config;
 	/** @var TokenManager */
 	private $tokenManager;
-	/** @var string */
-	private $userId;
 
 	public function __construct(IL10N $l10n,
 								IConfig $config,
-								TokenManager $tokenManager,
-								string $userId) {
+								TokenManager $tokenManager) {
 		$this->l10n = $l10n;
 		$this->config = $config;
 		$this->tokenManager = $tokenManager;
-		$this->userId = $userId;
 	}
 
 	/**
@@ -118,7 +114,7 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings {
 	}
 
 	public function getPersonalSettings(IUser $user): IPersonalProviderSettings {
-		return new Personal($this->config->getAppValue(Application::APP_ID, $this->userId . '_enabled', '0') === '1');
+		return new Personal($this->config->getAppValue(Application::APP_ID, $user->getUID() . '_enabled', '0') === '1');
 	}
 
 

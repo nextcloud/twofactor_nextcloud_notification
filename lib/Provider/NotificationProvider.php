@@ -27,14 +27,17 @@ namespace OCA\TwoFactorNextcloudNotification\Provider;
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCA\TwoFactorNextcloudNotification\Db\Token;
 use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
+use OCA\TwoFactorNextcloudNotification\Settings\Personal;
 use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
 use OCP\Authentication\TwoFactorAuth\IProvider;
+use OCP\Authentication\TwoFactorAuth\IProvidesPersonalSettings;
 use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IUser;
 use OCP\Template;
 
-class NotificationProvider implements IProvider {
+class NotificationProvider implements IProvider, IProvidesPersonalSettings {
 
 	/** @var IL10N */
 	private $l10n;
@@ -42,13 +45,17 @@ class NotificationProvider implements IProvider {
 	private $config;
 	/** @var TokenManager */
 	private $tokenManager;
+	/** @var string */
+	private $userId;
 
 	public function __construct(IL10N $l10n,
 								IConfig $config,
-								TokenManager $tokenManager) {
+								TokenManager $tokenManager,
+								string $userId) {
 		$this->l10n = $l10n;
 		$this->config = $config;
 		$this->tokenManager = $tokenManager;
+		$this->userId = $userId;
 	}
 
 	/**
@@ -109,4 +116,10 @@ class NotificationProvider implements IProvider {
 	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
 		return $this->config->getAppValue(Application::APP_ID, $user->getUID() . '_enabled', '0') === '1';
 	}
+
+	public function getPersonalSettings(IUser $user): IPersonalProviderSettings {
+		return new Personal($this->config->getAppValue(Application::APP_ID, $this->userId . '_enabled', '0') === '1');
+	}
+
+
 }

@@ -4,7 +4,7 @@
 	<name>TwoFactor via nextcloud notification</name>
 	<summary>Allows using any of your logged in devices as second factor</summary>
 	<description>Allows using any of your logged in devices as second factor</description>
-	<version>0.2.4</version>
+	<version>1.0.0</version>
 	<licence>agpl</licence>
 
 	<author>Joas Schilling</author>
@@ -20,7 +20,7 @@
 	<screenshot>https://raw.githubusercontent.com/nickv-nextcloud/twofactor_nextcloud_notification/master/screenshots/android.png</screenshot>
 
 	<dependencies>
-		<nextcloud min-version="14" max-version="16" />
+		<nextcloud min-version="15" max-version="16" />
 	</dependencies>
 
 	<background-jobs>
@@ -30,8 +30,4 @@
 	<two-factor-providers>
 		<provider>OCA\TwoFactorNextcloudNotification\Provider\NotificationProvider</provider>
 	</two-factor-providers>
-
-	<settings>
-		<personal>OCA\TwoFactorNextcloudNotification\Settings\Personal</personal>
-	</settings>
 </info>

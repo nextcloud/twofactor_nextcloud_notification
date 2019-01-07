@@ -20,6 +20,9 @@
 	<screenshot>https://raw.githubusercontent.com/nickv-nextcloud/twofactor_nextcloud_notification/master/screenshots/android.png</screenshot>
 
 	<dependencies>
+		<database>sqlite</database>
+		<database>mysql</database>
+		<database>pgsql</database>
 		<nextcloud min-version="15" max-version="16" />
 	</dependencies>
 

@@ -24,15 +24,18 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\BackgroundJob;
 
-use OC\BackgroundJob\TimedJob;
 use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
+use OCP\AppFramework\Utility\ITimeFactory;
+use OCP\BackgroundJob\TimedJob;
 
 class CleanupTokens extends TimedJob {
 
 	/** @var TokenManager */
 	private $tokenManager;
 
-	public function __construct(TokenManager $tokenManager) {
+	public function __construct(ITimeFactory $timeFactory, TokenManager $tokenManager) {
+		parent::__construct($timeFactory);
+
 		// Run once a day
 		$this->setInterval(3600);
 

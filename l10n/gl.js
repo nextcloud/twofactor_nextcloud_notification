@@ -1,7 +1,7 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "TwoFactor Nextcloud notification" : "Notificación de dous factores no Nextcloud ",
+    "TwoFactor Nextcloud notification" : "Notificación de dous factores no Nextcloud",
     "Approve" : "Aprobar",
     "Cancel" : "Cancelar",
     "Login attempt from {ip}" : "Intento de acceso dende {ip}",

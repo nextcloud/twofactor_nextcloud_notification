@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <info>
 	<id>twofactor_nextcloud_notification</id>
-	<name>TwoFactor via nextcloud notification</name>
+	<name>Two-Factor Authentication via Nextcloud notification</name>
 	<summary>Allows using any of your logged in devices as second factor</summary>
 	<description>Allows using any of your logged in devices as second factor</description>
 	<version>1.0.1</version>

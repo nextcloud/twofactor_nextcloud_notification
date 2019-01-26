@@ -8,7 +8,6 @@ OC.L10N.register(
     "Please approve or cancel the login." : "Onartu edo ezeztatu saio hasiera",
     "Nextcloud Notification" : "Nextcloud jakinarazpena",
     "Authenticate using a device that is already logged in to your account" : "Autentifikatu zure kontuan saioa hasita duen gailu baten bidez",
-    "TwoFactor via nextcloud notification" : "Nextcloud jakinarazpen bidezko bi urratseko egiaztapena",
     "Allows using any of your logged in devices as second factor" : "Aukera ematen dizu konektatutako edozein gailu egiaztapenaren bigarren urrats gisa erabiltzeko",
     "Please accept the request on one of your logged in devices." : "Onartu konektatutako gailuaren eskaera",
     "You will be redirected automatically once this login has been accepted." : "Automatikoki birbideratuko zaitu behin saio hasiera onartu ondoren",

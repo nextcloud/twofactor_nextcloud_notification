@@ -8,7 +8,6 @@ OC.L10N.register(
     "Please approve or cancel the login." : "Одобрите или поништите пријаву.",
     "Nextcloud Notification" : "Некстклауд Обавештења",
     "Authenticate using a device that is already logged in to your account" : "Проверите идентитет коришћењем уређаја који је већ пријављен на Ваш налог.",
-    "TwoFactor via nextcloud notification" : "Други фактор коришћењем некстклауд обавештења",
     "Allows using any of your logged in devices as second factor" : "Дозволи коришћење било ког пријављеног уређаја као други фактор",
     "Please accept the request on one of your logged in devices." : "Молимо прихватите захтев на неком од Ваших већ пријављених уређаја.",
     "You will be redirected automatically once this login has been accepted." : "Бићете аутоматски преусмерени када се захтев за пријаву прихвати.",

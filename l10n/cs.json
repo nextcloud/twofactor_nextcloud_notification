@@ -6,7 +6,6 @@
     "Please approve or cancel the login." : "Schvalte nebo zrušte přihlášení.",
     "Nextcloud Notification" : "Nextcloud oznámení",
     "Authenticate using a device that is already logged in to your account" : "Ověřovat pomocí zařízení na kterém už jste přihlášení ke svému účtu",
-    "TwoFactor via nextcloud notification" : "Dvoufázové ověřování prostřednictvím oznámení v nextcloud",
     "Allows using any of your logged in devices as second factor" : "Umožnit použití jako druhého faktoru jakéhokoli zařízení, na kterém jste přihlášení ",
     "Please accept the request on one of your logged in devices." : "Přijměte požadavek na některém ze zařízení, na kterém jste přihlášení.",
     "You will be redirected automatically once this login has been accepted." : "Jakmile bude přihlášení schváleno, budete automaticky přesměrováni.",

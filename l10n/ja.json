@@ -6,7 +6,6 @@
     "Please approve or cancel the login." : "ログインを承認またはキャンセルしてください。",
     "Nextcloud Notification" : "Nextcloud通知",
     "Authenticate using a device that is already logged in to your account" : "既にアカウントにログインしている端末を使用して認証する",
-    "TwoFactor via nextcloud notification" : "TwoFactor によるNextcloud通知",
     "Allows using any of your logged in devices as second factor" : "ログインしたデバイスのいずれかを第2因子として使用できます",
     "Please accept the request on one of your logged in devices." : "ログインしているデバイスの1つでリクエストを承認してください。",
     "You will be redirected automatically once this login has been accepted." : "このログインが承認されると自動的にリダイレクトされます。",

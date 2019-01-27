@@ -8,6 +8,7 @@ OC.L10N.register(
     "Please approve or cancel the login." : "Моля, одобрете или откажете опита за вписване.",
     "Nextcloud Notification" : "Nextcloud известие",
     "Authenticate using a device that is already logged in to your account" : "Удостоверяване чрез устройство, което вече е вписано с вашия профил",
+    "Two-Factor Authentication via Nextcloud notification" : "Двустепенно удостоверяване чрез Nextcloud известия",
     "Allows using any of your logged in devices as second factor" : "Позволява ползването на устройства, вписани в профил, да служат като втора стъпка при удостоверяване",
     "Please accept the request on one of your logged in devices." : "Моля, потвърдете на от устройство, което вече е вписано.",
     "You will be redirected automatically once this login has been accepted." : "Ще бъдете пренасочени автоматично, щом опита за вписване бъде одобрен.",

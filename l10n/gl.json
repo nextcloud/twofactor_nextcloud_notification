@@ -6,6 +6,7 @@
     "Please approve or cancel the login." : "Aprobe ou cancele o acceso.",
     "Nextcloud Notification" : "Notificación do Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Autenticación mediante un dispositivo que xa está conectado á súa conta",
+    "Two-Factor Authentication via Nextcloud notification" : "Autenticación de dous factores mediante as notificacións do Nextcloud",
     "Allows using any of your logged in devices as second factor" : "Permite usar calquera dos seus dispositivos conectados como segundo factor.",
     "Please accept the request on one of your logged in devices." : "Acepte a solicitude nun dos seus dispositivos conectados.",
     "You will be redirected automatically once this login has been accepted." : "Vostede será redirixido automaticamente unha vez que este acceso sexa aceptado.",

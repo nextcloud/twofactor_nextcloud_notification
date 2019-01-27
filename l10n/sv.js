@@ -8,6 +8,7 @@ OC.L10N.register(
     "Please approve or cancel the login." : "Godkänn eller avbryt inloggningen.",
     "Nextcloud Notification" : "Nextcloud-meddelanden",
     "Authenticate using a device that is already logged in to your account" : "Autentisera med en enhet som redan är inloggad på ditt konto",
+    "Two-Factor Authentication via Nextcloud notification" : "Tvåfaktorsautentisering via Nextcloud-meddelanden",
     "Allows using any of your logged in devices as second factor" : "Tillåter att använda någon av dina inloggade enheter som andra faktor",
     "Please accept the request on one of your logged in devices." : "Acceptera begäran på en av dina inloggade enheter.",
     "You will be redirected automatically once this login has been accepted." : "Du omdirigeras automatiskt när denna inloggning har godkänts.",

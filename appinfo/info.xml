@@ -4,7 +4,7 @@
 	<name>Two-Factor Authentication via Nextcloud notification</name>
 	<summary>Allows using any of your logged in devices as second factor</summary>
 	<description>Allows using any of your logged in devices as second factor</description>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<licence>agpl</licence>
 
 	<author>Joas Schilling</author>

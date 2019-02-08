@@ -8,6 +8,7 @@ OC.L10N.register(
     "Please approve or cancel the login." : "Veuillez approuver ou annuler la connexion.",
     "Nextcloud Notification" : "Notification Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "S’authentifier à l'aide d'un appareil déjà connecté à votre compte.",
+    "Two-Factor Authentication via Nextcloud notification" : "Authentification en deux étapes via les notifications de Nextcloud",
     "Allows using any of your logged in devices as second factor" : "Permet d'utiliser un de vos appareil identifiés comme second facteur d'autorisation.",
     "Please accept the request on one of your logged in devices." : "Veuillez accepter la demande sur un de vos appareils identifiés.",
     "You will be redirected automatically once this login has been accepted." : "Vous serez redirigé automatiquement une fois que cette connexion aura été acceptée.",

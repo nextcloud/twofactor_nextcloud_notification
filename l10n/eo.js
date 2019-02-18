@@ -5,7 +5,6 @@ OC.L10N.register(
     "Approve" : "Aprobi",
     "Cancel" : "Nuligi",
     "Login attempt from {ip}" : "Ensaluta provo el {ip}",
-    "Please approve or cancel the login." : "Bonvolu aprobi aŭ nuligi la ensaluton.",
     "Nextcloud Notification" : "Nextcloud-sciigo",
     "Authenticate using a device that is already logged in to your account" : "Aŭtentigi pere de aparato jam ensalutinta per via konto",
     "Two-Factor Authentication via Nextcloud notification" : "Dufaza aŭtentigo per Nextcloud-sciigo",

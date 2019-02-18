@@ -1,17 +1,16 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "TwoFactor Nextcloud notification" : "Zewi-Faktor Nextcloud-Benachrichtigung",
+    "TwoFactor Nextcloud notification" : "Zwei-Faktor Nextcloud-Benachrichtigung",
     "Approve" : "Bestätigen",
     "Cancel" : "Abbrechen",
     "Login attempt from {ip}" : "Anmeldeversuch von {ip}",
-    "Please approve or cancel the login." : "Bitte Anmeldung bestätigen oder abbrechen",
     "Nextcloud Notification" : "Nextcloud-Benachrichtigung",
-    "Authenticate using a device that is already logged in to your account" : "Melden Sie sich über ein Gerät an, das bereits in Ihr Konto eingeloggt ist",
+    "Authenticate using a device that is already logged in to your account" : "Authentifizieren Sie sich über ein Gerät, das bereits mit Ihrem Konto verbunden ist",
     "Two-Factor Authentication via Nextcloud notification" : "Zwei-Faktor-Authentifizierung über Nextcloud-Benachrichtigungen",
-    "Allows using any of your logged in devices as second factor" : "Ermöglicht, ein an der Nextcloud angemeldetes Gerät als zweiten Faktior zu benutzen.",
-    "Please accept the request on one of your logged in devices." : "Bitte Anmeldung auf einem bereits in Ihr Konto eingeloggten Gerät bestätigen",
-    "You will be redirected automatically once this login has been accepted." : "Nach Bestätigung dieses Anmeldeversuches werden Sie automatisch weitergeleitet werden",
+    "Allows using any of your logged in devices as second factor" : "Ermöglicht ein an der Nextcloud angemeldetes Gerät als zweiten Faktior zu benutzen.",
+    "Please accept the request on one of your logged in devices." : "Bitte akzeptieren Sie die Anfrage auf einem Ihrer eingeloggten Gerät",
+    "You will be redirected automatically once this login has been accepted." : "Nach Bestätigung dieses Anmeldeversuches werden Sie automatisch weitergeleitet",
     "Please wait …" : "Bitte warten...",
     "Use two-factor authentication via Nextcloud notifications" : "Benutze Zwei-Faktor-Authentifizierung über Nextcloud-Benachrichtigungen"
 },

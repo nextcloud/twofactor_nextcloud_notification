@@ -1,17 +1,16 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "TwoFactor Nextcloud notification" : "Zweifaktor Nextcloud Benachrichtigung",
+    "TwoFactor Nextcloud notification" : "Zwei-Faktor Nextcloud Benachrichtigung",
     "Approve" : "Annehmen",
     "Cancel" : "Abbrechen",
-    "Login attempt from {ip}" : "Login versuch von {ip}",
-    "Please approve or cancel the login." : "Bitte login annehmen oder abbrechen.",
-    "Nextcloud Notification" : "Nextcloud Benachrichtigung",
-    "Authenticate using a device that is already logged in to your account" : "Authentifiziere dich über ein Gerät das schon mit deinem Konto verbunden ist",
+    "Login attempt from {ip}" : "Anmeldeversuch von {ip}",
+    "Nextcloud Notification" : "Nextcloud-Benachrichtigung",
+    "Authenticate using a device that is already logged in to your account" : "Authentifiziere dich über ein Gerät, das bereits mit deinem Konto verbunden ist",
     "Two-Factor Authentication via Nextcloud notification" : "Zwei-Faktor-Authentifizierung über Nextcloud-Benachrichtigungen",
-    "Allows using any of your logged in devices as second factor" : "Ermöglicht, ein an der Nextcloud angemeldetes Gerät als zweiten Faktior zu benutzen.",
+    "Allows using any of your logged in devices as second factor" : "Ermöglicht ein an der Nextcloud angemeldetes Gerät als zweiten Faktior zu benutzen.",
     "Please accept the request on one of your logged in devices." : "Bitte akzeptiere die Anfrage auf einem deiner angemeldeten Geräte.",
-    "You will be redirected automatically once this login has been accepted." : "Sie werden automatisch weitergeleitet sobald die Anmeldung akzeptiert wurde.",
+    "You will be redirected automatically once this login has been accepted." : "Nach Bestätigung dieses Anmeldeversuches wirst du automatisch weitergeleitet.",
     "Please wait …" : "Bitte warten…",
     "Use two-factor authentication via Nextcloud notifications" : "Benutze Zwei-Faktor-Authentifizierung über Nextcloud-Benachrichtigungen"
 },

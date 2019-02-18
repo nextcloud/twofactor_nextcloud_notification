@@ -3,7 +3,6 @@
     "Approve" : "批准",
     "Cancel" : "取消",
     "Login attempt from {ip}" : "{ip} 试图登录",
-    "Please approve or cancel the login." : "请批准或取消登录。",
     "Nextcloud Notification" : "Nextcloud 通知",
     "Authenticate using a device that is already logged in to your account" : "使用已登录此帐户的设备来验证",
     "Allows using any of your logged in devices as second factor" : "可以使用任一已登录的设备作为第二验证因子",

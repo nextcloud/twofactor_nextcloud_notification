@@ -5,7 +5,6 @@ OC.L10N.register(
     "Approve" : "承認",
     "Cancel" : "キャンセル",
     "Login attempt from {ip}" : "{ip} からのログイン試行",
-    "Please approve or cancel the login." : "ログインを承認またはキャンセルしてください。",
     "Nextcloud Notification" : "Nextcloud通知",
     "Authenticate using a device that is already logged in to your account" : "既にアカウントにログインしている端末を使用して認証する",
     "Allows using any of your logged in devices as second factor" : "ログインしたデバイスのいずれかを第2因子として使用できます",

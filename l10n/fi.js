@@ -4,7 +4,6 @@ OC.L10N.register(
     "Approve" : "Hyväksy",
     "Cancel" : "Peruuta",
     "Login attempt from {ip}" : "Kirjautumisyritys IP:stä {ip}",
-    "Please approve or cancel the login." : "Hyväksy tai peru kirjautuminen.",
     "Nextcloud Notification" : "Nextcloud-ilmoitus",
     "Please wait …" : "Odota hetki…"
 },

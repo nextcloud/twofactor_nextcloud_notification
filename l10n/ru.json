@@ -3,7 +3,6 @@
     "Approve" : "Подтвердить",
     "Cancel" : "Отменить",
     "Login attempt from {ip}" : "Попытка входа с {ip}",
-    "Please approve or cancel the login." : "Подтвердите или отмените вход.",
     "Nextcloud Notification" : "Уведомления Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Авторизоваться, используя устройство, на котором уже выполнен вход в учётную запись",
     "Allows using any of your logged in devices as second factor" : "Разрешить использовать любое из ваших авторизованных устройств как второй фактор",

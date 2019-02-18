@@ -3,7 +3,6 @@
     "Approve" : "Aprovar",
     "Cancel" : "Cancel·lar",
     "Login attempt from {ip}" : "Intent de connexió de {ip}",
-    "Please approve or cancel the login." : "Si us plau, aprovar o cancel·lar la connexió.",
     "Nextcloud Notification" : "Notificació de Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Autenticar amb un dispositiu que ja està connectat al vostre compte",
     "Allows using any of your logged in devices as second factor" : "Permet utilitzar qualsevol dels dispositius connectats com a segon factor",

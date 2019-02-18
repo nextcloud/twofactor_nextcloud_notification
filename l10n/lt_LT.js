@@ -4,7 +4,6 @@ OC.L10N.register(
     "Approve" : "Patvirtinti",
     "Cancel" : "Atsisakyti",
     "Login attempt from {ip}" : "Bandymas prisijungti iš {ip}",
-    "Please approve or cancel the login." : "Patvirtinkite arba atsisakykite prisijungimo.",
     "Nextcloud Notification" : "Nextcloud pranešimas",
     "Please wait …" : "Prašome palaukti …"
 },

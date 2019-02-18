@@ -3,7 +3,6 @@
     "Approve" : "Goedkeuren",
     "Cancel" : "Annuleren",
     "Login attempt from {ip}" : "Inlog poging vanaf {ip}",
-    "Please approve or cancel the login." : "De inlog goedkeuren of weigeren.",
     "Nextcloud Notification" : "Nextcloud melding",
     "Authenticate using a device that is already logged in to your account" : "Authenticeren via een apparaat dat al is ingelogd op je account",
     "Two-Factor Authentication via Nextcloud notification" : "Tweefactor-authenticatie via Nextcloud-melding",

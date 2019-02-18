@@ -5,7 +5,6 @@ OC.L10N.register(
     "Approve" : "Aprovar",
     "Cancel" : "Cancelar",
     "Login attempt from {ip}" : "Tentativa de login de {ip}",
-    "Please approve or cancel the login." : "Por favor, aprove ou cancele o login.",
     "Nextcloud Notification" : "Notificação Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Autenticar usando um dispositivo que já está conectado à sua conta",
     "Two-Factor Authentication via Nextcloud notification" : "Autenticação de dois fatores via notificação Nextcloud",

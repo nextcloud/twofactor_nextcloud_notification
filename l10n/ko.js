@@ -5,7 +5,6 @@ OC.L10N.register(
     "Approve" : "승인",
     "Cancel" : "취소",
     "Login attempt from {ip}" : "{ip} 에서 로그인 시도가 있었습니다",
-    "Please approve or cancel the login." : "로그인을 승인 혹은 취소해 주세요.",
     "Nextcloud Notification" : "Nextcloud 알림",
     "Authenticate using a device that is already logged in to your account" : "로그인한 장치로 인증하기",
     "Allows using any of your logged in devices as second factor" : "로그인 한 다른 장치를 2단계 인증으로 사용하기 허용",

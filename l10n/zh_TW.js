@@ -5,7 +5,6 @@ OC.L10N.register(
     "Approve" : "核准",
     "Cancel" : "取消",
     "Login attempt from {ip}" : "來自IP:{ip}正試圖登入帳號",
-    "Please approve or cancel the login." : "請核准或取消登入帳號",
     "Nextcloud Notification" : "Nextcloud通知",
     "Authenticate using a device that is already logged in to your account" : "使用已登入到您帳戶的設備進行驗證",
     "Two-Factor Authentication via Nextcloud notification" : "透過Nextcloud通知進行兩階段身份驗證",

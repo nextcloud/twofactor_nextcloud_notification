@@ -5,7 +5,6 @@ OC.L10N.register(
     "Approve" : "Onartu",
     "Cancel" : "Ezeztatu",
     "Login attempt from {ip}" : "Saioaren hasiera ahalegina hemendik {ip}",
-    "Please approve or cancel the login." : "Onartu edo ezeztatu saio hasiera",
     "Nextcloud Notification" : "Nextcloud jakinarazpena",
     "Authenticate using a device that is already logged in to your account" : "Autentifikatu zure kontuan saioa hasita duen gailu baten bidez",
     "Two-Factor Authentication via Nextcloud notification" : "Bi urratseko autentifikazioa Nextcloud jakinarazpena bidez",

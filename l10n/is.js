@@ -5,7 +5,6 @@ OC.L10N.register(
     "Approve" : "Samþykkja",
     "Cancel" : "Hætta við",
     "Login attempt from {ip}" : "Tilraun til innskráningar frá {ip}",
-    "Please approve or cancel the login." : "Samþykktu eða hafnaðu innskráningunni.",
     "Nextcloud Notification" : "Nextcloud tilkynning",
     "Authenticate using a device that is already logged in to your account" : "Auðkenna með tæki sem þegar er skráð inn á notandaaðganginn þinn",
     "Allows using any of your logged in devices as second factor" : "Gerir kleift að nota eitt af þeim tækjum þínum sem eru skráð inn við tveggja-þrepa auðkenningu",

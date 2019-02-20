@@ -38,7 +38,7 @@
     "@vue/babel-preset-app": "^3.4.1",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
-    "vue-loader": "^15.6.3",
+    "vue-loader": "^15.6.4",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.6",
     "webpack": "^4.29.5",

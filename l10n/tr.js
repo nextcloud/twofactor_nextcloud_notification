@@ -5,6 +5,7 @@ OC.L10N.register(
     "Approve" : "Onayla",
     "Cancel" : "İptal",
     "Login attempt from {ip}" : "{ip} adresinden oturum açma girişimi",
+    "Please approve or deny the login attempt." : "Lütfen oturum açma girişimini kabul ya da red edin.",
     "Nextcloud Notification" : "Nextcloud Bildirimi",
     "Authenticate using a device that is already logged in to your account" : "Kimliğinizi hesabınızda oturum açmış bir aygıtı kullanarak doğrulayın",
     "Two-Factor Authentication via Nextcloud notification" : "Nextcloud bildirimi ile iki aşamalı kimlik doğrulaması",

@@ -1,7 +1,7 @@
 { "translations": {
     "TwoFactor Nextcloud notification" : "Notificació de TwoFactor de Nextcloud",
     "Approve" : "Aprovar",
-    "Cancel" : "Cancel·lar",
+    "Cancel" : "Cancel·la",
     "Login attempt from {ip}" : "Intent de connexió de {ip}",
     "Nextcloud Notification" : "Notificació de Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Autenticar amb un dispositiu que ja està connectat al vostre compte",

@@ -3,6 +3,7 @@
     "Approve" : "Zatwierdź",
     "Cancel" : "Anuluj",
     "Login attempt from {ip}" : "Próba logowania z {ip}",
+    "Please approve or deny the login attempt." : "Zatwierdź lub odrzuć próbę logowania",
     "Nextcloud Notification" : "Powiadomienia Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Uwierzytelniaj za pomocą urządzenia, które jest już zalogowane na Twoim koncie",
     "Two-Factor Authentication via Nextcloud notification" : "Uwierzytelnianie dwuetapowe za pośrednictwem pomocą Nextcloud",

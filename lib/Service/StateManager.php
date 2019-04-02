@@ -45,4 +45,8 @@ class StateManager {
 		$this->config->setAppValue(Application::APP_ID, $user->getUID() . '_enabled', $state ? '1' : '0');
 		$this->dispatcher->dispatch(StateChanged::class, new StateChanged($user, $state));
 	}
+
+	public function getState(IUser $user): bool {
+		return $this->config->getAppValue(Application::APP_ID, $user->getUID() . '_enabled', '0') === '1';
+	}
 }

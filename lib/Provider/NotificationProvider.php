@@ -26,9 +26,11 @@ namespace OCA\TwoFactorNextcloudNotification\Provider;
 
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCA\TwoFactorNextcloudNotification\Db\Token;
+use OCA\TwoFactorNextcloudNotification\Service\StateManager;
 use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
 use OCA\TwoFactorNextcloudNotification\Settings\Personal;
 use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\Authentication\TwoFactorAuth\IDeactivatableByAdmin;
 use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
 use OCP\Authentication\TwoFactorAuth\IProvider;
 use OCP\Authentication\TwoFactorAuth\IProvidesPersonalSettings;
@@ -37,21 +39,21 @@ use OCP\IL10N;
 use OCP\IUser;
 use OCP\Template;
 
-class NotificationProvider implements IProvider, IProvidesPersonalSettings {
+class NotificationProvider implements IProvider, IProvidesPersonalSettings, IDeactivatableByAdmin {
 
 	/** @var IL10N */
 	private $l10n;
-	/** @var IConfig */
-	private $config;
 	/** @var TokenManager */
 	private $tokenManager;
+	/** @var StateManager */
+	private $stateManager;
 
 	public function __construct(IL10N $l10n,
-								IConfig $config,
-								TokenManager $tokenManager) {
+								TokenManager $tokenManager,
+								StateManager $stateManager) {
 		$this->l10n = $l10n;
-		$this->config = $config;
 		$this->tokenManager = $tokenManager;
+		$this->stateManager = $stateManager;
 	}
 
 	/**
@@ -110,12 +112,14 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings {
 	}
 
 	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
-		return $this->config->getAppValue(Application::APP_ID, $user->getUID() . '_enabled', '0') === '1';
+		return $this->stateManager->getState($user);
 	}
 
 	public function getPersonalSettings(IUser $user): IPersonalProviderSettings {
-		return new Personal($this->config->getAppValue(Application::APP_ID, $user->getUID() . '_enabled', '0') === '1');
+		return new Personal($this->stateManager->getState($user));
 	}
 
-
+	public function disableFor(IUser $user) {
+		$this->stateManager->setState($user, false);
+	}
 }

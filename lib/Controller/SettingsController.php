@@ -24,44 +24,34 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\Controller;
 
-use OCA\TwoFactorNextcloudNotification\Event\StateChanged;
+use OCA\TwoFactorNextcloudNotification\Service\StateManager;
 use OCP\AppFramework\Controller;
-use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Http\JSONResponse;
-use OCP\IConfig;
 use OCP\IRequest;
 use OCP\IUserSession;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class SettingsController extends Controller {
 
-	/** @var EventDispatcherInterface */
-	private $dispatcher;
-
-	/** @var IConfig */
-	private $config;
-
 	/** @var IUserSession */
 	private $userSession;
+	/** @var StateManager */
+	private $stateManager;
 
 	public function __construct(string $appName,
 								IRequest $request,
-								EventDispatcherInterface $dispatcher,
-								IConfig $config,
+								StateManager $stateManager,
 								IUserSession $userSession) {
 		parent::__construct($appName, $request);
 
-		$this->dispatcher = $dispatcher;
-		$this->config = $config;
 		$this->userSession = $userSession;
+		$this->stateManager = $stateManager;
 	}
 
 	/**
 	 * @NoAdminRequired
 	 */
 	public function setState(bool $state): JSONResponse {
-		$this->config->setAppValue($this->appName, $this->userSession->getUser()->getUID() . '_enabled', $state ? '1' : '0');
-		$this->dispatcher->dispatch(StateChanged::class, new StateChanged($this->userSession->getUser(), $state));
+		$this->stateManager->setState($this->userSession->getUser(), $state);
 		return new JSONResponse([
 			'enabled' => $state
 		]);

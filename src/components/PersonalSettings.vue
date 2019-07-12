@@ -23,7 +23,7 @@
 	<div id="twofactor-notification-settings">
 		<div v-if="loading">
 			<span class="icon-loading-small loading"></span>
-			<span> {{ t('twofactor_nextcloud_notifications', 'Use two-factor authentication via Nextcloud notifications') }} </span>
+			<span> {{ t('twofactor_nextcloud_notification', 'Use two-factor authentication via Nextcloud notifications') }} </span>
 		</div>
 		<div v-else>
 			<input type="checkbox"
@@ -32,7 +32,7 @@
 				   v-model="enabled"
 				   @change="toggleEnabled"
 				   :disabled="loading">
-			<label for="twofactor-notifications-enabled">{{ t('twofactor_nextcloud_notifications',	'Use two-factor authentication via Nextcloud notifications') }}</label>
+			<label for="twofactor-notifications-enabled">{{ t('twofactor_nextcloud_notification',	'Use two-factor authentication via Nextcloud notifications') }}</label>
 		</div>
 	</div>
 </template>

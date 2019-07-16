@@ -42,15 +42,7 @@ class Application extends App {
 		$container = $this->getContainer();
 
 		$notificationManager = $container->getServer()->getNotificationManager();
-		$notificationManager->registerNotifier(function() {
-			return $this->getContainer()->query(Notifier::class);
-		}, function() {
-			$l = $this->getContainer()->getServer()->getL10N(self::APP_ID);
-			return [
-				'id' => self::APP_ID,
-				'name' => $l->t('TwoFactor Nextcloud notification'),
-			];
-		});
+		$notificationManager->registerNotifierService(Notifier::class);
 
 		/** @var EventDispatcherInterface $dispatcher */
 		$dispatcher = $container->query(EventDispatcherInterface::class);

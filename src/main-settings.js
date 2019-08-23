@@ -24,16 +24,15 @@ import Vue from 'vue'
 import Nextcloud from './mixins/Nextcloud'
 import PersonalSettings from './components/PersonalSettings.vue'
 import store from './store'
+import { loadState } from 'nextcloud-initial-state'
 
 Vue.mixin(Nextcloud)
 
-const initialStateElem = document.getElementById('twofactor-notifications-initial-state')
-if (initialStateElem) {
-	const enabled = initialStateElem.value === 'true'
-	store.replaceState({
-		enabled
-	})
-}
+
+const enabled = loadState('twofactor_nextcloud_notification', 'state');
+store.replaceState({
+	enabled
+})
 
 const View = Vue.extend(PersonalSettings)
 new View({

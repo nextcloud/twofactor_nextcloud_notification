@@ -35,6 +35,7 @@ use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
 use OCP\Authentication\TwoFactorAuth\IProvider;
 use OCP\Authentication\TwoFactorAuth\IProvidesPersonalSettings;
 use OCP\IConfig;
+use OCP\IInitialStateService;
 use OCP\IL10N;
 use OCP\IUser;
 use OCP\Template;
@@ -47,13 +48,17 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings, IDea
 	private $tokenManager;
 	/** @var StateManager */
 	private $stateManager;
+	/** @var IInitialStateService */
+	private $initialStateService;
 
 	public function __construct(IL10N $l10n,
 								TokenManager $tokenManager,
-								StateManager $stateManager) {
+								StateManager $stateManager,
+								IInitialStateService $initialStateService) {
 		$this->l10n = $l10n;
 		$this->tokenManager = $tokenManager;
 		$this->stateManager = $stateManager;
+		$this->initialStateService = $initialStateService;
 	}
 
 	/**
@@ -116,7 +121,7 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings, IDea
 	}
 
 	public function getPersonalSettings(IUser $user): IPersonalProviderSettings {
-		return new Personal($this->stateManager->getState($user));
+		return new Personal($this->initialStateService, $this->stateManager->getState($user));
 	}
 
 	public function disableFor(IUser $user) {

@@ -46,7 +46,7 @@ class NotificationManager {
 		$notification = $this->manager->createNotification();
 		$notification->setApp(Application::APP_ID)
 			->setSubject('login_attempt')
-			->setObject('2fa_id', $token->getId());
+			->setObject('2fa_id', (string)$token->getId());
 		$this->manager->markProcessed($notification);
 	}
 
@@ -56,7 +56,7 @@ class NotificationManager {
 			->setSubject('login_attempt', [
 				'ip' => $this->request->getRemoteAddress(),
 			])
-			->setObject('2fa_id', $token->getId())
+			->setObject('2fa_id', (string)$token->getId())
 			->setUser($token->getUserId())
 			->setDateTime(new \DateTime());
 		$this->manager->notify($notification);

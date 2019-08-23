@@ -28,12 +28,17 @@
 		<span class="icon-loading-small"></span>
 		{{ t('twofactor_nextcloud_notification', 'Please wait …') }}
 	</p>
+	<p v-else-if="state === State.REJECTED">
+		<span class="icon-loading-small"></span>
+		{{ t('twofactor_nextcloud_notification', 'Your login attempt was rejected.') }}
+	</p>
 </template>
 
 <script>
 	const State = Object.freeze({
 		POLLING: 0,
 		VERIFYING: 1,
+		REJECTED: 2,
 	})
 
 	export default {

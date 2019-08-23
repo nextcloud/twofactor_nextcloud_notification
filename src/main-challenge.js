@@ -36,6 +36,8 @@ const pollProducer = (url) => () => {
 			if (ocs.data.status === 'pending') {
 				return Promise.reject(ocs.data.status)
 			}
+
+			return ocs
 		})
 }
 
@@ -51,8 +53,15 @@ const url = OC.linkToOCS('apps/twofactor_nextcloud_notification/api/v1/poll', 2)
 
 poll(pollProducer(url), 800).then(r => {
 	console.debug('polling finished', r)
-	view.state++
-	document.getElementById("twofactor-form").submit()
+	if (r.data.status === 'accepted') {
+		// Move on when accepting
+		view.state = 1
+		document.getElementById("twofactor-form").submit()
+	} else {
+		// When the login was rejected cancel the login
+		view.state = 2
+		location.href = document.getElementsByClassName('two-factor-secondary')[0].href;
+	}
 }).catch(err => {
 	console.error('polling failed', err)
 })

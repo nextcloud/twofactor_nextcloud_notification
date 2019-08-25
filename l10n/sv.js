@@ -13,6 +13,7 @@ OC.L10N.register(
     "Please accept the request on one of your logged in devices." : "Acceptera begäran på en av dina inloggade enheter.",
     "You will be redirected automatically once this login has been accepted." : "Du omdirigeras automatiskt när denna inloggning har godkänts.",
     "Please wait …" : "Var god vänta ...",
+    "Your login attempt was rejected." : "Ditt inloggningsförsök avvisades.",
     "Use two-factor authentication via Nextcloud notifications" : "Använd tvåfaktorsautentisering via Nextcloud-meddelanden"
 },
 "nplurals=2; plural=(n != 1);");

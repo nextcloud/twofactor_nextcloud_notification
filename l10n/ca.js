@@ -13,6 +13,7 @@ OC.L10N.register(
     "Please accept the request on one of your logged in devices." : "Si us plau accepteu la petició en un dels seus dispositius connectats.",
     "You will be redirected automatically once this login has been accepted." : "Se us redirigirà automàticament una cop s'hagi acceptat aquesta connexió.",
     "Please wait …" : "Espereu si us plau ...",
+    "Your login attempt was rejected." : "S'ha rebutjat l'intent d'entrada.",
     "Use two-factor authentication via Nextcloud notifications" : "Fes servir l'autenticació de dos factors mitjançant notificacions Nextcloud"
 },
 "nplurals=2; plural=(n != 1);");

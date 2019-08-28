@@ -13,6 +13,7 @@ OC.L10N.register(
     "Please accept the request on one of your logged in devices." : "Lütfen oturum açmış aygıtlarınızın birinden isteği onaylayın.",
     "You will be redirected automatically once this login has been accepted." : "Oturum açma isteği onaylandığında otomatik olarak yönlendirileceksiniz.",
     "Please wait …" : "Lütfen bekleyin…",
+    "Your login attempt was rejected." : "Oturum açma girişiminiz reddedildi.",
     "Use two-factor authentication via Nextcloud notifications" : "Nextcloud bildirimi ile iki aşamalı kimlik doğrulaması kullanılsın"
 },
 "nplurals=2; plural=(n > 1);");

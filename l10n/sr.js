@@ -1,7 +1,7 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "TwoFactor Nextcloud notification" : "Двофактроска Некстклауд обавештења",
+    "TwoFactor Nextcloud notification" : "Двофакторска Некстклауд обавештења",
     "Approve" : "Одобри",
     "Cancel" : "Поништи",
     "Login attempt from {ip}" : "Покушај пријаве са адресе {ip}",
@@ -13,6 +13,7 @@ OC.L10N.register(
     "Please accept the request on one of your logged in devices." : "Молимо прихватите захтев на неком од Ваших већ пријављених уређаја.",
     "You will be redirected automatically once this login has been accepted." : "Бићете аутоматски преусмерени када се захтев за пријаву прихвати.",
     "Please wait …" : "Молимо сачекајте…",
+    "Your login attempt was rejected." : "Ваш покушај пријаве је одбијен.",
     "Use two-factor authentication via Nextcloud notifications" : "Користи двофакторску проверу идентитета преко Некстклауд обавештења"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

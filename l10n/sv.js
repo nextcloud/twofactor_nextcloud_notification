@@ -2,7 +2,7 @@ OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
     "TwoFactor Nextcloud notification" : "Tvåfaktor Nextcloud-meddelanden",
-    "Approve" : "Godkänna",
+    "Approve" : "Godkänn",
     "Cancel" : "Avbryt",
     "Login attempt from {ip}" : "Inloggningsförsök från {ip}",
     "Please approve or deny the login attempt." : "Godkänn eller neka inloggningsförsöket.",

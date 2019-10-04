@@ -19,7 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import Axios from 'nextcloud-axios'
+import Axios from '@nextcloud/axios'
 import Vue from 'vue'
 
 import Challenge from './components/Challenge.vue'

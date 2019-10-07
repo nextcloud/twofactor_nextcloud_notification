@@ -19,8 +19,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import Axios from 'nextcloud-axios'
-import { generateUrl } from 'nextcloud-router'
+import Axios from '@nextcloud/axios'
+import { generateUrl } from '@nextcloud/router'
 
 export function persist (enabled) {
 	const url = generateUrl('/apps/twofactor_nextcloud_notification/settings/state')

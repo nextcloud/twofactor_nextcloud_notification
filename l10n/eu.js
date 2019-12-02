@@ -13,6 +13,7 @@ OC.L10N.register(
     "Please accept the request on one of your logged in devices." : "Onartu konektatutako gailuaren eskaera",
     "You will be redirected automatically once this login has been accepted." : "Automatikoki birbideratuko zaitu behin saio hasiera onartu ondoren",
     "Please wait …" : "Itxaron mesedez …",
+    "Your login attempt was rejected." : "Saioa hasteko saiakera baztertu da.",
     "Use two-factor authentication via Nextcloud notifications" : "Erabili bi faktoreko egiaztapena Nextcloud jakinarazpenen bidez"
 },
 "nplurals=2; plural=(n != 1);");

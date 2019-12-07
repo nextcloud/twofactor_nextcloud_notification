@@ -10,7 +10,7 @@
     "Allows using any of your logged in devices as second factor" : "İkinci aşama olarak oturum açmış aygıtlarınızdan biri kullanılır",
     "Please accept the request on one of your logged in devices." : "Lütfen oturum açmış aygıtlarınızın birinden isteği kabul edin.",
     "You will be redirected automatically once this login has been accepted." : "Oturum açma isteği kabul edildiğinde otomatik olarak yönlendirileceksiniz.",
-    "Please wait …" : "Lütfen bekleyin…",
+    "Please wait …" : "Lütfen bekleyin …",
     "Your login attempt was rejected." : "Oturum açma girişiminiz reddedildi.",
     "Use two-factor authentication via Nextcloud notifications" : "Nextcloud bildirimi ile iki aşamalı kimlik doğrulaması kullanılsın"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"

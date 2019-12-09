@@ -13,6 +13,7 @@ OC.L10N.register(
     "Please accept the request on one of your logged in devices." : "Samþykktu beiðnina á einu af þeim tækjum þínum sem eru skráð inn.",
     "You will be redirected automatically once this login has been accepted." : "Þér verður endurbeint sjálfvirkt um leið og þessi innskráning hefur verið samþykkt.",
     "Please wait …" : "Bíddu aðeins …",
+    "Your login attempt was rejected." : "Tilraun þinni til innskráningar var hafnað.",
     "Use two-factor authentication via Nextcloud notifications" : "Nota tveggja-þátta auðkenningu í gegnum Nextcloud tilkynningar"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

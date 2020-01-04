@@ -5,7 +5,7 @@
     "Login attempt from {ip}" : "{ip} 试图登录",
     "Please approve or deny the login attempt." : "请批准或拒绝登录尝试",
     "Nextcloud Notification" : "Nextcloud 通知",
-    "Authenticate using a device that is already logged in to your account" : "使用已登录此帐户的设备来验证",
+    "Authenticate using a device that is already logged in to your account" : "使用已登录此账号的设备来验证",
     "Two-Factor Authentication via Nextcloud notification" : "通过 Nextcloud 通知进行两步验证",
     "Allows using any of your logged in devices as second factor" : "可以使用任一已登录的设备作为第二验证因子",
     "Please accept the request on one of your logged in devices." : "请在任一已登录的设备上接受请求。",

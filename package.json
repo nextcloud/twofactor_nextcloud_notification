@@ -39,7 +39,7 @@
     "@babel/preset-env": "^7.7.7",
     "@vue/babel-preset-app": "^4.1.2",
     "babel-loader": "^8.0.6",
-    "css-loader": "^3.4.1",
+    "css-loader": "^3.4.2",
     "vue-loader": "^15.8.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",

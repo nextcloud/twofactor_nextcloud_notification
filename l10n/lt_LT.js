@@ -1,6 +1,7 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
+    "TwoFactor Nextcloud notification" : "Dviejų faktorių Nextcloud pranešimas",
     "Approve" : "Patvirtinti",
     "Cancel" : "Atsisakyti",
     "Login attempt from {ip}" : "Bandymas prisijungti iš {ip}",

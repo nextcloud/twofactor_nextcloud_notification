@@ -10,7 +10,11 @@
   "scripts": {
     "build": "webpack --progress --config src/webpack.prod.js",
     "dev": "webpack --progress --watch --config src/webpack.dev.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "stylelint": "stylelint src",
+    "stylelint:fix": "stylelint src --fix"
   },
   "repository": {
     "type": "git",
@@ -37,9 +41,21 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.7.7",
+    "@nextcloud/eslint-plugin": "^1.1.0",
     "@vue/babel-preset-app": "^4.1.2",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
+    "eslint": "^5.16.0",
+    "eslint-config-nextcloud": "^0.1.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-nextcloud": "^0.3.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^5.2.3",
     "vue-loader": "^15.8.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",

@@ -28,13 +28,12 @@ import { loadState } from '@nextcloud/initial-state'
 
 Vue.mixin(Nextcloud)
 
-
-const enabled = loadState('twofactor_nextcloud_notification', 'state');
+const enabled = loadState('twofactor_nextcloud_notification', 'state')
 store.replaceState({
-	enabled
+	enabled,
 })
 
 const View = Vue.extend(PersonalSettings)
 new View({
-	store
+	store,
 }).$mount('#twofactor-notification-settings')

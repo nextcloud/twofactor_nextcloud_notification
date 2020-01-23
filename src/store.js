@@ -22,39 +22,39 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import {persist} from './services/SettingsService'
+import { persist } from './services/SettingsService'
 
 Vue.use(Vuex)
 
 export const mutations = {
-	setEnabled (state, enabled) {
+	setEnabled(state, enabled) {
 		state.enabled = enabled
-	}
+	},
 }
 
 export const actions = {
-	enable ({commit}) {
+	enable({ commit }) {
 		return persist(true)
-			.then(({enabled}) => {
+			.then(({ enabled }) => {
 				commit('setEnabled', enabled)
 				return enabled
 			})
 	},
 
-	disable ({commit}) {
+	disable({ commit }) {
 		return persist(false)
-			.then(({enabled}) => {
+			.then(({ enabled }) => {
 				commit('setEnabled', enabled)
 				return enabled
 			})
-	}
+	},
 }
 
 export default new Vuex.Store({
 	strict: process.env.NODE_ENV !== 'production',
 	state: {
-		enabled: false
+		enabled: false,
 	},
 	mutations,
-	actions
+	actions,
 })

@@ -22,48 +22,52 @@
 <template>
 	<div id="twofactor-notification-settings">
 		<div v-if="loading">
-			<span class="icon-loading-small loading"></span>
+			<span class="icon-loading-small loading" />
 			<span> {{ t('twofactor_nextcloud_notification', 'Use two-factor authentication via Nextcloud notifications') }} </span>
 		</div>
 		<div v-else>
-			<input type="checkbox"
-				   id="twofactor-notifications-enabled"
-				   class="checkbox"
-				   v-model="enabled"
-				   @change="toggleEnabled"
-				   :disabled="loading">
-			<label for="twofactor-notifications-enabled">{{ t('twofactor_nextcloud_notification',	'Use two-factor authentication via Nextcloud notifications') }}</label>
+			<input id="twofactor-notifications-enabled"
+				v-model="enabled"
+				type="checkbox"
+				class="checkbox"
+				:disabled="loading"
+				@change="toggleEnabled">
+			<label for="twofactor-notifications-enabled">{{ t('twofactor_nextcloud_notification', 'Use two-factor authentication via Nextcloud notifications') }}</label>
 		</div>
 	</div>
 </template>
 
 <script>
-	export default {
-		name: 'PersonalSettings',
-		data () {
-			return {
-				enabled: this.$store.state.enabled,
-				loading: false,
-			}
-		},
-		methods: {
-			toggleEnabled () {
-				this.loading = true
-
-				let action
-				if (this.enabled) {
-					action = this.$store.dispatch('enable')
-				} else {
-					action = this.$store.dispatch('disable')
-				}
-
-				action
-					.then(enabled => this.enabled = enabled)
-					.catch(console.error.bind(this))
-					.then(() => this.loading = false)
-			}
+export default {
+	name: 'PersonalSettings',
+	data() {
+		return {
+			enabled: this.$store.state.enabled,
+			loading: false,
 		}
-	}
+	},
+	methods: {
+		toggleEnabled() {
+			this.loading = true
+
+			let action
+			if (this.enabled) {
+				action = this.$store.dispatch('enable')
+			} else {
+				action = this.$store.dispatch('disable')
+			}
+
+			action
+				.then(enabled => {
+					this.enabled = enabled
+				})
+				.catch(console.error.bind(this))
+				.then(() => {
+					this.loading = false
+				})
+		},
+	},
+}
 </script>
 
 <style scoped>

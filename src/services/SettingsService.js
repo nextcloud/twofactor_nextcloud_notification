@@ -22,10 +22,10 @@
 import Axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
 
-export function persist (enabled) {
+export function persist(enabled) {
 	const url = generateUrl('/apps/twofactor_nextcloud_notification/settings/state')
 	const data = {
-		state: enabled
+		state: enabled,
 	}
 
 	return Axios.post(url, data)

@@ -24,15 +24,15 @@ import Vue from 'vue'
 
 import Challenge from './components/Challenge.vue'
 import Nextcloud from './mixins/Nextcloud'
-import {poll} from './util/poll'
-import store from "./store";
+import { poll } from './util/poll'
+import store from './store'
 
 Vue.mixin(Nextcloud)
 
 const pollProducer = (url) => () => {
 	return Axios.get(url, {})
 		.then(resp => resp.data)
-		.then(({ocs}) => {
+		.then(({ ocs }) => {
 			if (ocs.data.status === 'pending') {
 				return Promise.reject(ocs.data.status)
 			}
@@ -43,7 +43,7 @@ const pollProducer = (url) => () => {
 
 const View = Vue.extend(Challenge)
 const view = new View({
-	store
+	store,
 }).$mount('#twofactor-notification-challenge')
 
 const token = document.getElementById('challenge-poll-token').value
@@ -56,11 +56,11 @@ poll(pollProducer(url), 800).then(r => {
 	if (r.data.status === 'accepted') {
 		// Move on when accepting
 		view.state = 1
-		document.getElementById("twofactor-form").submit()
+		document.getElementById('twofactor-form').submit()
 	} else {
 		// When the login was rejected cancel the login
 		view.state = 2
-		location.href = document.getElementsByClassName('two-factor-secondary')[0].href;
+		location.href = document.getElementsByClassName('two-factor-secondary')[0].href
 	}
 }).catch(err => {
 	console.error('polling failed', err)

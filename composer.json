@@ -1,0 +1,12 @@
+{
+  "name": "twofactor_nextcloud_notification",
+  "description": "Twofactor via nextcloud notifications",
+  "license": "AGPL",
+  "config": {
+    "optimize-autoloader": true,
+    "classmap-authoritative": true
+  },
+  "scripts": {
+    "lint": "find . -name \\*.php -not -path './vendor/*' -exec php -l \"{}\" \\;"
+  }
+}

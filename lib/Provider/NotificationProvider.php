@@ -30,6 +30,7 @@ use OCA\TwoFactorNextcloudNotification\Service\StateManager;
 use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
 use OCA\TwoFactorNextcloudNotification\Settings\Personal;
 use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\Authentication\TwoFactorAuth\IActivatableByAdmin;
 use OCP\Authentication\TwoFactorAuth\IDeactivatableByAdmin;
 use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
 use OCP\Authentication\TwoFactorAuth\IProvider;
@@ -40,7 +41,7 @@ use OCP\IL10N;
 use OCP\IUser;
 use OCP\Template;
 
-class NotificationProvider implements IProvider, IProvidesPersonalSettings, IDeactivatableByAdmin {
+class NotificationProvider implements IProvider, IProvidesPersonalSettings, IActivatableByAdmin, IDeactivatableByAdmin {
 
 	/** @var IL10N */
 	private $l10n;
@@ -122,6 +123,10 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings, IDea
 
 	public function getPersonalSettings(IUser $user): IPersonalProviderSettings {
 		return new Personal($this->initialStateService, $this->stateManager->getState($user));
+	}
+
+	public function enableFor(IUser $user) {
+		$this->stateManager->setState($user, true);
 	}
 
 	public function disableFor(IUser $user) {

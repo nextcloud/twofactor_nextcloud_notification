@@ -42,7 +42,7 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@nextcloud/eslint-plugin": "^1.4.0",
-    "@vue/babel-preset-app": "^4.4.1",
+    "@vue/babel-preset-app": "^4.4.4",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",

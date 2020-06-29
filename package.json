@@ -36,7 +36,7 @@
     "@nextcloud/initial-state": "^1.1.2",
     "@nextcloud/router": "^1.1.0",
     "vue": "^2.6.11",
-    "vuex": "^3.4.0"
+    "vuex": "^3.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",

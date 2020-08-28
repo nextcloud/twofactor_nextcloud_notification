@@ -24,7 +24,7 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\Listener;
 
-use Symfony\Component\EventDispatcher\Event;
+use OCP\EventDispatcher\Event;
 
 interface IListener {
 

@@ -24,8 +24,8 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\Event;
 
+use OCP\EventDispatcher\Event;
 use OCP\IUser;
-use Symfony\Component\EventDispatcher\Event;
 
 class StateChanged extends Event {
 

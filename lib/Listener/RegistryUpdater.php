@@ -27,7 +27,7 @@ namespace OCA\TwoFactorNextcloudNotification\Listener;
 use OCA\TwoFactorNextcloudNotification\Event\StateChanged;
 use OCA\TwoFactorNextcloudNotification\Provider\NotificationProvider;
 use OCP\Authentication\TwoFactorAuth\IRegistry;
-use Symfony\Component\EventDispatcher\Event;
+use OCP\EventDispatcher\Event;
 
 class RegistryUpdater implements IListener {
 

@@ -28,33 +28,25 @@ use OCA\TwoFactorNextcloudNotification\Listener\IListener;
 use OCA\TwoFactorNextcloudNotification\Listener\RegistryUpdater;
 use OCA\TwoFactorNextcloudNotification\Notification\Notifier;
 use OCP\AppFramework\App;
+use OCP\AppFramework\Bootstrap\IBootContext;
+use OCP\AppFramework\Bootstrap\IBootstrap;
+use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
-class Application extends App {
+class Application extends App implements IBootstrap {
 	const APP_ID = 'twofactor_nextcloud_notification';
 
 	public function __construct() {
 		parent::__construct(self::APP_ID);
 	}
 
-	public function register() {
-		$container = $this->getContainer();
+	public function register(IRegistrationContext $context): void {
+		$context->registerEventListener(StateChanged::class, RegistryUpdater::class);
+	}
 
-		$notificationManager = $container->getServer()->getNotificationManager();
+	public function boot(IBootContext $context): void {
+		$notificationManager = $context->getServerContainer()->getNotificationManager();
 		$notificationManager->registerNotifierService(Notifier::class);
-
-		/** @var EventDispatcherInterface $dispatcher */
-		$dispatcher = $container->query(EventDispatcherInterface::class);
-		$dispatcher->addListener(StateChanged::class, function(StateChanged $event) use ($container) {
-			/** @var IListener[] $listeners */
-			$listeners = [
-				$container->query(RegistryUpdater::class)
-			];
-
-			foreach ($listeners as $listener) {
-				$listener->handle($event);
-			}
-		});
 	}
 }

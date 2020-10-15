@@ -11,6 +11,7 @@
     "Please accept the request on one of your logged in devices." : "請在您已登錄的某個設備上核准登入請求。",
     "You will be redirected automatically once this login has been accepted." : "一旦核准登入帳號後，頁面將自動重新導向。",
     "Please wait …" : "請稍候…",
+    "Your login attempt was rejected." : "您的登錄動作已被拒絕",
     "Use two-factor authentication via Nextcloud notifications" : "透過Nextcloud通知進行兩階段身份驗證"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

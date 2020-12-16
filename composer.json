@@ -1,5 +1,5 @@
 {
-  "name": "twofactor_nextcloud_notification",
+  "name": "nickv-nextcloud/twofactor_nextcloud_notification",
   "description": "Twofactor via nextcloud notifications",
   "license": "AGPL",
   "config": {

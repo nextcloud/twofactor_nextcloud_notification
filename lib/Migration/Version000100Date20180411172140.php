@@ -24,7 +24,7 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\Migration;
 
-use Doctrine\DBAL\Types\Type;
+use Doctrine\DBAL\Types\Types;
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCP\DB\ISchemaWrapper;
 use OCP\Migration\SimpleMigrationStep;
@@ -45,24 +45,24 @@ class Version000100Date20180411172140 extends SimpleMigrationStep {
 		if (!$schema->hasTable(Application::APP_ID . '_tokens')) {
 			$table = $schema->createTable(Application::APP_ID . '_tokens');
 
-			$table->addColumn('id', Type::INTEGER, [
+			$table->addColumn('id', Types::INTEGER, [
 				'autoincrement' => true,
 				'notnull' => true,
 				'length' => 20,
 			]);
-			$table->addColumn('user_id', Type::STRING, [
+			$table->addColumn('user_id', Types::STRING, [
 				'notnull' => true,
 				'length' => 64,
 			]);
-			$table->addColumn('token', Type::STRING, [
+			$table->addColumn('token', Types::STRING, [
 				'notnull' => true,
 				'length' => 40,
 			]);
-			$table->addColumn('timestamp', Type::INTEGER, [
+			$table->addColumn('timestamp', Types::INTEGER, [
 				'notnull' => true,
 				'length' => 20,
 			]);
-			$table->addColumn('status', Type::INTEGER, [
+			$table->addColumn('status', Types::INTEGER, [
 				'notnull' => true,
 				'length' => 2,
 			]);

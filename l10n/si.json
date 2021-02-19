@@ -1,4 +1,5 @@
 { "translations": {
-    "Cancel" : "අවලංගු කරන්න"
+    "Cancel" : "අවලංගු කරන්න",
+    "Please wait …" : "කරුණාකර රැඳී සිටින්න …"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

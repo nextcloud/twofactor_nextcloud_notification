@@ -2,7 +2,7 @@
     "TwoFactor Nextcloud notification" : "Nextcloud 雙重認證通告",
     "Approve" : "核准",
     "Cancel" : "取消",
-    "Login attempt from {ip}" : "來自IP:{ip}正試圖登入帳號",
+    "Login attempt from {ip}" : "來自IP：{ip}正試圖登入帳號",
     "Please approve or deny the login attempt." : "請核准或拒絕此登入請求",
     "Nextcloud Notification" : "Nextcloud通知",
     "Authenticate using a device that is already logged in to your account" : "使用已登入到您賬戶的設備進行驗證",

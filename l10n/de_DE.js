@@ -14,6 +14,6 @@ OC.L10N.register(
     "You will be redirected automatically once this login has been accepted." : "Nach Bestätigung dieses Anmeldeversuches werden Sie automatisch weitergeleitet",
     "Please wait …" : "Bitte warten …",
     "Your login attempt was rejected." : "Ihr Anmeldeversuch wurde zurückgewiesen.",
-    "Use two-factor authentication via Nextcloud notifications" : "Benutze Zwei-Faktor-Authentifizierung über Nextcloud-Benachrichtigungen"
+    "Use two-factor authentication via Nextcloud notifications" : "Benutze Zwei-Faktor-Authentifizierung mittels Nextcloud-Benachrichtigungen"
 },
 "nplurals=2; plural=(n != 1);");

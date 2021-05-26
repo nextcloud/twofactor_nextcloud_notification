@@ -1,6 +1,7 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
+    "TwoFactor Nextcloud notification" : "Kaksivaiheinen Nextcloud-tunnistautumisilmoitus",
     "Approve" : "Hyväksy",
     "Cancel" : "Peruuta",
     "Login attempt from {ip}" : "Kirjautumisyritys IP:stä {ip}",

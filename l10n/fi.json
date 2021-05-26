@@ -1,4 +1,5 @@
 { "translations": {
+    "TwoFactor Nextcloud notification" : "Kaksivaiheinen Nextcloud-tunnistautumisilmoitus",
     "Approve" : "Hyväksy",
     "Cancel" : "Peruuta",
     "Login attempt from {ip}" : "Kirjautumisyritys IP:stä {ip}",

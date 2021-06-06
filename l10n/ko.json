@@ -11,6 +11,7 @@
     "Please accept the request on one of your logged in devices." : "로그인한 다른 장치에서 요청을 수락해 주십시오.",
     "You will be redirected automatically once this login has been accepted." : "로그인이 수락되면 자동으로 전환됩니다.",
     "Please wait …" : "잠시 기다리십시오 …",
+    "Your login attempt was rejected." : "내 로그인 시도가 거부되었습니다.",
     "Use two-factor authentication via Nextcloud notifications" : "Nextcloud 알림을 통해 2단계 인증 사용하기"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

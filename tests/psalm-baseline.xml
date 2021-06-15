@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="4.7.3@38c452ae584467e939d55377aaf83b5a26f19dd1">
+  <file src="lib/AppInfo/Application.php">
+    <InvalidArgument occurrences="1">
+      <code>RegistryUpdater::class</code>
+    </InvalidArgument>
+  </file>
+  <file src="lib/BackgroundJob/CleanupTokens.php">
+    <InvalidReturnType occurrences="1">
+      <code>run</code>
+    </InvalidReturnType>
+  </file>
+  <file src="lib/Provider/NotificationProvider.php">
+    <MissingDependency occurrences="1">
+      <code>Template</code>
+    </MissingDependency>
+  </file>
+  <file src="lib/Service/StateManager.php">
+    <InvalidArgument occurrences="1">
+      <code>StateChanged::class</code>
+    </InvalidArgument>
+    <TooManyArguments occurrences="1">
+      <code>dispatch</code>
+    </TooManyArguments>
+  </file>
+  <file src="lib/Settings/Personal.php">
+    <MissingDependency occurrences="2">
+      <code>Template</code>
+      <code>Template</code>
+    </MissingDependency>
+  </file>
+</files>

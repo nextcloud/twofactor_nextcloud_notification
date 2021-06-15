@@ -63,4 +63,6 @@ nbproject
 /tests/Integration/vendor
 
 # Build
+/.php_cs.cache
 /build
+/vendor

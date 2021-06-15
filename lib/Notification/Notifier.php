@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @author Joas Schilling <coding@schilljs.com>
@@ -37,11 +38,8 @@ class Notifier implements INotifier {
 	/** @var IURLGenerator */
 	protected $urlGenerator;
 
-	/**
-	 * @param IFactory $l10nFactory
-	 * @param IURLGenerator $urlGenerator
-	 */
-	public function __construct(IFactory $l10nFactory, IURLGenerator $urlGenerator) {
+	public function __construct(IFactory $l10nFactory,
+								IURLGenerator $urlGenerator) {
 		$this->l10nFactory = $l10nFactory;
 		$this->urlGenerator = $urlGenerator;
 	}

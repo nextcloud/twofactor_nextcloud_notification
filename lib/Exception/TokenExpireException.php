@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
@@ -25,5 +26,4 @@ declare(strict_types=1);
 namespace OCA\TwoFactorNextcloudNotification\Exception;
 
 class TokenExpireException extends \Exception {
-
 }

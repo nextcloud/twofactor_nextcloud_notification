@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
@@ -36,7 +37,7 @@ class CleanupTokens extends TimedJob {
 	public function __construct(ITimeFactory $timeFactory, TokenManager $tokenManager) {
 		parent::__construct($timeFactory);
 
-		// Run once a day
+		// Run once an hour
 		$this->setInterval(3600);
 
 		$this->tokenManager = $tokenManager;
@@ -45,5 +46,4 @@ class CleanupTokens extends TimedJob {
 	protected function run($argument) {
 		$this->tokenManager->cleanupTokens();
 	}
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
@@ -27,7 +28,5 @@ namespace OCA\TwoFactorNextcloudNotification\Listener;
 use OCP\EventDispatcher\Event;
 
 interface IListener {
-
 	public function handle(Event $event);
-
 }

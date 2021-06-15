@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
@@ -37,10 +38,9 @@ use OCP\AppFramework\Db\Entity;
  * @method void setTimestamp(int $timestamp)
  */
 class Token extends Entity {
-
-	const PENDING = 0;
-	const ACCEPTED = 1;
-	const REJECTED = 2;
+	public const PENDING = 0;
+	public const ACCEPTED = 1;
+	public const REJECTED = 2;
 
 	/** @var string */
 	protected $userId;
@@ -57,5 +57,4 @@ class Token extends Entity {
 		$this->addType('status', 'int');
 		$this->addType('timestamp', 'int');
 	}
-
 }

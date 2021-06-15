@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
@@ -106,7 +107,7 @@ class TokenManager {
 	 * @throws TokenExpireException
 	 */
 	protected function validateToken(Token $token): Token {
-		if (($this->timeFactory->getTime() - $token->getTimestamp()) > 60*10) {
+		if (($this->timeFactory->getTime() - $token->getTimestamp()) > 60 * 10) {
 			$this->delete($token);
 			throw new TokenExpireException('Token expired');
 		}

@@ -1,5 +1,5 @@
 <?php
-script('twofactor_nextcloud_notification', 'challenge');
+script('twofactor_nextcloud_notification', 'twofactor_nextcloud_notification-challenge');
 ?>
 
 <input type="hidden" id="challenge-poll-token" value="<?php p($_['token']); ?>">

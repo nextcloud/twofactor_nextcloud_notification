@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @author Joas Schilling <coding@schilljs.com>
@@ -24,18 +25,15 @@ declare(strict_types=1);
 namespace OCA\TwoFactorNextcloudNotification\AppInfo;
 
 use OCA\TwoFactorNextcloudNotification\Event\StateChanged;
-use OCA\TwoFactorNextcloudNotification\Listener\IListener;
 use OCA\TwoFactorNextcloudNotification\Listener\RegistryUpdater;
 use OCA\TwoFactorNextcloudNotification\Notification\Notifier;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
-use Symfony\Component\EventDispatcher\Event;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class Application extends App implements IBootstrap {
-	const APP_ID = 'twofactor_nextcloud_notification';
+	public const APP_ID = 'twofactor_nextcloud_notification';
 
 	public function __construct() {
 		parent::__construct(self::APP_ID);

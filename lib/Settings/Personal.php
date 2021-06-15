@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
@@ -25,27 +26,24 @@ declare(strict_types=1);
 namespace OCA\TwoFactorNextcloudNotification\Settings;
 
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
-use OCP\AppFramework\Http\TemplateResponse;
+use OCP\AppFramework\Services\IInitialState;
 use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
-use OCP\IConfig;
-use OCP\IInitialStateService;
-use OCP\Settings\ISettings;
 use OCP\Template;
 
 class Personal implements IPersonalProviderSettings {
 
 	/** @var bool */
 	private $enabled;
-	/** @var IInitialStateService */
+	/** @var IInitialState */
 	private $initialStateService;
 
-	public function __construct(IInitialStateService $initialStateService, bool $enabled) {
+	public function __construct(IInitialState $initialStateService, bool $enabled) {
 		$this->enabled = $enabled;
 		$this->initialStateService = $initialStateService;
 	}
 
 	public function getBody(): Template {
-		$this->initialStateService->provideInitialState(Application::APP_ID, 'state', $this->enabled);
+		$this->initialStateService->provideInitialState('state', $this->enabled);
 		return new Template(Application::APP_ID, 'personal');
 	}
 }

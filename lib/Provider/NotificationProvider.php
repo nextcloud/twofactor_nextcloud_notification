@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
@@ -30,13 +31,12 @@ use OCA\TwoFactorNextcloudNotification\Service\StateManager;
 use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
 use OCA\TwoFactorNextcloudNotification\Settings\Personal;
 use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\AppFramework\Services\IInitialState;
 use OCP\Authentication\TwoFactorAuth\IActivatableByAdmin;
 use OCP\Authentication\TwoFactorAuth\IDeactivatableByAdmin;
 use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
 use OCP\Authentication\TwoFactorAuth\IProvider;
 use OCP\Authentication\TwoFactorAuth\IProvidesPersonalSettings;
-use OCP\IConfig;
-use OCP\IInitialStateService;
 use OCP\IL10N;
 use OCP\IUser;
 use OCP\Template;
@@ -49,13 +49,13 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings, IAct
 	private $tokenManager;
 	/** @var StateManager */
 	private $stateManager;
-	/** @var IInitialStateService */
+	/** @var IInitialState */
 	private $initialStateService;
 
 	public function __construct(IL10N $l10n,
 								TokenManager $tokenManager,
 								StateManager $stateManager,
-								IInitialStateService $initialStateService) {
+								IInitialState $initialStateService) {
 		$this->l10n = $l10n;
 		$this->tokenManager = $tokenManager;
 		$this->stateManager = $stateManager;

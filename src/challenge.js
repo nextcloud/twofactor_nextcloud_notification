@@ -20,6 +20,7 @@
  */
 
 import Axios from '@nextcloud/axios'
+import { generateOcsUrl } from '@nextcloud/router'
 import Vue from 'vue'
 
 import Challenge from './components/Challenge.vue'
@@ -49,7 +50,7 @@ const view = new View({
 const token = document.getElementById('challenge-poll-token').value
 console.debug('starting challenge polling', token)
 
-const url = OC.linkToOCS('apps/twofactor_nextcloud_notification/api/v1/poll', 2) + token
+const url = generateOcsUrl('apps/twofactor_nextcloud_notification/api/v1/poll/{token}', { token })
 
 poll(pollProducer(url), 800).then(r => {
 	console.debug('polling finished', r)

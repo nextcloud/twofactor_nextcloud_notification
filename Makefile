@@ -11,7 +11,15 @@ package_name=$(app_name)
 cert_dir=$(HOME)/.nextcloud/certificates
 version+=master
 
-all: appstore
+all: dev-setup build-js-production
+
+dev-setup: clean clean-dev npm-init
+
+npm-init:
+	npm ci
+
+npm-update:
+	npm update
 
 release: appstore create-tag
 
@@ -19,8 +27,26 @@ create-tag:
 	git tag -a v$(version) -m "Tagging the $(version) release."
 	git push origin v$(version)
 
+build-js:
+	npm run dev
+
+build-js-production:
+	npm run build
+
+lint:
+	npm run lint
+
+lint-fix:
+	npm run lint:fix
+
+watch-js:
+	npm run watch
+
 clean:
 	rm -rf $(build_dir)
+
+clean-dev:
+	rm -rf node_modules
 
 appstore: clean
 	mkdir -p $(sign_dir)

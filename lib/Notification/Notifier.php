@@ -108,6 +108,7 @@ class Notifier implements INotifier {
 
 		$notification->addParsedAction($approveAction)
 			->addParsedAction($disapproveAction)
+			->setParsedSubject(str_replace('{ip}', $param['ip'], $l->t('Login attempt from {ip}')))
 			->setRichSubject(
 				$l->t('Login attempt from {ip}'),
 				[
@@ -118,10 +119,8 @@ class Notifier implements INotifier {
 					],
 				])
 			->setParsedMessage($l->t('Please approve or deny the login attempt.'))
-			->setRichMessage(
-				$l->t('Please approve or deny the login attempt.'),
-				[])
-			->setParsedSubject(str_replace('{ip}', $param['ip'], $l->t('Login attempt from {ip}')));
+			->setRichMessage($l->t('Please approve or deny the login attempt.'))
+		;
 		return $notification;
 	}
 }

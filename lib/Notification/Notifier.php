@@ -117,7 +117,7 @@ class Notifier implements INotifier {
 						'name' => $param['ip'],
 					],
 				])
-			->setMessage($l->t('Please approve or deny the login attempt.'))
+			->setParsedMessage($l->t('Please approve or deny the login attempt.'))
 			->setRichMessage(
 				$l->t('Please approve or deny the login attempt.'),
 				[])

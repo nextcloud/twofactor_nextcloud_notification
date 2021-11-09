@@ -34,8 +34,8 @@ const pollRec = (producer, res, interval) => {
 
 /**
  * @param {Function} producer factory function that produces promises
- * @param {Number} interval polling interval
- * @returns {Promise}
+ * @param {number} interval polling interval
+ * @return {Promise}
  */
 export const poll = (producer, interval) => {
 	return new Promise(resolve => {

@@ -4,7 +4,7 @@
 	<name>Two-Factor Authentication via Nextcloud notification</name>
 	<summary>Allows using any of your logged in devices as second factor</summary>
 	<description>Allows using any of your logged in devices as second factor</description>
-	<version>3.2.1</version>
+	<version>3.3.0</version>
 	<licence>agpl</licence>
 
 	<author>Joas Schilling</author>
@@ -23,7 +23,7 @@
 		<database>sqlite</database>
 		<database>mysql</database>
 		<database>pgsql</database>
-		<nextcloud min-version="20" max-version="22" />
+		<nextcloud min-version="20" max-version="23" />
 	</dependencies>
 
 	<background-jobs>

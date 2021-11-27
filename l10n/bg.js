@@ -12,6 +12,8 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "Позволява ползването на устройства, вписани в профил, да служат като втора стъпка при удостоверяване",
     "Please accept the request on one of your logged in devices." : "Моля, потвърдете на от устройство, което вече е вписано.",
     "You will be redirected automatically once this login has been accepted." : "Ще бъдете пренасочени автоматично, щом опита за вписване бъде одобрен.",
-    "Please wait …" : "Моля, изчакайте …"
+    "Please wait …" : "Моля, изчакайте …",
+    "Your login attempt was rejected." : "Опита ви за влизане беше отхвърлен.",
+    "Use two-factor authentication via Nextcloud notifications" : "Използвайте двустепенно удостоверяване чрез Nextcloud известия"
 },
 "nplurals=2; plural=(n != 1);");

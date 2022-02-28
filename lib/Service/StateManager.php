@@ -27,24 +27,24 @@ namespace OCA\TwoFactorNextcloudNotification\Service;
 
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCA\TwoFactorNextcloudNotification\Event\StateChanged;
+use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IConfig;
 use OCP\IUser;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class StateManager {
-	/** @var EventDispatcherInterface */
+	/** @var IEventDispatcher */
 	private $dispatcher;
 	/** @var IConfig */
 	private $config;
 
-	public function __construct(EventDispatcherInterface $dispatcher, IConfig $config) {
+	public function __construct(IEventDispatcher $dispatcher, IConfig $config) {
 		$this->dispatcher = $dispatcher;
 		$this->config = $config;
 	}
 
 	public function setState(IUser $user, bool $state): void {
 		$this->config->setAppValue(Application::APP_ID, $user->getUID() . '_enabled', $state ? '1' : '0');
-		$this->dispatcher->dispatch(StateChanged::class, new StateChanged($user, $state));
+		$this->dispatcher->dispatchTyped(new StateChanged($user, $state));
 	}
 
 	public function getState(IUser $user): bool {

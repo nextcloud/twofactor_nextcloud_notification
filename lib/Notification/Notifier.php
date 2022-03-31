@@ -120,6 +120,7 @@ class Notifier implements INotifier {
 				])
 			->setParsedMessage($l->t('Please approve or deny the login attempt.'))
 			->setRichMessage($l->t('Please approve or deny the login attempt.'))
+			->setIcon($this->urlGenerator->imagePath('core', 'actions/password.svg'))
 		;
 		return $notification;
 	}

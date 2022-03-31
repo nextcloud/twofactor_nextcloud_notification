@@ -4,7 +4,7 @@
 	<name>Two-Factor Authentication via Nextcloud notification</name>
 	<summary>Allows using any of your logged in devices as second factor</summary>
 	<description>Allows using any of your logged in devices as second factor</description>
-	<version>3.3.1</version>
+	<version>3.4.0-alpha.1</version>
 	<licence>agpl</licence>
 
 	<author>Joas Schilling</author>
@@ -14,10 +14,10 @@
 	<namespace>TwoFactorNextcloudNotification</namespace>
 	<category>security</category>
 
-	<website>https://github.com/nickv-nextcloud/twofactor_nextcloud_notification</website>
-	<bugs>https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/issues</bugs>
-	<repository type="git">https://github.com/nickv-nextcloud/twofactor_nextcloud_notification.git</repository>
-	<screenshot>https://raw.githubusercontent.com/nickv-nextcloud/twofactor_nextcloud_notification/master/screenshots/android.png</screenshot>
+	<website>https://github.com/nextcloud/twofactor_nextcloud_notification</website>
+	<bugs>https://github.com/nextcloud/twofactor_nextcloud_notification/issues</bugs>
+	<repository type="git">https://github.com/nextcloud/twofactor_nextcloud_notification.git</repository>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/twofactor_nextcloud_notification/master/screenshots/android.png</screenshot>
 
 	<dependencies>
 		<database>sqlite</database>

@@ -1,7 +1,6 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "Approve" : "Approve",
-    "Cancel" : "Cancel"
+    "Cancel" : "ýatyrmak"
 },
 "nplurals=2; plural=(n != 1);");

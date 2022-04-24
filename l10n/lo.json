@@ -1,4 +1,5 @@
 { "translations": {
-    "Cancel" : "ຍົກເລີກ"
+    "Cancel" : "ຍົກເລີກ",
+    "Please wait …" : "ກະລຸນາລໍຖ້າ..."
 },"pluralForm" :"nplurals=1; plural=0;"
 }

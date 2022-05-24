@@ -16,4 +16,4 @@ OC.L10N.register(
     "Your login attempt was rejected." : "Il tuo tentativo di accesso è stato rifiutato.",
     "Use two-factor authentication via Nextcloud notifications" : "Utilizza l'autenticazione a due fattori tramite le notifiche di Nextcloud"
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

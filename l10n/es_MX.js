@@ -12,4 +12,4 @@ OC.L10N.register(
     "You will be redirected automatically once this login has been accepted." : "Usted será re-direccionado automáticamente una vez que este accesos sea aceptado.",
     "Use two-factor authentication via Nextcloud notifications" : "Usar autenticación de dos pasos vía notificaciones de Nextcloud"
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

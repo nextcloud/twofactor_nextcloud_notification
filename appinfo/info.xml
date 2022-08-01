@@ -24,7 +24,7 @@
 		<database>sqlite</database>
 		<database>mysql</database>
 		<database>pgsql</database>
-		<nextcloud min-version="22" max-version="24" />
+		<nextcloud min-version="22" max-version="25" />
 	</dependencies>
 
 	<background-jobs>

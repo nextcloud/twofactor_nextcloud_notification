@@ -108,9 +108,9 @@ class Notifier implements INotifier {
 
 		$notification->addParsedAction($approveAction)
 			->addParsedAction($disapproveAction)
-			->setParsedSubject(str_replace('{ip}', $param['ip'], $l->t('Login attempt from {ip}')))
+			->setParsedSubject(str_replace('{ip}', $param['ip'], $l->t('Login attempt from IP address {ip}')))
 			->setRichSubject(
-				$l->t('Login attempt from {ip}'),
+				$l->t('Login attempt from IP address {ip}'),
 				[
 					'ip' => [
 						'type' => 'highlight',
@@ -118,8 +118,8 @@ class Notifier implements INotifier {
 						'name' => $param['ip'],
 					],
 				])
-			->setParsedMessage($l->t('Please approve or deny the login attempt.'))
-			->setRichMessage($l->t('Please approve or deny the login attempt.'))
+			->setParsedMessage($l->t('If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt.'))
+			->setRichMessage($l->t('If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt.'))
 			->setIcon($this->urlGenerator->imagePath('core', 'actions/password.svg'))
 		;
 		return $notification;

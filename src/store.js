@@ -22,7 +22,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import { persist } from './services/SettingsService'
+import { persist } from './services/SettingsService.js'
 
 Vue.use(Vuex)
 

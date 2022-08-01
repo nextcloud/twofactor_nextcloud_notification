@@ -40,11 +40,10 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function register(IRegistrationContext $context): void {
+		$context->registerNotifierService(Notifier::class);
 		$context->registerEventListener(StateChanged::class, RegistryUpdater::class);
 	}
 
 	public function boot(IBootContext $context): void {
-		$notificationManager = $context->getServerContainer()->getNotificationManager();
-		$notificationManager->registerNotifierService(Notifier::class);
 	}
 }

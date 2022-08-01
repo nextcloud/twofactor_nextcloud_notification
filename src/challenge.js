@@ -24,9 +24,9 @@ import { generateOcsUrl } from '@nextcloud/router'
 import Vue from 'vue'
 
 import Challenge from './components/Challenge.vue'
-import Nextcloud from './mixins/Nextcloud'
-import { poll } from './util/poll'
-import store from './store'
+import Nextcloud from './mixins/Nextcloud.js'
+import { poll } from './util/poll.js'
+import store from './store.js'
 
 Vue.mixin(Nextcloud)
 

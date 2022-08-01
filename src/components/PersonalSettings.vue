@@ -21,25 +21,25 @@
 
 <template>
 	<div id="twofactor-notification-settings">
-		<div v-if="loading">
-			<span class="icon-loading-small loading" />
-			<span> {{ t('twofactor_nextcloud_notification', 'Use two-factor authentication via Nextcloud notifications') }} </span>
-		</div>
-		<div v-else>
-			<input id="twofactor-notifications-enabled"
-				v-model="enabled"
-				type="checkbox"
-				class="checkbox"
-				:disabled="loading"
-				@change="toggleEnabled">
-			<label for="twofactor-notifications-enabled">{{ t('twofactor_nextcloud_notification', 'Use two-factor authentication via Nextcloud notifications') }}</label>
-		</div>
+		<CheckboxRadioSwitch type="switch"
+			:checked.sync="enabled"
+			:loading="loading"
+			@update:checked="toggleEnabled">
+			{{ t('twofactor_nextcloud_notification', 'Use two-factor authentication via Nextcloud notifications') }}
+		</CheckboxRadioSwitch>
 	</div>
 </template>
 
 <script>
+import CheckboxRadioSwitch from '@nextcloud/vue/dist/Components/CheckboxRadioSwitch'
+
 export default {
 	name: 'PersonalSettings',
+
+	components: {
+		CheckboxRadioSwitch,
+	},
+
 	data() {
 		return {
 			enabled: this.$store.state.enabled,

@@ -21,9 +21,9 @@
 
 import Vue from 'vue'
 
-import Nextcloud from './mixins/Nextcloud'
+import Nextcloud from './mixins/Nextcloud.js'
 import PersonalSettings from './components/PersonalSettings.vue'
-import store from './store'
+import store from './store.js'
 import { loadState } from '@nextcloud/initial-state'
 
 Vue.mixin(Nextcloud)

@@ -4,8 +4,6 @@ OC.L10N.register(
     "TwoFactor Nextcloud notification" : "To-faktor Nextcloud-varsel",
     "Approve" : "Godkjenn",
     "Cancel" : "Avbryt",
-    "Login attempt from {ip}" : "Påloggingsforsøk fra {ip}",
-    "Please approve or deny the login attempt." : "Vennligst godkjenn eller avvis påloggingen.",
     "Nextcloud Notification" : "Nextcloud varsel",
     "Authenticate using a device that is already logged in to your account" : "Autentiser ved hjelp av en enhet som allerede er logget på kontoen din",
     "Two-Factor Authentication via Nextcloud notification" : "Tofaktorautentisering via Nextcloud-varsel",

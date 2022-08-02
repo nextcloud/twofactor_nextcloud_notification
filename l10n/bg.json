@@ -2,8 +2,6 @@
     "TwoFactor Nextcloud notification" : "TwoFactor Nextcloud notification",
     "Approve" : "Одобрение",
     "Cancel" : "Отказ",
-    "Login attempt from {ip}" : "Опит за вписване от {ip}",
-    "Please approve or deny the login attempt." : "Моля, одобрете или откажете опита за вписване.",
     "Nextcloud Notification" : "Nextcloud известие",
     "Authenticate using a device that is already logged in to your account" : "Удостоверяване чрез устройство, което вече е вписано с вашия профил",
     "Two-Factor Authentication via Nextcloud notification" : "Двустепенно удостоверяване чрез Nextcloud известия",

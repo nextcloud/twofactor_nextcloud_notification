@@ -2,8 +2,6 @@
     "TwoFactor Nextcloud notification" : "Nextcloud 两步验证通知",
     "Approve" : "批准",
     "Cancel" : "取消",
-    "Login attempt from {ip}" : "{ip} 试图登录",
-    "Please approve or deny the login attempt." : "请批准或拒绝登录尝试",
     "Nextcloud Notification" : "Nextcloud 通知",
     "Authenticate using a device that is already logged in to your account" : "使用已登录此账号的设备来验证",
     "Two-Factor Authentication via Nextcloud notification" : "通过 Nextcloud 通知进行两步验证",

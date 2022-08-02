@@ -4,8 +4,6 @@ OC.L10N.register(
     "TwoFactor Nextcloud notification" : "Kaksivaiheinen Nextcloud-tunnistautumisilmoitus",
     "Approve" : "Hyväksy",
     "Cancel" : "Peruuta",
-    "Login attempt from {ip}" : "Kirjautumisyritys IP:stä {ip}",
-    "Please approve or deny the login attempt." : "Hyväksy tai hylkää kirjautuminen.",
     "Nextcloud Notification" : "Nextcloud-ilmoitus",
     "Authenticate using a device that is already logged in to your account" : "Todenna käyttäen laitetta, joka on jo kirjautuneena tilillesi",
     "Two-Factor Authentication via Nextcloud notification" : "Kaksivaiheinen tunnistautuminen Nextcloudin ilmoituksilla",

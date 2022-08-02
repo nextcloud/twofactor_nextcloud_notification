@@ -2,8 +2,6 @@
     "TwoFactor Nextcloud notification" : "Obvestila dvostopenjskega overjanja",
     "Approve" : "Odobri",
     "Cancel" : "Prekliči",
-    "Login attempt from {ip}" : "Zaznan je poskus prijave z naslova {ip}",
-    "Please approve or deny the login attempt." : "Odobrite ali zavrnite poskus prijave.",
     "Nextcloud Notification" : "Obvestila Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Overitev z napravo, ki je že prijavljena v račun",
     "Two-Factor Authentication via Nextcloud notification" : "Dvostopenjska overitev prek obvestil Nextcloud",

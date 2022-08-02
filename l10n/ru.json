@@ -2,8 +2,6 @@
     "TwoFactor Nextcloud notification" : "Уведомление использования второго фактора аутентификации для Nextcloud",
     "Approve" : "Подтвердить",
     "Cancel" : "Отменить",
-    "Login attempt from {ip}" : "Попытка входа с {ip}",
-    "Please approve or deny the login attempt." : "Пожалуйста, подтвердите или отклоните попытку входа.",
     "Nextcloud Notification" : "Уведомления Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Авторизоваться, используя устройство, на котором уже выполнен вход в учётную запись",
     "Two-Factor Authentication via Nextcloud notification" : "Двухфакторная аутентификация через уведомления Nextcloud",

@@ -4,8 +4,6 @@ OC.L10N.register(
     "TwoFactor Nextcloud notification" : "Kétfaktoros Nextcloud-értesítés",
     "Approve" : "Jóváhagyás",
     "Cancel" : "Mégse",
-    "Login attempt from {ip}" : "Belépési kísérlet innen: {ip}",
-    "Please approve or deny the login attempt." : "Engedélyezze vagy utasítsa el a belépési kísérletet.",
     "Nextcloud Notification" : "NextCloud-értesítés",
     "Authenticate using a device that is already logged in to your account" : "Hitelesítés egy eszközzel, amellyel már bejelentkezett a fiókjába",
     "Two-Factor Authentication via Nextcloud notification" : "Kétfaktoros hitelesítés Nextcloud értesítésen keresztül",

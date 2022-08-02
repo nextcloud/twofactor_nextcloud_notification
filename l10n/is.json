@@ -2,8 +2,6 @@
     "TwoFactor Nextcloud notification" : "Tveggja-þátta Nextcloud tilkynning",
     "Approve" : "Samþykkja",
     "Cancel" : "Hætta við",
-    "Login attempt from {ip}" : "Tilraun til innskráningar frá {ip}",
-    "Please approve or deny the login attempt." : "Samþykktu eða hafnaðu tilrauninni til innskráningar.",
     "Nextcloud Notification" : "Nextcloud tilkynning",
     "Authenticate using a device that is already logged in to your account" : "Auðkenna með tæki sem þegar er skráð inn á notandaaðganginn þinn",
     "Two-Factor Authentication via Nextcloud notification" : "Tveggja-þátta auðkenning í gegnum Nextcloud tilkynningu",

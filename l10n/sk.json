@@ -2,8 +2,6 @@
     "TwoFactor Nextcloud notification" : "Oznamy Nextcloud pre dvojfázové overenie",
     "Approve" : "Schváliť",
     "Cancel" : "Zrušiť",
-    "Login attempt from {ip}" : "Pokus o prihlásenie z {ip}",
-    "Please approve or deny the login attempt." : "Schváľte alebo odmietnite pokus o prihlásenie.",
     "Nextcloud Notification" : "Oznamy Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Autentifikovať pomocou zariadenia, ktoré už je prihlásené k vášmu účtu",
     "Two-Factor Authentication via Nextcloud notification" : "Dvojfázové overenie prostredníctvom oznamov Nextcloud",

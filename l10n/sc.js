@@ -4,8 +4,6 @@ OC.L10N.register(
     "TwoFactor Nextcloud notification" : "Notìfica de Nextcloud a duos fatores",
     "Approve" : "Aprova",
     "Cancel" : "Annulla",
-    "Login attempt from {ip}" : "Tentativu de intrada dae {ip}",
-    "Please approve or deny the login attempt." : "Aprova o nega su tentativu de intrada.",
     "Nextcloud Notification" : "Notìfica de Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Autentica·ti impreende unu dispositivu chi est giai intradu in su contu tuo",
     "Two-Factor Authentication via Nextcloud notification" : "Autenticatzione a duos fatores cun notìfica de Nextcloud",

@@ -2,6 +2,8 @@
     "TwoFactor Nextcloud notification" : "Uwierzytelnianie dwuskładnikowe za pomocą powiadomień Nextcloud",
     "Approve" : "Zatwierdź",
     "Cancel" : "Anuluj",
+    "Login attempt from IP address {ip}" : "Próba logowania z adresu IP {ip}",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Jeśli obecnie próbujesz zalogować się z innego urządzenia lub przeglądarki, zatwierdź żądanie. Jeśli w tej chwili nie próbujesz się zalogować, powinieneś użyć opcji anuluj, aby przerwać próbę logowania.",
     "Nextcloud Notification" : "Powiadomienia Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Uwierzytelniaj za pomocą urządzenia, które jest już zalogowane na Twoim koncie",
     "Two-Factor Authentication via Nextcloud notification" : "Dwuskładnikowe uwierzytelnianie za pomocą powiadomienia Nextcloud",

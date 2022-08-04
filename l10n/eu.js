@@ -5,6 +5,7 @@ OC.L10N.register(
     "Approve" : "Onartu",
     "Cancel" : "Ezeztatu",
     "Login attempt from IP address {ip}" : "Saioaren hasiera ahalegina IP honetatik: {ip}",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Beste gailu edo arakatzaile batetik saioa hasten saiatzen ari bazara, onar ezazu eskaera. Momentuz saioa hasten saiatzen ez bazara, bertan behera uzteko aukera erabili beharko zenuke saioa hasteko saiakera bertan behera uzteko.",
     "Nextcloud Notification" : "Nextcloud jakinarazpena",
     "Authenticate using a device that is already logged in to your account" : "Autentifikatu zure kontuan saioa hasita duen gailu baten bidez",
     "Two-Factor Authentication via Nextcloud notification" : "Bi faktoreko autentifikazioa Nextcloud jakinarazpena bidez",

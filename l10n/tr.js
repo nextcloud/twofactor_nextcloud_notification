@@ -4,6 +4,8 @@ OC.L10N.register(
     "TwoFactor Nextcloud notification" : "Nextcloud iki aşamalı kimlik doğrulama bildirimi",
     "Approve" : "Onayla",
     "Cancel" : "İptal",
+    "Login attempt from IP address {ip}" : "{ip} IP adresinden oturum açma girişimi",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Şu anda başka bir aygıttan veya tarayıcıdan oturum açmaya çalışıyorsanız, lütfen bu isteğinizi doğrulayın. Şu anda yeni bir oturum açmaya çalışmıyorsanız, oturum açma girişimini iptal etmek için iptal seçeneğini kullanmalısınız.",
     "Nextcloud Notification" : "Nextcloud bildirimi",
     "Authenticate using a device that is already logged in to your account" : "Kimliğinizi hesabınızda oturum açmış bir aygıtı kullanarak doğrulayın",
     "Two-Factor Authentication via Nextcloud notification" : "Nextcloud bildirimi ile iki aşamalı kimlik doğrulaması",

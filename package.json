@@ -12,8 +12,8 @@
 		"stylelint:fix": "stylelint css/*.css css/*.scss src/**/*.scss src/**/*.vue --fix"
 	},
 	"engines": {
-		"node": "^14.0.0",
-		"npm": "^7.0.0"
+		"node": "^16.0.0",
+		"npm": "^7.0.0 || ^8.0.0"
 	},
 	"browserslist": [
 		"extends @nextcloud/browserslist-config"

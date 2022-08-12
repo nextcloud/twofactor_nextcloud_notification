@@ -1,9 +1,11 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "TwoFactor Nextcloud notification" : "TwoFactor Nextcloud notification",
+    "TwoFactor Nextcloud notification" : "Nextcloud известие за двустепенно удостоверяване",
     "Approve" : "Одобрение",
     "Cancel" : "Отказ",
+    "Login attempt from IP address {ip}" : "Опит за влизане от IP адрес {ip}",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Ако в момента се опитвате да се влезете/вписване/ от друго устройство или браузър, моля, одобрете заявката. Ако не се опитвате да влезете/вписване/ в момента, трябва да използвате опцията за отказ, за да прекъснете опита за влизане.",
     "Nextcloud Notification" : "Nextcloud известие",
     "Authenticate using a device that is already logged in to your account" : "Удостоверяване чрез устройство, което вече е вписано с вашия профил",
     "Two-Factor Authentication via Nextcloud notification" : "Двустепенно удостоверяване чрез Nextcloud известия",

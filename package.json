@@ -21,7 +21,7 @@
 	"author": "Joas Schilling <coding@schilljs.com>",
 	"license": "agpl",
 	"dependencies": {
-		"@nextcloud/axios": "^1.10.0",
+		"@nextcloud/axios": "^2.0.0",
 		"@nextcloud/initial-state": "^1.2.1",
 		"@nextcloud/router": "^2.0.0",
 		"@nextcloud/vue": "^5.4.0",

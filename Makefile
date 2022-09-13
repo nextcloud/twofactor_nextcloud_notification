@@ -57,7 +57,8 @@ appstore: clean
 	--exclude=.git \
 	--exclude=.github \
 	--exclude=.gitignore \
-	--exclude=.php_cs.dist \
+	--exclude=.php-cs-fixer.cache \
+	--exclude=.php-cs-fixer.dist.php \
 	--exclude=.nextcloudignore \
 	--exclude=.scrutinizer.yml \
 	--exclude=.travis.yml \
@@ -77,6 +78,7 @@ appstore: clean
 	--exclude=src \
 	--exclude=stylelint.config.js \
 	--exclude=tests \
+	--exclude=vendor \
 	--exclude=webpack.js \
 	$(project_dir)/  $(sign_dir)/$(app_name)
 	@if [ -f $(cert_dir)/$(app_name).key ]; then \

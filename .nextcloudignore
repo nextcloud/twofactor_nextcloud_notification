@@ -4,7 +4,8 @@
 .git
 .github
 .gitignore
-.php_cs.dist
+.php-cs-fixer.cache
+.php-cs-fixer.dist.php
 .nextcloudignore
 .scrutinizer.yml
 .travis.yml
@@ -22,4 +23,5 @@ screenshots
 src
 stylelint.config.js
 tests
+vendor
 webpack.js

@@ -5,6 +5,7 @@ OC.L10N.register(
     "Approve" : "Hyväksy",
     "Cancel" : "Peruuta",
     "Login attempt from IP address {ip}" : "Kirjautumisyritys IP-osoitteesta {ip}",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Jos yrität parhaillaan kirjautua toiselta laitteelta tai toisesta selaimesta, hyväksy pyyntö. Jos et yritä kirjautua muualta tällä hetkellä, valitse Peruuta peruaksesi kirjautumisyrityksen.",
     "Nextcloud Notification" : "Nextcloud-ilmoitus",
     "Authenticate using a device that is already logged in to your account" : "Todenna käyttäen laitetta, joka on jo kirjautuneena tilillesi",
     "Two-Factor Authentication via Nextcloud notification" : "Kaksivaiheinen tunnistautuminen Nextcloudin ilmoituksilla",

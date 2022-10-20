@@ -30,7 +30,6 @@ use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\TimedJob;
 
 class CleanupTokens extends TimedJob {
-
 	/** @var TokenManager */
 	private $tokenManager;
 

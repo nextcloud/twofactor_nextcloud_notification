@@ -31,7 +31,6 @@ use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
 use OCP\Template;
 
 class Personal implements IPersonalProviderSettings {
-
 	/** @var bool */
 	private $enabled;
 	/** @var IInitialState */

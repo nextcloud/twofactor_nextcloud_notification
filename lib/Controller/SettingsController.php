@@ -32,7 +32,6 @@ use OCP\IRequest;
 use OCP\IUserSession;
 
 class SettingsController extends Controller {
-
 	/** @var IUserSession */
 	private $userSession;
 	/** @var StateManager */

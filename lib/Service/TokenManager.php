@@ -32,7 +32,6 @@ use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Utility\ITimeFactory;
 
 class TokenManager {
-
 	/** @var TokenMapper */
 	private $mapper;
 

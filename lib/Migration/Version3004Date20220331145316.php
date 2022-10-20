@@ -32,7 +32,6 @@ use OCP\Migration\IOutput;
 use OCP\Migration\SimpleMigrationStep;
 
 class Version3004Date20220331145316 extends SimpleMigrationStep {
-
 	/** @var IConfig */
 	protected $config;
 

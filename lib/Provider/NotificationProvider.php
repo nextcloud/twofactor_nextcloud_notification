@@ -42,7 +42,6 @@ use OCP\IUser;
 use OCP\Template;
 
 class NotificationProvider implements IProvider, IProvidesPersonalSettings, IActivatableByAdmin, IDeactivatableByAdmin {
-
 	/** @var IL10N */
 	private $l10n;
 	/** @var TokenManager */

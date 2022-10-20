@@ -33,7 +33,6 @@ use OCP\AppFramework\OCSController;
 use OCP\IRequest;
 
 class APIController extends OCSController {
-
 	/** @var string */
 	private $userId;
 

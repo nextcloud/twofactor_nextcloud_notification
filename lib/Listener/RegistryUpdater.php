@@ -31,7 +31,6 @@ use OCP\Authentication\TwoFactorAuth\IRegistry;
 use OCP\EventDispatcher\Event;
 
 class RegistryUpdater implements IListener {
-
 	/** @var IRegistry */
 	private $registry;
 

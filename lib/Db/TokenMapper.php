@@ -33,7 +33,6 @@ use OCP\IDBConnection;
 use OCP\Security\ISecureRandom;
 
 class TokenMapper extends QBMapper {
-
 	/** @var ITimeFactory */
 	private $timeFactory;
 	/** @var ISecureRandom */

@@ -29,7 +29,6 @@ use OCP\EventDispatcher\Event;
 use OCP\IUser;
 
 class StateChanged extends Event {
-
 	/** @var IUser */
 	private $user;
 

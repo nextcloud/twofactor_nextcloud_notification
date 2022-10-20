@@ -31,7 +31,6 @@ use OCP\IRequest;
 use OCP\Notification\IManager;
 
 class NotificationManager {
-
 	/** @var IManager */
 	private $manager;
 

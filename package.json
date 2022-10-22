@@ -24,7 +24,7 @@
 		"@nextcloud/axios": "^2.1.0",
 		"@nextcloud/initial-state": "^2.0.0",
 		"@nextcloud/router": "^2.0.0",
-		"@nextcloud/vue": "^7.0.0",
+		"@nextcloud/vue": "^7.0.1",
 		"vue": "^2.7.13",
 		"vuex": "^3.6.2"
 	},

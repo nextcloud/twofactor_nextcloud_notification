@@ -2,6 +2,8 @@
     "TwoFactor Nextcloud notification" : "Tvåfaktor Nextcloud-meddelanden",
     "Approve" : "Godkänn",
     "Cancel" : "Avbryt",
+    "Login attempt from IP address {ip}" : "Inloggningsförsök från IP-adress {ip}",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Om du för närvarande försöker logga in från en annan enhet eller webbläsare, godkänn begäran. Om du inte försöker logga in för tillfället bör du använda alternativet avbryt för att avbryta inloggningsförsöket.",
     "Nextcloud Notification" : "Nextcloud-meddelanden",
     "Authenticate using a device that is already logged in to your account" : "Autentisera med en enhet som redan är inloggad på ditt konto",
     "Two-Factor Authentication via Nextcloud notification" : "Tvåfaktorsautentisering via Nextcloud-meddelanden",

@@ -32,6 +32,9 @@ use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\IDBConnection;
 use OCP\Security\ISecureRandom;
 
+/**
+ * @template-extends QBMapper<Token>
+ */
 class TokenMapper extends QBMapper {
 	/** @var ITimeFactory */
 	private $timeFactory;

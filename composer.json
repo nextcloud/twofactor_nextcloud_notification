@@ -1,8 +1,8 @@
 {
 	"autoload-dev": {
 		"psr-4": {
-			"OCP\\": "vendor/christophwurst/nextcloud/OCP",
-			"OCA\\Notifications\\": "lib/"
+			"OCP\\": "vendor/nextcloud/ocp/OCP",
+			"OCA\\TwoFactorNextcloudNotification\\": "lib/"
 		}
 	},
 	"name": "nickv-nextcloud/twofactor_nextcloud_notification",

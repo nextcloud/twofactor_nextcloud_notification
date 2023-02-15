@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="v4.25.0@d7cd84c4ebca74ba3419b9601f81d177bcbe2aac">
+<files psalm-version="5.6.0@e784128902dfe01d489c4123d69918a9f3c1eac5">
   <file src="lib/AppInfo/Application.php">
-    <InvalidArgument occurrences="1">
+    <InvalidArgument>
       <code>RegistryUpdater::class</code>
     </InvalidArgument>
   </file>
   <file src="lib/Provider/NotificationProvider.php">
-    <MissingDependency occurrences="1">
+    <MissingDependency>
       <code>Template</code>
     </MissingDependency>
   </file>
   <file src="lib/Settings/Personal.php">
-    <MissingDependency occurrences="2">
+    <MissingDependency>
       <code>Template</code>
       <code>Template</code>
     </MissingDependency>

@@ -2,6 +2,8 @@
     "TwoFactor Nextcloud notification" : "Двофакторска Некстклауд обавештења",
     "Approve" : "Одобри",
     "Cancel" : "Поништи",
+    "Login attempt from IP address {ip}" : "Покушај пријаве са IP адресе {ip}",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Ако тренутно покушавате да се пријавите са неког другог уређаја или прегледача, молимо вас да одобрите захтев. Ако сада не покушавате да се пријавите, требало би да употребите опцију откажи и тако прекинете покушај пријављивања.",
     "Nextcloud Notification" : "Некстклауд Обавештења",
     "Authenticate using a device that is already logged in to your account" : "Проверите идентитет коришћењем уређаја који је већ пријављен на Ваш налог.",
     "Two-Factor Authentication via Nextcloud notification" : "Двофакторска провера идентитета преко Некстклауд обавештења",

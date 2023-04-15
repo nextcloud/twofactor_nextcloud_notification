@@ -28,8 +28,8 @@ namespace OCA\TwoFactorNextcloudNotification\Migration;
 use Doctrine\DBAL\Types\Types;
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCP\DB\ISchemaWrapper;
-use OCP\Migration\SimpleMigrationStep;
 use OCP\Migration\IOutput;
+use OCP\Migration\SimpleMigrationStep;
 
 class Version000100Date20180411172140 extends SimpleMigrationStep {
 	/**

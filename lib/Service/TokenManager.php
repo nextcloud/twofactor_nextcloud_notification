@@ -42,8 +42,8 @@ class TokenManager {
 	private $timeFactory;
 
 	public function __construct(TokenMapper $mapper,
-								NotificationManager $notificationManager,
-								ITimeFactory $timeFactory) {
+		NotificationManager $notificationManager,
+		ITimeFactory $timeFactory) {
 		$this->mapper = $mapper;
 		$this->notificationManager = $notificationManager;
 		$this->timeFactory = $timeFactory;

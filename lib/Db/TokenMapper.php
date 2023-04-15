@@ -42,8 +42,8 @@ class TokenMapper extends QBMapper {
 	private $random;
 
 	public function __construct(IDBConnection $db,
-								ITimeFactory $timeFactory,
-								ISecureRandom $random) {
+		ITimeFactory $timeFactory,
+		ISecureRandom $random) {
 		parent::__construct($db, Application::APP_ID . '_tokens', Token::class);
 
 		$this->timeFactory = $timeFactory;

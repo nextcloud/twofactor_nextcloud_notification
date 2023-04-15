@@ -52,9 +52,9 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings, IAct
 	private $initialStateService;
 
 	public function __construct(IL10N $l10n,
-								TokenManager $tokenManager,
-								StateManager $stateManager,
-								IInitialState $initialStateService) {
+		TokenManager $tokenManager,
+		StateManager $stateManager,
+		IInitialState $initialStateService) {
 		$this->l10n = $l10n;
 		$this->tokenManager = $tokenManager;
 		$this->stateManager = $stateManager;

@@ -40,9 +40,9 @@ class APIController extends OCSController {
 	private $tokenManager;
 
 	public function __construct(string $appName,
-								IRequest $request,
-								TokenManager $tokenManager,
-								string $userId = null) {
+		IRequest $request,
+		TokenManager $tokenManager,
+		string $userId = null) {
 		parent::__construct($appName, $request);
 
 		$this->tokenManager = $tokenManager;

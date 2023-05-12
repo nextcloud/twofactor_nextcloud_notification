@@ -14,6 +14,7 @@ babel.config.js
 composer.json
 composer.lock
 krankerl.toml
+Makefile
 node_modules
 package.json
 package-lock.json

@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.7.0 – 2023-05-12
+### Fixed
+- Compatibility with Nextcloud 27
+
 ## 3.6.0 – 2023-02-15
 ### Fixed
 - Compatibility with Nextcloud 26

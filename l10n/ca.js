@@ -10,7 +10,7 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "Permet utilitzar qualsevol dels dispositius en què s'hagi iniciat la sessió com a segon factor",
     "Please accept the request on one of your logged in devices." : "Accepteu la sol·licitud en un dels dispositius en què hàgiu iniciat la sessió.",
     "You will be redirected automatically once this login has been accepted." : "Se us redirigirà automàticament quan s'hagi acceptat aquest inici de sessió.",
-    "Please wait …" : "Espereu...",
+    "Please wait …" : "Espereu…",
     "Your login attempt was rejected." : "S'ha rebutjat l'intent d'inici de sessió.",
     "Use two-factor authentication via Nextcloud notifications" : "Utilitza l'autenticació de dos factors mitjançant les notificacions del Nextcloud"
 },

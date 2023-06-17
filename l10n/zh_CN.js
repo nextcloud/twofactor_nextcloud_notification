@@ -10,7 +10,7 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "可以使用任一已登录的设备作为第二验证因子",
     "Please accept the request on one of your logged in devices." : "请在任一已登录的设备上接受请求。",
     "You will be redirected automatically once this login has been accepted." : "登录通过时会自动跳转。",
-    "Please wait …" : "请稍候…",
+    "Please wait …" : "请稍候……",
     "Your login attempt was rejected." : "您的登录尝试被拒绝。",
     "Use two-factor authentication via Nextcloud notifications" : "通过 Nextcloud 通知使用两步验证"
 },

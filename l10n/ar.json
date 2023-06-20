@@ -1,6 +1,17 @@
 { "translations": {
+    "TwoFactor Nextcloud notification" : "إشعار نكست كلاود المُثنّى",
     "Approve" : "إعتماد",
     "Cancel" : "إلغاء",
-    "Please wait …" : "الرجاء الانتظار..."
+    "Login attempt from IP address {ip}" : "محاولة للدخول من العنوان {ip} ",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "إذا كنت تحاول حاليّاً الدخول من جهاز أو متصفح آخر، رجاءً أكّد ذلك. و إلّا، إضغط على خيار الإلغاء لإجهاض محاولة الدخول.",
+    "Nextcloud Notification" : "إشعار نكست كلاود",
+    "Authenticate using a device that is already logged in to your account" : "عرّف نفسك من خلال جهاز سبق أن دخلت منه إلى حسابك",
+    "Two-Factor Authentication via Nextcloud notification" : "التحقق المُثنّى من الهويّة من خلال إشعارات نكست كلاود",
+    "Allows using any of your logged in devices as second factor" : "إسمح باستخدام أي جهاز سبق أن دخلت إليه كسبيلٍ ثانٍ للمصادقة.",
+    "Please accept the request on one of your logged in devices." : "من فضلك، إقبل الطلب على أحد الأجهزة التي سبق أن دخلت إليها.",
+    "You will be redirected automatically once this login has been accepted." : "سوف يتم توجيهك تلقائيّاً بمجرد قبول طلبك للدخول.",
+    "Please wait …" : "الرجاء الانتظار...",
+    "Your login attempt was rejected." : "تمّ رفض محاولتك للدخول.",
+    "Use two-factor authentication via Nextcloud notifications" : "إستخدم التّحقُّق المُثنّى من الهويّة من خلال إشعارات نكست كلاود"
 },"pluralForm" :"nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;"
 }

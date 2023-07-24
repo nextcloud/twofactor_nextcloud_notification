@@ -1,5 +1,6 @@
 { "translations": {
     "Approve" : "تأیید",
-    "Cancel" : "لغو"
+    "Cancel" : "لغو",
+    "Please wait …" : "لطفا صبر کنید …"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

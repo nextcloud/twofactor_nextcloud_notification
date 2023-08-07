@@ -4,4 +4,4 @@ The app allows you to use other logged in devices or browser sessions as a secon
 
 Browser trying to log in | Notification to approve the request
 ---|---
-![Browser trying to log in](https://raw.githubusercontent.com/nextcloud/twofactor_nextcloud_notification/master/screenshots/request.png) | ![Notification to approve the request](https://raw.githubusercontent.com/nextcloud/twofactor_nextcloud_notification/master/screenshots/notification.png)
+![Browser trying to log in](https://raw.githubusercontent.com/nextcloud/twofactor_nextcloud_notification/main/screenshots/request.png) | ![Notification to approve the request](https://raw.githubusercontent.com/nextcloud/twofactor_nextcloud_notification/main/screenshots/notification.png)

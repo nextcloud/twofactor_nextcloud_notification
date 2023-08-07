@@ -27,9 +27,9 @@
 		"test:unit": "echo 'Only testing installation of the app'"
 	},
 	"require-dev": {
-		"nextcloud/coding-standard": "^1.0.0",
+		"nextcloud/coding-standard": "^1.1",
 		"nextcloud/ocp": "dev-stable25",
-		"phpunit/phpunit": "^9.5",
-		"psalm/phar": "^5.12"
+		"phpunit/phpunit": "^9.6",
+		"psalm/phar": "^5.14"
 	}
 }

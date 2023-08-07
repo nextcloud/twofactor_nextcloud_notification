@@ -17,8 +17,8 @@
 	<website>https://github.com/nextcloud/twofactor_nextcloud_notification</website>
 	<bugs>https://github.com/nextcloud/twofactor_nextcloud_notification/issues</bugs>
 	<repository type="git">https://github.com/nextcloud/twofactor_nextcloud_notification.git</repository>
-	<screenshot>https://raw.githubusercontent.com/nextcloud/twofactor_nextcloud_notification/master/screenshots/request.png</screenshot>
-	<screenshot>https://raw.githubusercontent.com/nextcloud/twofactor_nextcloud_notification/master/screenshots/notification.png</screenshot>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/twofactor_nextcloud_notification/main/screenshots/request.png</screenshot>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/twofactor_nextcloud_notification/main/screenshots/notification.png</screenshot>
 
 	<dependencies>
 		<database>sqlite</database>

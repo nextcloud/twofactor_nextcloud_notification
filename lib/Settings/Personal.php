@@ -31,14 +31,10 @@ use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
 use OCP\Template;
 
 class Personal implements IPersonalProviderSettings {
-	/** @var bool */
-	private $enabled;
-	/** @var IInitialState */
-	private $initialStateService;
-
-	public function __construct(IInitialState $initialStateService, bool $enabled) {
-		$this->enabled = $enabled;
-		$this->initialStateService = $initialStateService;
+	public function __construct(
+		private IInitialState $initialStateService,
+		private bool $enabled,
+	) {
 	}
 
 	public function getBody(): Template {

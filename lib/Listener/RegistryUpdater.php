@@ -29,20 +29,20 @@ use OCA\TwoFactorNextcloudNotification\Event\StateChanged;
 use OCA\TwoFactorNextcloudNotification\Provider\NotificationProvider;
 use OCP\Authentication\TwoFactorAuth\IRegistry;
 use OCP\EventDispatcher\Event;
+use OCP\EventDispatcher\IEventListener;
+use OCP\User\Events\PostLoginEvent;
 
-class RegistryUpdater implements IListener {
-	/** @var IRegistry */
-	private $registry;
-
-	/** @var NotificationProvider */
-	private $provider;
-
-	public function __construct(IRegistry $registry, NotificationProvider $provider) {
-		$this->registry = $registry;
-		$this->provider = $provider;
+/**
+ * @template-implements IEventListener<Event|PostLoginEvent>
+ */
+class RegistryUpdater implements IEventListener {
+	public function __construct(
+		private IRegistry $registry,
+		private NotificationProvider $provider,
+	) {
 	}
 
-	public function handle(Event $event) {
+	public function handle(Event $event): void {
 		if ($event instanceof StateChanged) {
 			if ($event->isEnabled()) {
 				$this->registry->enableProviderFor($this->provider, $event->getUser());

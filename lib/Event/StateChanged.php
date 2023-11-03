@@ -29,15 +29,11 @@ use OCP\EventDispatcher\Event;
 use OCP\IUser;
 
 class StateChanged extends Event {
-	/** @var IUser */
-	private $user;
-
-	/** @var bool */
-	private $enabled;
-
-	public function __construct(IUser $user, bool $enabled) {
-		$this->user = $user;
-		$this->enabled = $enabled;
+	public function __construct(
+		private IUser $user,
+		private bool $enabled,
+	) {
+		parent::__construct();
 	}
 
 	/**

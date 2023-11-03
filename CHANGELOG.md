@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.8.0 – 2023-11-03
+### Changed
+- Compatibility with Nextcloud 28
+- Require Nextcloud 26
+
 ## 3.7.0 – 2023-05-12
 ### Fixed
 - Compatibility with Nextcloud 27
@@ -17,27 +22,27 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - Compatibility with Nextcloud 24
 
-## [3.3.1] - 2021-11-09
+## 3.3.1 - 2021-11-09
 ### Fixed
 - Made 23 Compatible
 
-## [3.2.1] - 2021-07-22
+## 3.2.1 - 2021-07-22
 ### Fixed
 - Add missing javascript files
 
-## [3.2.0] - 2021-06-17
+## 3.2.0 - 2021-06-17
 ### Fixed
 - Made 22 Compatible
 
-## [3.1.2] - 2021-03-04
+## 3.1.2 - 2021-03-04
 ### Fixed
 - Installing with NC21
 
-## [3.1.1] - 2021-03-01
+## 3.1.1 - 2021-03-01
 ### Changes
 - Made Doctrine 3.0 compatible for PHP8 support in Nextcloud 21
 
-## [3.1.0] - 2020-12-21
+## 3.1.0 - 2020-12-21
 ### Added
 - Made 21 Compatible
 
@@ -45,7 +50,7 @@ All notable changes to this project will be documented in this file.
 - Dependency updates
 - Translation updates
 
-## [3.0.0] - 2020-08-28
+## 3.0.0 - 2020-08-28
 ### Added
 - Made 20 compatible
 
@@ -57,16 +62,16 @@ All notable changes to this project will be documented in this file.
 ### Removed
 - Removed 17, 18 and 19 compatibility
 
-## [2.3.0] - 2020-04-03
+## 2.3.0 - 2020-04-03
 ### Added
 - Made 19 compatible
 - Made activatable by admin
 
-## [2.2.0] - 2019-12-05
+## 2.2.0 - 2019-12-05
 ### Added
 - Made 18 compatible
 
-## [2.1.1] - 2019-09-07
+## 2.1.1 - 2019-09-07
 ### Fixed
 - Undefined index warning fixes
 
@@ -74,7 +79,7 @@ All notable changes to this project will be documented in this file.
 - Updated dependencies
 - Updated translations
 
-## [2.1.0] - 2019-08-23
+## 2.1.0 - 2019-08-23
 ### Added
 - Logout on rejecting the login
 
@@ -86,7 +91,7 @@ All notable changes to this project will be documented in this file.
 - Updated translations
 - Use proper initial state API
 
-## [2.0.0] - 2019-08-15
+## 2.0.0 - 2019-08-15
 ### Added
 - Made compatible with NC17 notifier registration
 
@@ -99,7 +104,7 @@ All notable changes to this project will be documented in this file.
 - Removed Nextcloud 15 support
 - Removed Nextcloud 16 support
 
-## [1.1.2] - 2019-07-11
+## 1.1.2 - 2019-07-11
 ### Added
 - Make 17 compatible
 
@@ -107,11 +112,11 @@ All notable changes to this project will be documented in this file.
 - Updated dependencies
 - Updated translations
 
-## [1.1.1] - 2019-04-02
+## 1.1.1 - 2019-04-02
 ### Fixed
 - Use an up to date git to tag
 
-## [1.1.0] - 2019-04-02
+## 1.1.0 - 2019-04-02
 ### Added
 - Deactivatable by admin
 
@@ -119,11 +124,11 @@ All notable changes to this project will be documented in this file.
 - Updated translations
 - Updated dependencies
 
-## [1.0.3] - 2019-01-29
+## 1.0.3 - 2019-01-29
 ### Fixed
 - Should really be IE11 compatible now
 
-## [1.0.2] - 2019-01-07
+## 1.0.2 - 2019-01-07
 ### Changed
 - Use the public interface for background jobs
 - Updated translations
@@ -132,11 +137,11 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - Should be compatible with IE now
 
-## [1.0.1] - 2018-12-07
+## 1.0.1 - 2018-12-07
 ### Fixed
 - Use provided user so the provider can always load
 
-## [1.0.0] - 2018-12-07
+## 1.0.0 - 2018-12-07
 ### Added
 - Nextcloud 16 support
 
@@ -147,16 +152,16 @@ All notable changes to this project will be documented in this file.
 ### Removed
 - Nextcloud 14 support
 
-## [0.2.4] - 2018-10-23
+## 0.2.4 - 2018-10-23
 ### Added
 - Added Notification Manager [#28](https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/pull/28)
 - Feedback when the login is approved on waiting screen [#29](https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/issues/29)
 
-## [0.2.3] - 2018-10-21
+## 0.2.3 - 2018-10-21
 ### Fixed
 - Allow to disable provider properly as well [#27](https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/pull/27)
 
-## [0.2.2] - 2018-10-19
+## 0.2.2 - 2018-10-19
 ### Added
 - Screenshots added [#15](https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/issues/15)
 - Prepare for translations [#20](https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/issues/20)
@@ -165,10 +170,10 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - Notifications expired attempts are cleaned up [#8](https://github.com/nickv-nextcloud/twofactor_nextcloud_notification/issues/8)
 
-## [0.2.1] - 2018-10-18
+## 0.2.1 - 2018-10-18
 ### Fixed
 - Made info.xml compliant
 
-## [0.2.0] - 2018-10-18
+## 0.2.0 - 2018-10-18
 ### Added
 - Basic provider implementation

@@ -32,14 +32,10 @@ use OCP\IConfig;
 use OCP\IUser;
 
 class StateManager {
-	/** @var IEventDispatcher */
-	private $dispatcher;
-	/** @var IConfig */
-	private $config;
-
-	public function __construct(IEventDispatcher $dispatcher, IConfig $config) {
-		$this->dispatcher = $dispatcher;
-		$this->config = $config;
+	public function __construct(
+		private IEventDispatcher $dispatcher,
+		private IConfig $config,
+	) {
 	}
 
 	public function setState(IUser $user, bool $state): void {

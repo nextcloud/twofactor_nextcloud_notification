@@ -30,16 +30,14 @@ use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\TimedJob;
 
 class CleanupTokens extends TimedJob {
-	/** @var TokenManager */
-	private $tokenManager;
-
-	public function __construct(ITimeFactory $timeFactory, TokenManager $tokenManager) {
+	public function __construct(
+		ITimeFactory $timeFactory,
+		private TokenManager $tokenManager,
+	) {
 		parent::__construct($timeFactory);
 
 		// Run once an hour
 		$this->setInterval(3600);
-
-		$this->tokenManager = $tokenManager;
 	}
 
 	protected function run($argument) {

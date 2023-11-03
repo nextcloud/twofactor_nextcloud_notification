@@ -42,23 +42,12 @@ use OCP\IUser;
 use OCP\Template;
 
 class NotificationProvider implements IProvider, IProvidesPersonalSettings, IActivatableByAdmin, IDeactivatableByAdmin {
-	/** @var IL10N */
-	private $l10n;
-	/** @var TokenManager */
-	private $tokenManager;
-	/** @var StateManager */
-	private $stateManager;
-	/** @var IInitialState */
-	private $initialStateService;
-
-	public function __construct(IL10N $l10n,
-		TokenManager $tokenManager,
-		StateManager $stateManager,
-		IInitialState $initialStateService) {
-		$this->l10n = $l10n;
-		$this->tokenManager = $tokenManager;
-		$this->stateManager = $stateManager;
-		$this->initialStateService = $initialStateService;
+	public function __construct(
+		private IL10N $l10n,
+		private TokenManager $tokenManager,
+		private StateManager $stateManager,
+		private IInitialState $initialStateService
+	) {
 	}
 
 	/**

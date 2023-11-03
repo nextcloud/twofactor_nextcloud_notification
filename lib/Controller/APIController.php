@@ -33,20 +33,13 @@ use OCP\AppFramework\OCSController;
 use OCP\IRequest;
 
 class APIController extends OCSController {
-	/** @var string */
-	private $userId;
-
-	/** @var TokenManager */
-	private $tokenManager;
-
-	public function __construct(string $appName,
+	public function __construct(
+		string $appName,
 		IRequest $request,
-		TokenManager $tokenManager,
-		string $userId = null) {
+		private TokenManager $tokenManager,
+		private ?string $userId = null,
+	) {
 		parent::__construct($appName, $request);
-
-		$this->tokenManager = $tokenManager;
-		$this->userId = $userId;
 	}
 
 	/**

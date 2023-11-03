@@ -32,21 +32,11 @@ use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Utility\ITimeFactory;
 
 class TokenManager {
-	/** @var TokenMapper */
-	private $mapper;
-
-	/** @var NotificationManager */
-	private $notificationManager;
-
-	/** @var ITimeFactory */
-	private $timeFactory;
-
-	public function __construct(TokenMapper $mapper,
-		NotificationManager $notificationManager,
-		ITimeFactory $timeFactory) {
-		$this->mapper = $mapper;
-		$this->notificationManager = $notificationManager;
-		$this->timeFactory = $timeFactory;
+	public function __construct(
+		private TokenMapper $mapper,
+		private NotificationManager $notificationManager,
+		private ITimeFactory $timeFactory,
+	) {
 	}
 
 	/**
@@ -72,7 +62,7 @@ class TokenManager {
 	/**
 	 * @param Token $token
 	 */
-	public function delete(Token $token) {
+	public function delete(Token $token): void {
 		$this->notificationManager->clearNotification($token);
 		$this->mapper->delete($token);
 	}
@@ -86,7 +76,7 @@ class TokenManager {
 		return $this->mapper->update($token);
 	}
 
-	public function cleanupTokens() {
+	public function cleanupTokens(): void {
 		$tokens = $this->mapper->getTokensForCleanup();
 
 		foreach ($tokens as $token) {

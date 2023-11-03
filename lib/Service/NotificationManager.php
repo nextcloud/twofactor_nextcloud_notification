@@ -31,18 +31,13 @@ use OCP\IRequest;
 use OCP\Notification\IManager;
 
 class NotificationManager {
-	/** @var IManager */
-	private $manager;
-
-	/** @var IRequest */
-	private $request;
-
-	public function __construct(IManager $manager, IRequest $request) {
-		$this->manager = $manager;
-		$this->request = $request;
+	public function __construct(
+		private IManager $manager,
+		private IRequest $request,
+	) {
 	}
 
-	public function clearNotification(Token $token) {
+	public function clearNotification(Token $token): void {
 		$notification = $this->manager->createNotification();
 		$notification->setApp(Application::APP_ID)
 			->setSubject('login_attempt')
@@ -50,7 +45,7 @@ class NotificationManager {
 		$this->manager->markProcessed($notification);
 	}
 
-	public function newNotification(Token $token) {
+	public function newNotification(Token $token): void {
 		$notification = $this->manager->createNotification();
 		$notification->setApp(Application::APP_ID)
 			->setSubject('login_attempt', [

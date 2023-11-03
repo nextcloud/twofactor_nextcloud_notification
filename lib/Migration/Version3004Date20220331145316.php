@@ -32,11 +32,9 @@ use OCP\Migration\IOutput;
 use OCP\Migration\SimpleMigrationStep;
 
 class Version3004Date20220331145316 extends SimpleMigrationStep {
-	/** @var IConfig */
-	protected $config;
-
-	public function __construct(IConfig $config) {
-		$this->config = $config;
+	public function __construct(
+		protected IConfig $config,
+	) {
 	}
 
 	/**
@@ -47,7 +45,7 @@ class Version3004Date20220331145316 extends SimpleMigrationStep {
 	public function postSchemaChange(IOutput $output, Closure $schemaClosure, array $options): void {
 		$keys = $this->config->getAppKeys('twofactor_nextcloud_notification');
 		foreach ($keys as $key) {
-			if (substr($key, -8) === '_enabled') {
+			if (str_ends_with($key, '_enabled')) {
 				$this->config->setUserValue(
 					substr($key, 0, -8),
 					'twofactor_nextcloud_notification',

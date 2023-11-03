@@ -32,19 +32,13 @@ use OCP\IRequest;
 use OCP\IUserSession;
 
 class SettingsController extends Controller {
-	/** @var IUserSession */
-	private $userSession;
-	/** @var StateManager */
-	private $stateManager;
-
-	public function __construct(string $appName,
+	public function __construct(
+		string $appName,
 		IRequest $request,
-		StateManager $stateManager,
-		IUserSession $userSession) {
+		private StateManager $stateManager,
+		private IUserSession $userSession,
+	) {
 		parent::__construct($appName, $request);
-
-		$this->userSession = $userSession;
-		$this->stateManager = $stateManager;
 	}
 
 	/**

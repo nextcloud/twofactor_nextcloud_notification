@@ -36,18 +36,12 @@ use OCP\Security\ISecureRandom;
  * @template-extends QBMapper<Token>
  */
 class TokenMapper extends QBMapper {
-	/** @var ITimeFactory */
-	private $timeFactory;
-	/** @var ISecureRandom */
-	private $random;
-
-	public function __construct(IDBConnection $db,
-		ITimeFactory $timeFactory,
-		ISecureRandom $random) {
+	public function __construct(
+		IDBConnection $db,
+		private ITimeFactory $timeFactory,
+		private ISecureRandom $random,
+	) {
 		parent::__construct($db, Application::APP_ID . '_tokens', Token::class);
-
-		$this->timeFactory = $timeFactory;
-		$this->random = $random;
 	}
 
 	/**
@@ -97,7 +91,7 @@ class TokenMapper extends QBMapper {
 		return $token;
 	}
 
-	public function getTokensForCleanup() {
+	public function getTokensForCleanup(): array {
 		// Clear all tokens older than 10 minutes
 		$time = $this->timeFactory->getTime() - (60 * 10);
 

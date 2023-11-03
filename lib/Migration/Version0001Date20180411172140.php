@@ -31,7 +31,7 @@ use OCP\DB\ISchemaWrapper;
 use OCP\Migration\IOutput;
 use OCP\Migration\SimpleMigrationStep;
 
-class Version000100Date20180411172140 extends SimpleMigrationStep {
+class Version0001Date20180411172140 extends SimpleMigrationStep {
 	/**
 	 * @param IOutput $output
 	 * @param \Closure $schemaClosure The `\Closure` returns a `ISchemaWrapper`

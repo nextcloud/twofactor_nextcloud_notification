@@ -1,6 +1,7 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
+    "Approve" : "Aprobă",
     "Cancel" : "Anulează",
     "Please wait …" : "Vă rugăm așteptați ..."
 },

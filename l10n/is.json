@@ -2,6 +2,8 @@
     "TwoFactor Nextcloud notification" : "Tveggja-þátta Nextcloud tilkynning",
     "Approve" : "Samþykkja",
     "Cancel" : "Hætta við",
+    "Login attempt from IP address {ip}" : "Tilraun til innskráningar frá IP-vistfanginu {ip}",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Ef þú ert að reyna að skrá þig inn af öðru tæki eða öðrum vafra, ættirðu að samþykkja beiðnina. Ef þú ert ekki að reyna að skrá þig inn núna, þá ættirðu að hætta við og hafna þessari tilraun til innskráningar.",
     "Nextcloud Notification" : "Nextcloud tilkynning",
     "Authenticate using a device that is already logged in to your account" : "Auðkenna með tæki sem þegar er skráð inn á notandaaðganginn þinn",
     "Two-Factor Authentication via Nextcloud notification" : "Tveggja-þátta auðkenning í gegnum Nextcloud tilkynningu",

@@ -50,6 +50,16 @@ jobs:
         php-versions: ['8.0', '8.1', '8.2', '8.3']
         server-versions: ['master']
         mysql-versions: ['8.1']
+        include: 
+           - php-versions: '8.0' 
+             server-versions: 'stable26' 
+             mysql-versions: '8.0' 
+           - php-versions: '8.1' 
+             server-versions: 'stable27' 
+             mysql-versions: '8.0'
+           - php-versions: '8.3' 
+             server-versions: 'stable28' 
+             mysql-versions: '8.1'
 
     name: MySQL ${{ matrix.mysql-versions }} PHP ${{ matrix.php-versions }} Nextcloud ${{ matrix.server-versions }}
 

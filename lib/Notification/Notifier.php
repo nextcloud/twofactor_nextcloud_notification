@@ -110,7 +110,7 @@ class Notifier implements INotifier {
 				])
 			->setParsedMessage($l->t('If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt.'))
 			->setRichMessage($l->t('If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt.'))
-			->setIcon($this->urlGenerator->imagePath('core', 'actions/password.svg'))
+			->setIcon($this->urlGenerator->getAbsoluteURL($this->urlGenerator->imagePath('core', 'actions/password.svg')))
 		;
 		return $notification;
 	}

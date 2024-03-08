@@ -1,6 +1,6 @@
 {
 	"name": "twofactor_nextcloud_notification",
-	"version": "1.0.0",
+	"version": "3.9.0",
 	"description": "The app allows you to use other logged in devices or browser sessions as a second factor.",
 	"scripts": {
 		"build": "NODE_ENV=production webpack --progress --config webpack.js",
@@ -24,7 +24,7 @@
 		"@nextcloud/axios": "^2.4.0",
 		"@nextcloud/initial-state": "^2.1.0",
 		"@nextcloud/router": "^3.0.0",
-		"@nextcloud/vue": "^8.8.1",
+		"@nextcloud/vue": "^8.9.1",
 		"vue": "^2.7.16",
 		"vuex": "^3.6.2"
 	},

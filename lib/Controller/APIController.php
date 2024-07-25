@@ -28,6 +28,8 @@ use OCA\TwoFactorNextcloudNotification\Exception\TokenExpireException;
 use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\Attribute\PublicPage;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
 use OCP\IRequest;
@@ -42,11 +44,7 @@ class APIController extends OCSController {
 		parent::__construct($appName, $request);
 	}
 
-	/**
-	 * @NoAdminRequired
-	 * @param int $attemptId
-	 * @return DataResponse
-	 */
+	#[NoAdminRequired]
 	public function approve(int $attemptId): DataResponse {
 		try {
 			$token = $this->tokenManager->getById($attemptId);
@@ -66,11 +64,7 @@ class APIController extends OCSController {
 		return new DataResponse([], Http::STATUS_ACCEPTED);
 	}
 
-	/**
-	 * @NoAdminRequired
-	 * @param int $attemptId
-	 * @return DataResponse
-	 */
+	#[NoAdminRequired]
 	public function disapprove(int $attemptId): DataResponse {
 		try {
 			$token = $this->tokenManager->getById($attemptId);
@@ -90,11 +84,7 @@ class APIController extends OCSController {
 		return new DataResponse([], Http::STATUS_OK);
 	}
 
-	/**
-	 * @PublicPage
-	 * @param string $token
-	 * @return DataResponse
-	 */
+	#[PublicPage]
 	public function poll(string $token): DataResponse {
 		try {
 			$token = $this->tokenManager->getByToken($token);

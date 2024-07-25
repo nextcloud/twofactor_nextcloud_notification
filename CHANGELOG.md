@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.10.0 – 2024-07-25
+### Changed
+- Compatibility with Nextcloud 30
+- Require Nextcloud 27
+
 ## 3.9.0 – 2024-03-08
 ### Added
 - Compatibility with Nextcloud 29

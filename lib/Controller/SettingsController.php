@@ -27,6 +27,7 @@ namespace OCA\TwoFactorNextcloudNotification\Controller;
 
 use OCA\TwoFactorNextcloudNotification\Service\StateManager;
 use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\JSONResponse;
 use OCP\IRequest;
 use OCP\IUserSession;
@@ -41,9 +42,7 @@ class SettingsController extends Controller {
 		parent::__construct($appName, $request);
 	}
 
-	/**
-	 * @NoAdminRequired
-	 */
+	#[NoAdminRequired]
 	public function setState(bool $state): JSONResponse {
 		$this->stateManager->setState($this->userSession->getUser(), $state);
 		return new JSONResponse([

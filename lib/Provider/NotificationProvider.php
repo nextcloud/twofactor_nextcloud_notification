@@ -113,11 +113,11 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings, IAct
 		return new Personal($this->initialStateService, $this->stateManager->getState($user));
 	}
 
-	public function enableFor(IUser $user) {
+	public function enableFor(IUser $user): void {
 		$this->stateManager->setState($user, true);
 	}
 
-	public function disableFor(IUser $user) {
+	public function disableFor(IUser $user): void {
 		$this->stateManager->setState($user, false);
 	}
 }

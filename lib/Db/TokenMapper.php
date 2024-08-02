@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\Db;
 
-use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\QBMapper;
 use OCP\AppFramework\Utility\ITimeFactory;
@@ -24,7 +23,7 @@ class TokenMapper extends QBMapper {
 		private ITimeFactory $timeFactory,
 		private ISecureRandom $random,
 	) {
-		parent::__construct($db, Application::APP_ID . '_tokens', Token::class);
+		parent::__construct($db, 'twofactor_tnn_tokens', Token::class);
 	}
 
 	/**

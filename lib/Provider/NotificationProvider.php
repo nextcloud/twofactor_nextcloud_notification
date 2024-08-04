@@ -19,17 +19,20 @@ use OCP\Authentication\TwoFactorAuth\IActivatableByAdmin;
 use OCP\Authentication\TwoFactorAuth\IDeactivatableByAdmin;
 use OCP\Authentication\TwoFactorAuth\IPersonalProviderSettings;
 use OCP\Authentication\TwoFactorAuth\IProvider;
+use OCP\Authentication\TwoFactorAuth\IProvidesIcons;
 use OCP\Authentication\TwoFactorAuth\IProvidesPersonalSettings;
 use OCP\IL10N;
+use OCP\IURLGenerator;
 use OCP\IUser;
 use OCP\Template;
 
-class NotificationProvider implements IProvider, IProvidesPersonalSettings, IActivatableByAdmin, IDeactivatableByAdmin {
+class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPersonalSettings, IActivatableByAdmin, IDeactivatableByAdmin {
 	public function __construct(
 		private IL10N $l10n,
 		private TokenManager $tokenManager,
 		private StateManager $stateManager,
-		private IInitialState $initialStateService
+		private IInitialState $initialStateService,
+		private IURLGenerator $url,
 	) {
 	}
 
@@ -58,6 +61,14 @@ class NotificationProvider implements IProvider, IProvidesPersonalSettings, IAct
 	 */
 	public function getDescription(): string {
 		return $this->l10n->t('Authenticate using a device that is already logged in to your account');
+	}
+
+	public function getLightIcon(): string {
+		return $this->url->getAbsoluteURL($this->url->imagePath(Application::APP_ID, 'app.svg'));
+	}
+
+	public function getDarkIcon(): string {
+		return $this->url->getAbsoluteURL($this->url->imagePath(Application::APP_ID, 'app-dark.svg'));
 	}
 
 	/**

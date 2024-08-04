@@ -1,9 +1,10 @@
 {
 	"name": "twofactor_nextcloud_notification",
-	"version": "3.9.0",
+	"version": "4.0.0",
 	"description": "The app allows you to use other logged in devices or browser sessions as a second factor.",
 	"scripts": {
 		"build": "NODE_ENV=production webpack --progress --config webpack.js",
+		"postbuild": "build-js/npm-post-build.sh",
 		"dev": "NODE_ENV=development webpack --progress --config webpack.js",
 		"watch": "NODE_ENV=development webpack --progress --watch --config webpack.js",
 		"lint": "eslint --ext .js,.vue src",

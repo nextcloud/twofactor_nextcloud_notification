@@ -19,7 +19,7 @@
 		"extends @nextcloud/browserslist-config"
 	],
 	"author": "Joas Schilling <coding@schilljs.com>",
-	"license": "agpl",
+	"license": "AGPL-3.0-or-later",
 	"dependencies": {
 		"@nextcloud/axios": "^2.5.0",
 		"@nextcloud/initial-state": "^2.2.0",

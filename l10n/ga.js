@@ -1,6 +1,11 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
+    "Please accept the request on one of your logged in devices." : "Glac leis an iarratas ar cheann de do ghléasanna logáilte isteach.",
+    "You will be redirected automatically once this login has been accepted." : "Déanfar tú a atreorú go huathoibríoch nuair a ghlactar leis an logáil isteach seo.",
+    "Please wait …" : "Fán le do thoil …",
+    "Your login attempt was rejected." : "Diúltaíodh do d'iarracht logáil isteach.",
+    "Use two-factor authentication via Nextcloud notifications" : "Bain úsáid as fíordheimhniú dhá-fhachtóir trí fhógraí Nextcloud",
     "TwoFactor Nextcloud notification" : "Fógra TwoFactor Nextcloud",
     "Approve" : "Cheadaigh",
     "Cancel" : "Cealaigh",
@@ -9,11 +14,6 @@ OC.L10N.register(
     "Nextcloud Notification" : "Fógra Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Fíordheimhnigh úsáid gléas atá logáilte isteach i do chuntas cheana féin",
     "Two-Factor Authentication via Nextcloud notification" : "Fíordheimhniú Dhá-Fachtóir trí fhógra Nextcloud",
-    "Allows using any of your logged in devices as second factor" : "Is féidir aon cheann de do ghléasanna logáilte isteach a úsáid mar dhara fachtóir",
-    "Please accept the request on one of your logged in devices." : "Glac leis an iarratas ar cheann de do ghléasanna logáilte isteach.",
-    "You will be redirected automatically once this login has been accepted." : "Déanfar tú a atreorú go huathoibríoch nuair a ghlactar leis an logáil isteach seo.",
-    "Please wait …" : "Fán le do thoil …",
-    "Your login attempt was rejected." : "Diúltaíodh do d'iarracht logáil isteach.",
-    "Use two-factor authentication via Nextcloud notifications" : "Bain úsáid as fíordheimhniú dhá-fhachtóir trí fhógraí Nextcloud"
+    "Allows using any of your logged in devices as second factor" : "Is féidir aon cheann de do ghléasanna logáilte isteach a úsáid mar dhara fachtóir"
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");

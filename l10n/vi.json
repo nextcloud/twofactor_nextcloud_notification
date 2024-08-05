@@ -1,6 +1,6 @@
 { "translations": {
+    "Please wait …" : "Vui lòng đợi ...",
     "Approve" : "Chấp thuận",
-    "Cancel" : "Hủy bỏ",
-    "Please wait …" : "Vui lòng đợi ..."
+    "Cancel" : "Hủy bỏ"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

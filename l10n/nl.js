@@ -1,6 +1,11 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
+    "Please accept the request on one of your logged in devices." : "Accepteer de aanvraag op een van je ingelogde apparaten.",
+    "You will be redirected automatically once this login has been accepted." : "Je wordt automatisch doorgestuurd als deze inlog is geaccepteerd.",
+    "Please wait …" : "Even geduld...",
+    "Your login attempt was rejected." : "Je inlogpoging is afgewezen.",
+    "Use two-factor authentication via Nextcloud notifications" : "Gebruik twee-factor authenticatie via Nextcloud meldingen",
     "TwoFactor Nextcloud notification" : "Twee-factor Nextcloud melding",
     "Approve" : "Goedkeuren",
     "Cancel" : "Annuleren",
@@ -9,11 +14,6 @@ OC.L10N.register(
     "Nextcloud Notification" : "Nextcloud melding",
     "Authenticate using a device that is already logged in to your account" : "Authenticeren via een apparaat dat al is ingelogd op je account",
     "Two-Factor Authentication via Nextcloud notification" : "Tweefactor-authenticatie via Nextcloud-melding",
-    "Allows using any of your logged in devices as second factor" : "Gebruik apparaten waarop je reeds bent ingelogd als tweede factor",
-    "Please accept the request on one of your logged in devices." : "Accepteer de aanvraag op een van je ingelogde apparaten.",
-    "You will be redirected automatically once this login has been accepted." : "Je wordt automatisch doorgestuurd als deze inlog is geaccepteerd.",
-    "Please wait …" : "Even geduld...",
-    "Your login attempt was rejected." : "Je inlogpoging is afgewezen.",
-    "Use two-factor authentication via Nextcloud notifications" : "Gebruik twee-factor authenticatie via Nextcloud meldingen"
+    "Allows using any of your logged in devices as second factor" : "Gebruik apparaten waarop je reeds bent ingelogd als tweede factor"
 },
 "nplurals=2; plural=(n != 1);");

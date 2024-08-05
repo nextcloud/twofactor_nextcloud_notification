@@ -1,6 +1,6 @@
 { "translations": {
+    "Please wait …" : "Ju lutem prisni ...",
     "Approve" : "Mirato",
-    "Cancel" : "Anullo",
-    "Please wait …" : "Ju lutem prisni ..."
+    "Cancel" : "Anullo"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

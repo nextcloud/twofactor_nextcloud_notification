@@ -1,6 +1,11 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
+    "Please accept the request on one of your logged in devices." : "Hyväksy kirjautuminen yhdellä kirjautuneista laitteistasi.",
+    "You will be redirected automatically once this login has been accepted." : "Sinut ohjataan automaattisesti eteenpäin, kun kirjautuminen on hyväksytty.",
+    "Please wait …" : "Odota hetki…",
+    "Your login attempt was rejected." : "Kirjautumisesi hylättiin.",
+    "Use two-factor authentication via Nextcloud notifications" : "Käytä kaksivaiheista tunnistautumista Nextcloudin ilmoituksilla",
     "TwoFactor Nextcloud notification" : "Kaksivaiheinen Nextcloud-tunnistautumisilmoitus",
     "Approve" : "Hyväksy",
     "Cancel" : "Peruuta",
@@ -9,11 +14,6 @@ OC.L10N.register(
     "Nextcloud Notification" : "Nextcloud-ilmoitus",
     "Authenticate using a device that is already logged in to your account" : "Todenna käyttäen laitetta, joka on jo kirjautuneena tilillesi",
     "Two-Factor Authentication via Nextcloud notification" : "Kaksivaiheinen tunnistautuminen Nextcloudin ilmoituksilla",
-    "Allows using any of your logged in devices as second factor" : "Sallii minkä tahansa kirjautuneen laitteesi käyttämisen todentamiseen",
-    "Please accept the request on one of your logged in devices." : "Hyväksy kirjautuminen yhdellä kirjautuneista laitteistasi.",
-    "You will be redirected automatically once this login has been accepted." : "Sinut ohjataan automaattisesti eteenpäin, kun kirjautuminen on hyväksytty.",
-    "Please wait …" : "Odota hetki…",
-    "Your login attempt was rejected." : "Kirjautumisesi hylättiin.",
-    "Use two-factor authentication via Nextcloud notifications" : "Käytä kaksivaiheista tunnistautumista Nextcloudin ilmoituksilla"
+    "Allows using any of your logged in devices as second factor" : "Sallii minkä tahansa kirjautuneen laitteesi käyttämisen todentamiseen"
 },
 "nplurals=2; plural=(n != 1);");

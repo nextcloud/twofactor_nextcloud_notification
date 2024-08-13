@@ -9,15 +9,21 @@ declare(strict_types=1);
 namespace OCA\TwoFactorNextcloudNotification\Notification;
 
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
+use OCA\TwoFactorNextcloudNotification\Exception\TokenExpireException;
+use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
+use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\IURLGenerator;
 use OCP\L10N\IFactory;
+use OCP\Notification\AlreadyProcessedException;
 use OCP\Notification\INotification;
 use OCP\Notification\INotifier;
+use OCP\Notification\UnknownNotificationException;
 
 class Notifier implements INotifier {
 	public function __construct(
 		protected IFactory $l10nFactory,
 		protected IURLGenerator $urlGenerator,
+		protected TokenManager $tokenManager,
 	) {
 	}
 
@@ -45,16 +51,28 @@ class Notifier implements INotifier {
 	 * @param INotification $notification
 	 * @param string $languageCode The code of the language that should be used to prepare the notification
 	 * @return INotification
-	 * @throws \InvalidArgumentException When the notification was not prepared by a notifier
+	 * @throws UnknownNotificationException When the notification was not prepared by a notifier
+	 * @throws AlreadyProcessedException When the notification is not needed anymore and should be deleted
 	 */
 	public function prepare(INotification $notification, string $languageCode): INotification {
 		if ($notification->getApp() !== Application::APP_ID ||
 			$notification->getSubject() !== 'login_attempt') {
-			throw new \InvalidArgumentException('Unhandled app or subject');
+			throw new UnknownNotificationException();
+		}
+
+		$attemptId = $notification->getObjectId();
+
+		try {
+			$token = $this->tokenManager->getById((int) $attemptId);
+		} catch (DoesNotExistException|TokenExpireException) {
+			throw new AlreadyProcessedException();
+		}
+
+		if ($token->getUserId() !== $notification->getUser()) {
+			throw new AlreadyProcessedException();
 		}
 
 		$l = $this->l10nFactory->get(Application::APP_ID, $languageCode);
-		$attemptId = $notification->getObjectId();
 		$param = $notification->getSubjectParameters();
 
 		$approveAction = $notification->createAction()

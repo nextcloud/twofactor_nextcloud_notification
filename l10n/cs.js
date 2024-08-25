@@ -5,6 +5,7 @@ OC.L10N.register(
     "You will be redirected automatically once this login has been accepted." : "Jakmile bude přihlášení schváleno, budete automaticky přesměrováni.",
     "Please wait …" : "Čekejte…",
     "Your login attempt was rejected." : "Váš pokus o přihlášení byl odmítnut.",
+    "component" : "součást",
     "Use two-factor authentication via Nextcloud notifications" : "Pro dvoufázové ověřování používat zprávy posílané jako upozornění z Nextcloud",
     "TwoFactor Nextcloud notification" : "Upozornění z Nextcloud pro dvoufázové ověřování",
     "Approve" : "Schválit",

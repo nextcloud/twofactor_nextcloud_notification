@@ -63,7 +63,7 @@ class Notifier implements INotifier {
 		$attemptId = $notification->getObjectId();
 
 		try {
-			$token = $this->tokenManager->getById((int) $attemptId);
+			$token = $this->tokenManager->getById((int)$attemptId);
 		} catch (DoesNotExistException|TokenExpireException) {
 			throw new AlreadyProcessedException();
 		}

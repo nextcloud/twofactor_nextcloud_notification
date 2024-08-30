@@ -5,6 +5,7 @@ OC.L10N.register(
     "You will be redirected automatically once this login has been accepted." : "一旦核准登入帳號後，頁面將自動重新導向。",
     "Please wait …" : "請稍候…",
     "Your login attempt was rejected." : "您的登入操作已被拒絕",
+    "checkbox-content__icon" : "checkbox-content__icon",
     "Use two-factor authentication via Nextcloud notifications" : "透過 Nextcloud 通告進行雙重認證",
     "TwoFactor Nextcloud notification" : "Nextcloud 雙重認證通告",
     "Approve" : "核准",

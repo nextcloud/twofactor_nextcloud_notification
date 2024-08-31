@@ -7,6 +7,8 @@
     "TwoFactor Nextcloud notification" : "Уведомление использования второго фактора аутентификации для Nextcloud",
     "Approve" : "Подтвердить",
     "Cancel" : "Отменить",
+    "Login attempt from IP address {ip}" : "Попытка входа в систему с IP-адреса {ip}",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Если вы в данный момент пытаетесь войти в систему с другого устройства или браузера, пожалуйста, подтвердите запрос. Если в данный момент вы не пытаетесь войти в систему, вам следует воспользоваться опцией \"Отменить\", чтобы прервать попытку входа.",
     "Nextcloud Notification" : "Уведомления Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Авторизоваться, используя устройство, на котором уже выполнен вход в учётную запись",
     "Two-Factor Authentication via Nextcloud notification" : "Двухфакторная аутентификация через уведомления Nextcloud",

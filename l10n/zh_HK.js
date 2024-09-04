@@ -7,6 +7,7 @@ OC.L10N.register(
     "Your login attempt was rejected." : "您的登入操作已被拒絕",
     "checkbox-content__icon" : "checkbox-content__icon",
     "Use two-factor authentication via Nextcloud notifications" : "透過 Nextcloud 通告進行雙重認證",
+    "switch" : "切換",
     "TwoFactor Nextcloud notification" : "Nextcloud 雙重認證通告",
     "Approve" : "核准",
     "Cancel" : "取消",

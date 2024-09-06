@@ -19,7 +19,7 @@ OC.L10N.register(
     "checkbox-content" : "checkbox-content",
     "checkbox-radio-switch__content" : "checkbox-radio-switch__content",
     "Use two-factor authentication via Nextcloud notifications" : "Benutze Zwei-Faktor-Authentifizierung mittels Nextcloud-Benachrichtigungen",
-    "switch" : "Wechseln",
+    "switch" : "switch",
     "twofactor-notification-settings" : "Zwei-Faktor-Benachrichtigungseinstellungen",
     "TwoFactor Nextcloud notification" : "Zwei-Faktor Nextcloud-Benachrichtigung",
     "Approve" : "Bestätigen",

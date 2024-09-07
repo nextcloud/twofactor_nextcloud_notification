@@ -1,27 +1,17 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "Please accept the request on one of your logged in devices." : "Accepteu la sol·licitud en un dels dispositius en què hàgiu iniciat la sessió.",
-    "You will be redirected automatically once this login has been accepted." : "Se us redirigirà automàticament quan s'hagi acceptat aquest inici de sessió.",
-    "Please wait …" : "Espereu…",
-    "Your login attempt was rejected." : "S'ha rebutjat l'intent d'inici de sessió.",
-    "M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z" : "M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z",
-    "material-design-icon__svg" : "material-design-icon__svg",
-    "M17,13H7V11H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" : "M17,13H7V11H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z",
-    "M10,17L5,12L6.41,10.58L10,14.17L17.59,6.58L19,8M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" : "M10,17L5,12L6.41,10.58L10,14.17L17.59,6.58L19,8M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z",
-    "M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z" : "M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z",
-    "M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" : "M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z",
-    "M17,7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7M7,15A3,3 0 0,1 4,12A3,3 0 0,1 7,9A3,3 0 0,1 10,12A3,3 0 0,1 7,15Z" : "M17,7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7M7,15A3,3 0 0,1 4,12A3,3 0 0,1 7,9A3,3 0 0,1 10,12A3,3 0 0,1 7,15Z",
-    "M17,7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7M17,15A3,3 0 0,1 14,12A3,3 0 0,1 17,9A3,3 0 0,1 20,12A3,3 0 0,1 17,15Z" : "M17,7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7M17,15A3,3 0 0,1 14,12A3,3 0 0,1 17,9A3,3 0 0,1 20,12A3,3 0 0,1 17,15Z",
-    "component" : "component",
-    "checkbox-radio-switch__content" : "checkbox-radio-switch__content",
-    "Use two-factor authentication via Nextcloud notifications" : "Utilitza l'autenticació de dos factors mitjançant les notificacions del Nextcloud",
     "TwoFactor Nextcloud notification" : "Notificació de dos factors del Nextcloud",
     "Approve" : "Aprova",
     "Cancel" : "Cancel·la",
     "Nextcloud Notification" : "Notificació del Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Autentica'm amb un dispositiu que ja tingui la sessió iniciada en el meu compte",
     "Two-Factor Authentication via Nextcloud notification" : "Autenticació de dos factors mitjançant una notificació del Nextcloud",
-    "Allows using any of your logged in devices as second factor" : "Permet utilitzar qualsevol dels dispositius en què s'hagi iniciat la sessió com a segon factor"
+    "Allows using any of your logged in devices as second factor" : "Permet utilitzar qualsevol dels dispositius en què s'hagi iniciat la sessió com a segon factor",
+    "Please accept the request on one of your logged in devices." : "Accepteu la sol·licitud en un dels dispositius en què hàgiu iniciat la sessió.",
+    "You will be redirected automatically once this login has been accepted." : "Se us redirigirà automàticament quan s'hagi acceptat aquest inici de sessió.",
+    "Please wait …" : "Espereu…",
+    "Your login attempt was rejected." : "S'ha rebutjat l'intent d'inici de sessió.",
+    "Use two-factor authentication via Nextcloud notifications" : "Utilitza l'autenticació de dos factors mitjançant les notificacions del Nextcloud"
 },
 "nplurals=2; plural=(n != 1);");

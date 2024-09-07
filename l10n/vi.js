@@ -1,8 +1,8 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "Please wait …" : "Vui lòng đợi ...",
     "Approve" : "Chấp thuận",
-    "Cancel" : "Hủy bỏ"
+    "Cancel" : "Hủy bỏ",
+    "Please wait …" : "Vui lòng đợi ..."
 },
 "nplurals=1; plural=0;");

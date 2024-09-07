@@ -1,15 +1,15 @@
 { "translations": {
-    "Please accept the request on one of your logged in devices." : "Atzeta sa rechesta in unu de is dispositivos tuos registrados.",
-    "You will be redirected automatically once this login has been accepted." : "T'ant a torrare a deretare in automàticu cando custa intrada at a èssere aprovada.",
-    "Please wait …" : "Abeta ...",
-    "Your login attempt was rejected." : "Su tentativu tuo de intrada est istadu refudadu.",
-    "Use two-factor authentication via Nextcloud notifications" : "Imprea s'autenticatzione a duos fatores cun is notìficas de Nextcloud",
     "TwoFactor Nextcloud notification" : "Notìfica de Nextcloud a duos fatores",
     "Approve" : "Aprova",
     "Cancel" : "Annulla",
     "Nextcloud Notification" : "Notìfica de Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Autentica·ti impreende unu dispositivu chi est giai intradu in su contu tuo",
     "Two-Factor Authentication via Nextcloud notification" : "Autenticatzione a duos fatores cun notìfica de Nextcloud",
-    "Allows using any of your logged in devices as second factor" : "Permitit de impreare cale si siat dispositivu tuo registradu comente segundu fatore"
+    "Allows using any of your logged in devices as second factor" : "Permitit de impreare cale si siat dispositivu tuo registradu comente segundu fatore",
+    "Please accept the request on one of your logged in devices." : "Atzeta sa rechesta in unu de is dispositivos tuos registrados.",
+    "You will be redirected automatically once this login has been accepted." : "T'ant a torrare a deretare in automàticu cando custa intrada at a èssere aprovada.",
+    "Please wait …" : "Abeta ...",
+    "Your login attempt was rejected." : "Su tentativu tuo de intrada est istadu refudadu.",
+    "Use two-factor authentication via Nextcloud notifications" : "Imprea s'autenticatzione a duos fatores cun is notìficas de Nextcloud"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

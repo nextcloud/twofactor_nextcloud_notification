@@ -1,7 +1,7 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "Please wait …" : "ກະລຸນາລໍຖ້າ...",
-    "Cancel" : "ຍົກເລີກ"
+    "Cancel" : "ຍົກເລີກ",
+    "Please wait …" : "ກະລຸນາລໍຖ້າ..."
 },
 "nplurals=1; plural=0;");

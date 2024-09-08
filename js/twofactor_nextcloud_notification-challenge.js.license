@@ -37,7 +37,7 @@ This file is generated from multiple sources. Included packages:
 	- version: 3.3.3
 	- license: MIT
 - webpack
-	- version: 5.88.2
+	- version: 5.94.0
 	- license: MIT
 - twofactor_nextcloud_notification
 	- version: 4.0.0

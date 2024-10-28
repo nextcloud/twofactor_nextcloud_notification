@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace OCA\TwoFactorNextcloudNotification\Db;
 
 use OCP\AppFramework\Db\Entity;
+use OCP\DB\Types;
 
 /**
  * @method string getUserId()
@@ -35,9 +36,9 @@ class Token extends Entity {
 	protected $timestamp;
 
 	public function __construct() {
-		$this->addType('userId', 'string');
-		$this->addType('token', 'string');
-		$this->addType('status', 'int');
-		$this->addType('timestamp', 'int');
+		$this->addType('userId', Types::STRING);
+		$this->addType('token', Types::STRING);
+		$this->addType('status', Types::INTEGER);
+		$this->addType('timestamp', Types::INTEGER);
 	}
 }

@@ -2,6 +2,8 @@
     "TwoFactor Nextcloud notification" : "Nextcloud 2단계 인증 알림",
     "Approve" : "승인",
     "Cancel" : "취소",
+    "Login attempt from IP address {ip}" : "IP 주소 {ip}로부터의 로그인 시도",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "현재 다른 기기나 브라우저에서 로그인을 시도 중이라면 요청을 승인해 주십시오. 만약 귀하의 로그인 시도가 아니라면, 취소 옵션을 이용해 로그인 시도를 차단해 주세요.",
     "Nextcloud Notification" : "Nextcloud 알림",
     "Authenticate using a device that is already logged in to your account" : "로그인한 장치로 인증하기",
     "Two-Factor Authentication via Nextcloud notification" : "Nextcloud 알림을 통한 2단계 인증",

@@ -24,7 +24,8 @@ use OCP\Authentication\TwoFactorAuth\IProvidesPersonalSettings;
 use OCP\IL10N;
 use OCP\IURLGenerator;
 use OCP\IUser;
-use OCP\Template;
+use OCP\Template\ITemplate;
+use OCP\Template\ITemplateManager;
 
 class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPersonalSettings, IActivatableByAdmin, IDeactivatableByAdmin {
 	public function __construct(
@@ -33,6 +34,7 @@ class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPerson
 		private StateManager $stateManager,
 		private IInitialState $initialStateService,
 		private IURLGenerator $url,
+		private ITemplateManager $templateManager,
 	) {
 	}
 
@@ -75,15 +77,15 @@ class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPerson
 	 * Get the template for rending the 2FA provider view
 	 *
 	 * @param IUser $user
-	 * @return Template
+	 * @return ITemplate
 	 */
-	public function getTemplate(IUser $user): Template {
+	public function getTemplate(IUser $user): ITemplate {
 		$token = $this->tokenManager->generate($user->getUID());
 
-		$tmpl = new Template(Application::APP_ID, 'challenge');
-		$tmpl->assign('token', $token->getToken());
+		$template = $this->templateManager->getTemplate(Application::APP_ID, 'challenge');
+		$template->assign('token', $token->getToken());
 
-		return $tmpl;
+		return $template;
 	}
 
 	public function verifyChallenge(IUser $user, string $challenge): bool {
@@ -104,7 +106,11 @@ class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPerson
 	}
 
 	public function getPersonalSettings(IUser $user): IPersonalProviderSettings {
-		return new Personal($this->initialStateService, $this->stateManager->getState($user));
+		return new Personal(
+			$this->initialStateService,
+			$this->templateManager,
+			$this->stateManager->getState($user),
+		);
 	}
 
 	public function enableFor(IUser $user): void {

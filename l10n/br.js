@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "TwoFactor Nextcloud notification" : " Kemenadenn Nextclpoud TwoFactor",
     "Approve" : "Aotreañ",
-    "Cancel" : "Arrest",
+    "Cancel" : "Nullañ",
     "Nextcloud Notification" : "Kemenadenn Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Dilesit e ur implij un ardivink dija kemprennet d'ho gont",
     "Two-Factor Authentication via Nextcloud notification" : "An dilesa Daou-elfenn dre kemenadenn Nextcloud",

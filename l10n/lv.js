@@ -1,6 +1,7 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "Cancel" : "Atcelt"
+    "Cancel" : "Atcelt",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Ja šobrīd mēģini pieteikties no citas ierīces vai pārlūka, lūgums apstiprināt pieprasījumu. Ja pašlaik nemēģini pieteikties, vajadzētu izmantot atcelšanas iespēju, lai pārtrauktu pieteikšanās mēģinājumu."
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

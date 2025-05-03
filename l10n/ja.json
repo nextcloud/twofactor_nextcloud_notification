@@ -2,6 +2,8 @@
     "TwoFactor Nextcloud notification" : "TwoFactor Nextcloud通知",
     "Approve" : "承認",
     "Cancel" : "キャンセル",
+    "Login attempt from IP address {ip}" : "IPアドレス{ip}からのログイン試行",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "別のデバイスまたはブラウザからログインしようとしている場合は、要求を承認してください。現在ログインしようとしていない場合は、cancelオプションを使用してログイン試行を中止してください。",
     "Nextcloud Notification" : "Nextcloud通知",
     "Authenticate using a device that is already logged in to your account" : "すでにアカウントにログインしている端末を使用して認証する",
     "Two-Factor Authentication via Nextcloud notification" : "Nextcloudの通知経由での二要素認証",

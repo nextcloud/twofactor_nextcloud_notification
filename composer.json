@@ -19,17 +19,15 @@
 		"lint": "find . -name \\*.php -not -path './vendor/*' -not -path './build/*' -print0 | xargs -0 -n1 php -l",
 		"cs:check": "php-cs-fixer fix --dry-run --diff",
 		"cs:fix": "php-cs-fixer fix",
-		"psalm": "psalm.phar --threads=1",
-		"psalm:dev": "psalm.phar --no-cache --threads=$(nproc)",
+		"psalm": "psalm.phar --no-cache --threads=$(nproc)",
+		"psalm:dev": "@psalm",
 		"psalm:update-baseline": "psalm.phar --threads=1 --update-baseline --set-baseline=tests/psalm-baseline.xml",
-		"psalm:clear": "psalm.phar --clear-cache && psalm.phar --clear-global-cache",
-		"psalm:fix": "psalm.phar --alter --issues=InvalidReturnType,InvalidNullableReturnType,MissingParamType,InvalidFalsableReturnType",
 		"test:unit": "echo 'Only testing installation of the app'"
 	},
 	"require-dev": {
 		"nextcloud/coding-standard": "^1.2.1",
 		"nextcloud/ocp": "dev-stable31",
 		"phpunit/phpunit": "^9.6.19",
-		"psalm/phar": "^5.25.0"
+		"psalm/phar": "^6.1.0"
 	}
 }

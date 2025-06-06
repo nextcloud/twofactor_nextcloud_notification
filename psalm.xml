@@ -9,7 +9,7 @@
     findUnusedCode="false"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://getpsalm.org/schema/config"
-    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor-bin/psalm/vendor/vimeo/psalm/config.xsd"
     errorBaseline="tests/psalm-baseline.xml"
     phpVersion="8.1"
 >
@@ -17,13 +17,12 @@
 		<directory name="lib" />
 		<ignoreFiles>
 			<directory name="vendor" />
+			<directory name="vendor-bin" />
 		</ignoreFiles>
 	</projectFiles>
 	<extraFiles>
 		<directory name="vendor" />
-		<ignoreFiles>
-			<directory name="vendor/phpunit/php-code-coverage" />
-		</ignoreFiles>
+		<directory name="vendor-bin" />
 	</extraFiles>
 	<issueHandlers>
 		<UndefinedDocblockClass>

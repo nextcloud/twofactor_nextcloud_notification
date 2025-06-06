@@ -6,7 +6,7 @@ SPDX-PackageSupplier = "Nextcloud GmbH <info@nextcloud.com>"
 SPDX-PackageDownloadLocation = "https://github.com/nextcloud/twofactor_nextcloud_notification"
 
 [[annotations]]
-path = ["package-lock.json", "package.json", "composer.json", "composer.lock", ".tx/config"]
+path = ["package-lock.json", "package.json", "composer.json", "composer.lock", "vendor-bin/*/composer.json", "vendor-bin/*/composer.lock", ".tx/config"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2018 Nextcloud GmbH and Nextcloud contributors"
 SPDX-License-Identifier = "AGPL-3.0-or-later"

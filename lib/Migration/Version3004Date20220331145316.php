@@ -25,6 +25,7 @@ class Version3004Date20220331145316 extends SimpleMigrationStep {
 	 * @param Closure $schemaClosure The `\Closure` returns a `ISchemaWrapper`
 	 * @param array $options
 	 */
+	#[\Override]
 	public function postSchemaChange(IOutput $output, Closure $schemaClosure, array $options): void {
 		$keys = $this->config->getAppKeys('twofactor_nextcloud_notification');
 		foreach ($keys as $key) {

@@ -19,6 +19,7 @@ class Version0001Date20180411172140 extends SimpleMigrationStep {
 	 * @param array $options
 	 * @return null|ISchemaWrapper
 	 */
+	#[\Override]
 	public function changeSchema(IOutput $output, \Closure $schemaClosure, array $options) {
 		/**
 		 * Dropped by Version4000Date20240802134536

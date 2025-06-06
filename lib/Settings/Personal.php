@@ -22,6 +22,7 @@ class Personal implements IPersonalProviderSettings {
 	) {
 	}
 
+	#[\Override]
 	public function getBody(): ITemplate {
 		$this->initialStateService->provideInitialState('state', $this->enabled);
 		return $this->templateManager->getTemplate(Application::APP_ID, 'personal');

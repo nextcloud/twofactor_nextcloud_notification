@@ -27,22 +27,12 @@ class Notifier implements INotifier {
 	) {
 	}
 
-	/**
-	 * Identifier of the notifier, only use [a-z0-9_]
-	 *
-	 * @return string
-	 * @since 17.0.0
-	 */
+	#[\Override]
 	public function getID(): string {
 		return Application::APP_ID;
 	}
 
-	/**
-	 * Human-readable name describing the notifier
-	 *
-	 * @return string
-	 * @since 17.0.0
-	 */
+	#[\Override]
 	public function getName(): string {
 		return $this->l10nFactory->get(Application::APP_ID)->t('TwoFactor Nextcloud notification');
 	}
@@ -54,6 +44,7 @@ class Notifier implements INotifier {
 	 * @throws UnknownNotificationException When the notification was not prepared by a notifier
 	 * @throws AlreadyProcessedException When the notification is not needed anymore and should be deleted
 	 */
+	#[\Override]
 	public function prepare(INotification $notification, string $languageCode): INotification {
 		if ($notification->getApp() !== Application::APP_ID ||
 			$notification->getSubject() !== 'login_attempt') {

@@ -38,47 +38,32 @@ class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPerson
 	) {
 	}
 
-	/**
-	 * Get unique identifier of this 2FA provider
-	 *
-	 * @return string
-	 */
+	#[\Override]
 	public function getId(): string {
 		return Application::APP_ID;
 	}
 
-	/**
-	 * Get the display name for selecting the 2FA provider
-	 *
-	 * @return string
-	 */
+	#[\Override]
 	public function getDisplayName(): string {
 		return $this->l10n->t('Nextcloud Notification');
 	}
 
-	/**
-	 * Get the description for selecting the 2FA provider
-	 *
-	 * @return string
-	 */
+	#[\Override]
 	public function getDescription(): string {
 		return $this->l10n->t('Authenticate using a device that is already logged in to your account');
 	}
 
+	#[\Override]
 	public function getLightIcon(): string {
 		return $this->url->getAbsoluteURL($this->url->imagePath(Application::APP_ID, 'app.svg'));
 	}
 
+	#[\Override]
 	public function getDarkIcon(): string {
 		return $this->url->getAbsoluteURL($this->url->imagePath(Application::APP_ID, 'app-dark.svg'));
 	}
 
-	/**
-	 * Get the template for rending the 2FA provider view
-	 *
-	 * @param IUser $user
-	 * @return ITemplate
-	 */
+	#[\Override]
 	public function getTemplate(IUser $user): ITemplate {
 		$token = $this->tokenManager->generate($user->getUID());
 
@@ -88,6 +73,7 @@ class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPerson
 		return $template;
 	}
 
+	#[\Override]
 	public function verifyChallenge(IUser $user, string $challenge): bool {
 		try {
 			$token = $this->tokenManager->getByToken($challenge);
@@ -101,10 +87,12 @@ class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPerson
 			$token->getUserId() === $user->getUID();
 	}
 
+	#[\Override]
 	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
 		return $this->stateManager->getState($user);
 	}
 
+	#[\Override]
 	public function getPersonalSettings(IUser $user): IPersonalProviderSettings {
 		return new Personal(
 			$this->initialStateService,
@@ -113,10 +101,12 @@ class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPerson
 		);
 	}
 
+	#[\Override]
 	public function enableFor(IUser $user): void {
 		$this->stateManager->setState($user, true);
 	}
 
+	#[\Override]
 	public function disableFor(IUser $user): void {
 		$this->stateManager->setState($user, false);
 	}

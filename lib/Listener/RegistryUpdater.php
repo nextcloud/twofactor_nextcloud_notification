@@ -25,6 +25,7 @@ class RegistryUpdater implements IEventListener {
 	) {
 	}
 
+	#[\Override]
 	public function handle(Event $event): void {
 		if ($event instanceof StateChanged) {
 			if ($event->isEnabled()) {

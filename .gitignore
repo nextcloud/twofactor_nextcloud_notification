@@ -66,4 +66,5 @@ nbproject
 /.php-cs-fixer.cache
 /build
 /vendor
+/vendor-bin/*/vendor
 /node_modules

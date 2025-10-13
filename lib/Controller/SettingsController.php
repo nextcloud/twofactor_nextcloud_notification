@@ -27,6 +27,7 @@ class SettingsController extends Controller {
 
 	#[NoAdminRequired]
 	public function setState(bool $state): JSONResponse {
+		/** @psalm-suppress PossiblyNullArgument */
 		$this->stateManager->setState($this->userSession->getUser(), $state);
 		return new JSONResponse([
 			'enabled' => $state

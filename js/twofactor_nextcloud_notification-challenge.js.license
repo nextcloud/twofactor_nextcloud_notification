@@ -6,7 +6,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 SPDX-FileCopyrightText: Tobias Koppers @sokra
 SPDX-FileCopyrightText: T. Jameson Little <t.jameson.little@gmail.com>
 SPDX-FileCopyrightText: Roman Shtylman <shtylman@gmail.com>
-SPDX-FileCopyrightText: Matt Zabriskie
 SPDX-FileCopyrightText: Joas Schilling <coding@schilljs.com>
 SPDX-FileCopyrightText: GitHub Inc.
 SPDX-FileCopyrightText: Feross Aboukhadijeh
@@ -20,9 +19,6 @@ This file is generated from multiple sources. Included packages:
 - semver
 	- version: 7.6.3
 	- license: ISC
-- axios
-	- version: 1.12.1
-	- license: MIT
 - base64-js
 	- version: 1.5.1
 	- license: MIT

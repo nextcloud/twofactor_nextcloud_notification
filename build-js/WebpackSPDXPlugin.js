@@ -199,10 +199,10 @@ class WebpackSPDXPlugin {
 			}
 			output = `\n\n${output}`
 			for (const author of [...authors].sort()) {
-				output = `SPDX-FileCopyrightText: ${author}\n${output}`
+				output = 'SPDX-FileCopy' + `rightText: ${author}\n${output}`
 			}
 			for (const license of [...licenses].sort()) {
-				output = `SPDX-License-Identifier: ${license}\n${output}`
+				output = 'SPDX-License-Id' + `entifier: ${license}\n${output}`
 			}
 
 			compilation.emitAsset(

@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import { t } from '@nextcloud/l10n'
+
 const State = Object.freeze({
 	POLLING: 0,
 	VERIFYING: 1,
@@ -32,6 +34,9 @@ export default {
 			state: State.POLLING,
 			State,
 		}
+	},
+	methods: {
+		t,
 	},
 }
 </script>

@@ -16,6 +16,7 @@
 
 <script>
 import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
+import { t } from '@nextcloud/l10n'
 
 export default {
 	name: 'PersonalSettings',
@@ -31,6 +32,7 @@ export default {
 		}
 	},
 	methods: {
+		t,
 		toggleEnabled() {
 			this.loading = true
 

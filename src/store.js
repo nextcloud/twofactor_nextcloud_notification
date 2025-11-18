@@ -36,8 +36,10 @@ export const actions = {
 
 export default new Vuex.Store({
 	strict: process.env.NODE_ENV !== 'production',
-	state: {
-		enabled: false,
+	state() {
+		return {
+			enabled: false,
+		}
 	},
 	mutations,
 	actions,

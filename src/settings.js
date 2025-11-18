@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-import Vue from 'vue'
+import { createApp } from 'vue'
 
 import PersonalSettings from './components/PersonalSettings.vue'
 import store from './store.js'
@@ -14,7 +14,6 @@ store.replaceState({
 	enabled,
 })
 
-const View = Vue.extend(PersonalSettings)
-new View({
-	store,
-}).$mount('#twofactor-notification-settings')
+createApp(PersonalSettings)
+	.use(store)
+	.mount('#twofactor-notification-settings')

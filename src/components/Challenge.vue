@@ -20,6 +20,7 @@
 
 <script>
 import { t } from '@nextcloud/l10n'
+import { challengeOnLoginForm } from '../services/ChallengeService.js'
 
 const State = Object.freeze({
 	POLLING: 0,
@@ -29,12 +30,19 @@ const State = Object.freeze({
 
 export default {
 	name: 'Challenge',
+
 	data() {
 		return {
 			state: State.POLLING,
 			State,
 		}
 	},
+
+	async created() {
+		const accepted = await challengeOnLoginForm()
+		this.state = accepted ? State.VERIFYING : State.REJECTED
+	},
+
 	methods: {
 		t,
 	},

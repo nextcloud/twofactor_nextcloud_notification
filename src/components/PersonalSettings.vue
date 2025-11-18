@@ -5,17 +5,17 @@
 
 <template>
 	<div id="twofactor-notification-settings">
-		<NcCheckboxRadioSwitch type="switch"
-			:checked.sync="enabled"
+		<NcCheckboxRadioSwitch v-model="enabled"
+			type="switch"
 			:loading="loading"
-			@update:checked="toggleEnabled">
+			@update:modelValue="toggleEnabled">
 			{{ t('twofactor_nextcloud_notification', 'Use two-factor authentication via Nextcloud notifications') }}
 		</NcCheckboxRadioSwitch>
 	</div>
 </template>
 
 <script>
-import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
+import NcCheckboxRadioSwitch from '@nextcloud/vue/components/NcCheckboxRadioSwitch'
 import { t } from '@nextcloud/l10n'
 
 export default {

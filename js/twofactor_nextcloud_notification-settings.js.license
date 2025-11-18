@@ -8,8 +8,10 @@ SPDX-FileCopyrightText: T. Jameson Little <t.jameson.little@gmail.com>
 SPDX-FileCopyrightText: Roman Shtylman <shtylman@gmail.com>
 SPDX-FileCopyrightText: Nextcloud GmbH and Nextcloud contributors
 SPDX-FileCopyrightText: Joas Schilling <coding@schilljs.com>
+SPDX-FileCopyrightText: Guillaume Chau
 SPDX-FileCopyrightText: GitHub Inc.
 SPDX-FileCopyrightText: Feross Aboukhadijeh
+SPDX-FileCopyrightText: Evan You
 
 
 This file is generated from multiple sources. Included packages:
@@ -17,8 +19,23 @@ This file is generated from multiple sources. Included packages:
 	- version: 7.6.3
 	- license: ISC
 - @nextcloud/vue
-	- version: 8.33.0
+	- version: 9.2.0
 	- license: AGPL-3.0-or-later
+- @vue/devtools-api
+	- version: 6.6.4
+	- license: MIT
+- @vue/reactivity
+	- version: 3.5.24
+	- license: MIT
+- @vue/runtime-core
+	- version: 3.5.24
+	- license: MIT
+- @vue/runtime-dom
+	- version: 3.5.24
+	- license: MIT
+- @vue/shared
+	- version: 3.5.24
+	- license: MIT
 - base64-js
 	- version: 1.5.1
 	- license: MIT
@@ -39,6 +56,12 @@ This file is generated from multiple sources. Included packages:
 	- license: MIT
 - style-loader
 	- version: 4.0.0
+	- license: MIT
+- vue-loader
+	- version: 17.4.2
+	- license: MIT
+- vue
+	- version: 3.5.24
 	- license: MIT
 - webpack
 	- version: 5.94.0

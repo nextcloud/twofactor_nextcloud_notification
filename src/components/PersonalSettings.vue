@@ -8,7 +8,7 @@
 		<NcCheckboxRadioSwitch v-model="enabled"
 			type="switch"
 			:loading="loading"
-			@update:modelValue="toggleEnabled">
+			@update:model-value="toggleEnabled">
 			{{ t('twofactor_nextcloud_notification', 'Use two-factor authentication via Nextcloud notifications') }}
 		</NcCheckboxRadioSwitch>
 	</div>

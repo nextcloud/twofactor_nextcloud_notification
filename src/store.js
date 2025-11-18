@@ -3,12 +3,8 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-import Vue from 'vue'
-import Vuex from 'vuex'
-
+import { createStore } from 'vuex'
 import { persist } from './services/SettingsService.js'
-
-Vue.use(Vuex)
 
 export const mutations = {
 	setEnabled(state, enabled) {
@@ -34,7 +30,7 @@ export const actions = {
 	},
 }
 
-export default new Vuex.Store({
+export default createStore({
 	strict: process.env.NODE_ENV !== 'production',
 	state() {
 		return {

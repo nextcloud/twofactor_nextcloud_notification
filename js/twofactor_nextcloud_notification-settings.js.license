@@ -16,10 +16,10 @@ SPDX-FileCopyrightText: Evan You
 
 This file is generated from multiple sources. Included packages:
 - semver
-	- version: 7.6.3
+	- version: 7.7.3
 	- license: ISC
 - @nextcloud/vue
-	- version: 9.2.0
+	- version: 9.3.0
 	- license: AGPL-3.0-or-later
 - @vue/devtools-api
 	- version: 6.6.4

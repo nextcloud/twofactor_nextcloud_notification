@@ -14,10 +14,10 @@ SPDX-FileCopyrightText: Feross Aboukhadijeh
 
 This file is generated from multiple sources. Included packages:
 - semver
-	- version: 7.6.3
+	- version: 7.7.3
 	- license: ISC
 - @nextcloud/vue
-	- version: 8.34.0
+	- version: 8.35.0
 	- license: AGPL-3.0-or-later
 - base64-js
 	- version: 1.5.1

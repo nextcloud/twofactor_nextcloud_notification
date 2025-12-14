@@ -12,7 +12,7 @@ SPDX-FileCopyrightText: Feross Aboukhadijeh
 
 This file is generated from multiple sources. Included packages:
 - semver
-	- version: 7.6.3
+	- version: 7.7.3
 	- license: ISC
 - base64-js
 	- version: 1.5.1

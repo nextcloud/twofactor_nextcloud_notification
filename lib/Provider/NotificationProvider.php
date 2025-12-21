@@ -83,8 +83,8 @@ class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPerson
 
 		$this->tokenManager->delete($token);
 
-		return $token->getStatus() === Token::ACCEPTED &&
-			$token->getUserId() === $user->getUID();
+		return $token->getStatus() === Token::ACCEPTED
+			&& $token->getUserId() === $user->getUID();
 	}
 
 	#[\Override]

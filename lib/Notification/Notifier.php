@@ -46,8 +46,8 @@ class Notifier implements INotifier {
 	 */
 	#[\Override]
 	public function prepare(INotification $notification, string $languageCode): INotification {
-		if ($notification->getApp() !== Application::APP_ID ||
-			$notification->getSubject() !== 'login_attempt') {
+		if ($notification->getApp() !== Application::APP_ID
+			|| $notification->getSubject() !== 'login_attempt') {
 			throw new UnknownNotificationException();
 		}
 

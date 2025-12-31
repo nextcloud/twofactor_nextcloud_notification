@@ -70,6 +70,7 @@ class APIController extends OCSController {
 	}
 
 	#[PublicPage]
+	#[NoTwoFactorRequired]
 	public function poll(string $token): DataResponse {
 		try {
 			$token = $this->tokenManager->getByToken($token);

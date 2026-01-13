@@ -69,6 +69,9 @@ class APIController extends OCSController {
 		return new DataResponse([], Http::STATUS_OK);
 	}
 
+	/**
+	 * @NoTwoFactorRequired
+	 */
 	#[PublicPage]
 	public function poll(string $token): DataResponse {
 		try {

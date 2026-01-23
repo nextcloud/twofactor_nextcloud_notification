@@ -59,6 +59,9 @@ updates:
   labels:
     - 3. to review
     - dependencies
+  ignore:
+    - dependency-name: "*"
+      update-types: ["version-update:semver-major", "version-update:semver-minor"]
   cooldown:
     default-days: 4
     exclude:
@@ -80,6 +83,9 @@ updates:
   labels:
     - 3. to review
     - dependencies
+  ignore:
+    - dependency-name: "*"
+      update-types: ["version-update:semver-major", "version-update:semver-minor"]
   cooldown:
     default-days: 4
     exclude:
@@ -101,6 +107,9 @@ updates:
   labels:
     - 3. to review
     - dependencies
+  ignore:
+    - dependency-name: "*"
+      update-types: ["version-update:semver-major", "version-update:semver-minor"]
   cooldown:
     default-days: 4
     exclude:

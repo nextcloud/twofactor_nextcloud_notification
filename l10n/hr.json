@@ -2,6 +2,8 @@
     "TwoFactor Nextcloud notification" : "TwoFactor Nextcloud obavijest",
     "Approve" : "Odobri",
     "Cancel" : "Odustani",
+    "Login attempt from IP address {ip}" : "Pokušaj prijave s IP adrese {ip}",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Ako se trenutačno pokušavate prijaviti s drugog uređaja ili preglednika, odobrite zahtjev. Ako se u ovom trenutku ne pokušavate prijaviti, upotrijebite opciju za poništavanje kako biste prekinuli pokušaj prijave.",
     "Nextcloud Notification" : "Nextcloud obavijest",
     "Authenticate using a device that is already logged in to your account" : "Izvršite autentifikaciju uređajem koji je već prijavljen u vaš račun",
     "Two-Factor Authentication via Nextcloud notification" : "Dvofaktorska autentifikacija putem Nextcloud obavijesti",

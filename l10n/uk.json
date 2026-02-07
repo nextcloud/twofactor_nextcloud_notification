@@ -7,7 +7,7 @@
     "Nextcloud Notification" : "Сповіщення Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Пройдіть автентифікацію за допомогою пристрою, з яким ви вже входили під вашим обліковим записом",
     "Two-Factor Authentication via Nextcloud notification" : "Двофакторна автентифікація за допомогою сповіщень у Nextcloud",
-    "Allows using any of your logged in devices as second factor" : "Дозволяє використовувати будь-який пристрій, в якому ви вже авторизовані, в якості другого фактору автентифікації",
+    "Allows using any of your logged in devices as second factor" : "Дозволяє використовувати будь-який пристрій, в якому ви вже авторизовані, в якості другого фактора автентифікації",
     "Please accept the request on one of your logged in devices." : "Прийміть запит на одному із пристроїв, до яких ви вже увійшли.",
     "You will be redirected automatically once this login has been accepted." : "Вас буде автоматично переспрямовано після підтвердження авторизації.",
     "Please wait …" : "Будь ласка, зачекайте…",

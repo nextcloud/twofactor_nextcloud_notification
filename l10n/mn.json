@@ -3,6 +3,7 @@
     "Approve" : "Зөвшөөрөх",
     "Cancel" : "болиулах",
     "Login attempt from IP address {ip}" : "{ip} IP хаягаас нэвтрэх оролдлого",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Хэрэв та одоо өөр төхөөрөмж эсвэл хөтчөөс нэвтрэхийг оролдож байгаа бол хүсэлтийг зөвшөөрнө үү. Хэрэв та одоо нэвтрэхийг оролдохгүй байгаа бол нэвтрэлтийн оролдлогыг цуцлахын тулд цуцлах сонголтыг ашиглах хэрэгтэй.",
     "Nextcloud Notification" : "Nextcloud мэдэгдэл",
     "Authenticate using a device that is already logged in to your account" : "Таны хаягт аль хэдийн нэвтэрсэн төхөөрөмж ашиглан баталгаажуулах",
     "Two-Factor Authentication via Nextcloud notification" : "Nextcloud мэдэгдлээр хоёр хүчин зүйлийн баталгаажуулалт",

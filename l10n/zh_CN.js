@@ -4,6 +4,7 @@ OC.L10N.register(
     "TwoFactor Nextcloud notification" : "Nextcloud 两步验证通知",
     "Approve" : "批准",
     "Cancel" : "取消",
+    "Login attempt from IP address {ip}" : "IP地址{ip}正尝试登陆",
     "Nextcloud Notification" : "Nextcloud 通知",
     "Authenticate using a device that is already logged in to your account" : "使用已登录此账号的设备来验证",
     "Two-Factor Authentication via Nextcloud notification" : "通过 Nextcloud 通知进行两步验证",

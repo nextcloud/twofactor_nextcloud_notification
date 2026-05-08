@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2018 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
-script('twofactor_nextcloud_notification', 'twofactor_nextcloud_notification-challenge');
+\OCP\Util::addScript('twofactor_nextcloud_notification', 'twofactor_nextcloud_notification-challenge', 'core');
 ?>
 
 <input type="hidden" id="challenge-poll-token" value="<?php p($_['token']); ?>">

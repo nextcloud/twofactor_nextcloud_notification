@@ -10,13 +10,15 @@ declare(strict_types=1);
 namespace OCA\TwoFactorNextcloudNotification\Migration;
 
 use Closure;
-use OCP\IConfig;
+use OCP\Config\IUserConfig;
+use OCP\IAppConfig;
 use OCP\Migration\IOutput;
 use OCP\Migration\SimpleMigrationStep;
 
 class Version3004Date20220331145316 extends SimpleMigrationStep {
 	public function __construct(
-		protected IConfig $config,
+		private readonly IAppConfig $appConfig,
+		private readonly IUserConfig $userConfig,
 	) {
 	}
 
@@ -27,17 +29,17 @@ class Version3004Date20220331145316 extends SimpleMigrationStep {
 	 */
 	#[\Override]
 	public function postSchemaChange(IOutput $output, Closure $schemaClosure, array $options): void {
-		$keys = $this->config->getAppKeys('twofactor_nextcloud_notification');
+		$keys = $this->appConfig->getKeys('twofactor_nextcloud_notification');
 		foreach ($keys as $key) {
 			if (str_ends_with($key, '_enabled')) {
-				$this->config->setUserValue(
+				$this->userConfig->setValueBool(
 					substr($key, 0, -8),
 					'twofactor_nextcloud_notification',
 					'enabled',
-					'1'
+					true
 				);
 
-				$this->config->deleteAppValue('twofactor_nextcloud_notification', $key);
+				$this->appConfig->deleteKey('twofactor_nextcloud_notification', $key);
 			}
 		}
 	}

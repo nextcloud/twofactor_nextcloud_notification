@@ -19,8 +19,8 @@ class SettingsController extends Controller {
 	public function __construct(
 		string $appName,
 		IRequest $request,
-		private StateManager $stateManager,
-		private IUserSession $userSession,
+		private readonly StateManager $stateManager,
+		private readonly IUserSession $userSession,
 	) {
 		parent::__construct($appName, $request);
 	}

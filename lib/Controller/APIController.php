@@ -24,8 +24,8 @@ class APIController extends OCSController {
 	public function __construct(
 		string $appName,
 		IRequest $request,
-		private TokenManager $tokenManager,
-		private ?string $userId = null,
+		private readonly TokenManager $tokenManager,
+		private readonly ?string $userId = null,
 	) {
 		parent::__construct($appName, $request);
 	}
@@ -34,9 +34,9 @@ class APIController extends OCSController {
 	public function approve(int $attemptId): DataResponse {
 		try {
 			$token = $this->tokenManager->getById($attemptId);
-		} catch (DoesNotExistException $e) {
+		} catch (DoesNotExistException) {
 			return new DataResponse([], Http::STATUS_NOT_FOUND);
-		} catch (TokenExpireException $e) {
+		} catch (TokenExpireException) {
 			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
@@ -54,9 +54,9 @@ class APIController extends OCSController {
 	public function disapprove(int $attemptId): DataResponse {
 		try {
 			$token = $this->tokenManager->getById($attemptId);
-		} catch (DoesNotExistException $e) {
+		} catch (DoesNotExistException) {
 			return new DataResponse([], Http::STATUS_NOT_FOUND);
-		} catch (TokenExpireException $e) {
+		} catch (TokenExpireException) {
 			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 
@@ -75,9 +75,9 @@ class APIController extends OCSController {
 	public function poll(string $token): DataResponse {
 		try {
 			$token = $this->tokenManager->getByToken($token);
-		} catch (DoesNotExistException $e) {
+		} catch (DoesNotExistException) {
 			return new DataResponse([], Http::STATUS_NOT_FOUND);
-		} catch (TokenExpireException $e) {
+		} catch (TokenExpireException) {
 			return new DataResponse([], Http::STATUS_FORBIDDEN);
 		}
 

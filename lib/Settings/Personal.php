@@ -16,9 +16,9 @@ use OCP\Template\ITemplateManager;
 
 class Personal implements IPersonalProviderSettings {
 	public function __construct(
-		private IInitialState $initialStateService,
-		private ITemplateManager $templateManager,
-		private bool $enabled,
+		private readonly IInitialState $initialStateService,
+		private readonly ITemplateManager $templateManager,
+		private readonly bool $enabled,
 	) {
 	}
 

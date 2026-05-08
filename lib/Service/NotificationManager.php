@@ -15,8 +15,8 @@ use OCP\Notification\IManager;
 
 class NotificationManager {
 	public function __construct(
-		private IManager $manager,
-		private IRequest $request,
+		private readonly IManager $manager,
+		private readonly IRequest $request,
 	) {
 	}
 

@@ -20,8 +20,8 @@ use OCP\User\Events\PostLoginEvent;
  */
 class RegistryUpdater implements IEventListener {
 	public function __construct(
-		private IRegistry $registry,
-		private NotificationProvider $provider,
+		private readonly IRegistry $registry,
+		private readonly NotificationProvider $provider,
 	) {
 	}
 

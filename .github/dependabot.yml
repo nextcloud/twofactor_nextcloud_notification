@@ -7,6 +7,7 @@ updates:
     - "/"
     - "/vendor-bin/csfixer"
     - "/vendor-bin/psalm"
+    - "/vendor-bin/rector"
   commit-message:
     prefix: "ci"
     include: "scope"
@@ -21,7 +22,7 @@ updates:
     - 3. to review
     - dependencies
   cooldown:
-    default-days: 4
+    default-days: 10
 
 - package-ecosystem: npm
   directory: "/"
@@ -39,7 +40,7 @@ updates:
     - 3. to review
     - dependencies
   cooldown:
-    default-days: 4
+    default-days: 10
     exclude:
       - "@nextcloud/*"
 
@@ -63,7 +64,7 @@ updates:
     - dependency-name: "*"
       update-types: ["version-update:semver-major", "version-update:semver-minor"]
   cooldown:
-    default-days: 4
+    default-days: 10
     exclude:
       - "@nextcloud/*"
 
@@ -87,7 +88,7 @@ updates:
     - dependency-name: "*"
       update-types: ["version-update:semver-major", "version-update:semver-minor"]
   cooldown:
-    default-days: 4
+    default-days: 10
     exclude:
       - "@nextcloud/*"
 
@@ -111,7 +112,7 @@ updates:
     - dependency-name: "*"
       update-types: ["version-update:semver-major", "version-update:semver-minor"]
   cooldown:
-    default-days: 4
+    default-days: 10
     exclude:
       - "@nextcloud/*"
 

@@ -20,8 +20,8 @@ use OCP\Security\ISecureRandom;
 class TokenMapper extends QBMapper {
 	public function __construct(
 		IDBConnection $db,
-		private ITimeFactory $timeFactory,
-		private ISecureRandom $random,
+		private readonly ITimeFactory $timeFactory,
+		private readonly ISecureRandom $random,
 	) {
 		parent::__construct($db, 'twofactor_tnn_tokens', Token::class);
 	}

@@ -13,8 +13,8 @@ use OCP\IUser;
 
 class StateChanged extends Event {
 	public function __construct(
-		private IUser $user,
-		private bool $enabled,
+		private readonly IUser $user,
+		private readonly bool $enabled,
 	) {
 		parent::__construct();
 	}

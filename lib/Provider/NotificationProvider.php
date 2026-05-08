@@ -29,12 +29,12 @@ use OCP\Template\ITemplateManager;
 
 class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPersonalSettings, IActivatableByAdmin, IDeactivatableByAdmin {
 	public function __construct(
-		private IL10N $l10n,
-		private TokenManager $tokenManager,
-		private StateManager $stateManager,
-		private IInitialState $initialStateService,
-		private IURLGenerator $url,
-		private ITemplateManager $templateManager,
+		private readonly IL10N $l10n,
+		private readonly TokenManager $tokenManager,
+		private readonly StateManager $stateManager,
+		private readonly IInitialState $initialStateService,
+		private readonly IURLGenerator $url,
+		private readonly ITemplateManager $templateManager,
 	) {
 	}
 
@@ -77,7 +77,7 @@ class NotificationProvider implements IProvider, IProvidesIcons, IProvidesPerson
 	public function verifyChallenge(IUser $user, string $challenge): bool {
 		try {
 			$token = $this->tokenManager->getByToken($challenge);
-		} catch (DoesNotExistException $e) {
+		} catch (DoesNotExistException) {
 			return false;
 		}
 

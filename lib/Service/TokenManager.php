@@ -16,9 +16,9 @@ use OCP\AppFramework\Utility\ITimeFactory;
 
 class TokenManager {
 	public function __construct(
-		private TokenMapper $mapper,
-		private NotificationManager $notificationManager,
-		private ITimeFactory $timeFactory,
+		private readonly TokenMapper $mapper,
+		private readonly NotificationManager $notificationManager,
+		private readonly ITimeFactory $timeFactory,
 	) {
 	}
 

@@ -15,7 +15,7 @@ use OCP\BackgroundJob\TimedJob;
 class CleanupTokens extends TimedJob {
 	public function __construct(
 		ITimeFactory $timeFactory,
-		private TokenManager $tokenManager,
+		private readonly TokenManager $tokenManager,
 	) {
 		parent::__construct($timeFactory);
 

@@ -14,6 +14,7 @@ use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\Attribute\NoTwoFactorRequired;
 use OCP\AppFramework\Http\Attribute\PublicPage;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
@@ -69,6 +70,7 @@ class APIController extends OCSController {
 		return new DataResponse([], Http::STATUS_OK);
 	}
 
+	#[NoTwoFactorRequired]
 	#[PublicPage]
 	public function poll(string $token): DataResponse {
 		try {

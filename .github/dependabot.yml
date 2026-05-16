@@ -45,6 +45,30 @@ updates:
       - "@nextcloud/*"
 
 - package-ecosystem: npm
+  target-branch: stable34
+  directory: "/"
+  commit-message:
+    prefix: "build"
+    include: "scope"
+  versioning-strategy: "increase"
+  schedule:
+    interval: weekly
+    day: saturday
+    time: "03:00"
+    timezone: Europe/Berlin
+  open-pull-requests-limit: 10
+  labels:
+    - 3. to review
+    - dependencies
+  ignore:
+    - dependency-name: "*"
+      update-types: ["version-update:semver-major", "version-update:semver-minor"]
+  cooldown:
+    default-days: 10
+    exclude:
+      - "@nextcloud/*"
+
+- package-ecosystem: npm
   target-branch: stable33
   directory: "/"
   commit-message:
@@ -70,30 +94,6 @@ updates:
 
 - package-ecosystem: npm
   target-branch: stable32
-  directory: "/"
-  commit-message:
-    prefix: "build"
-    include: "scope"
-  versioning-strategy: "increase"
-  schedule:
-    interval: weekly
-    day: saturday
-    time: "03:00"
-    timezone: Europe/Berlin
-  open-pull-requests-limit: 10
-  labels:
-    - 3. to review
-    - dependencies
-  ignore:
-    - dependency-name: "*"
-      update-types: ["version-update:semver-major", "version-update:semver-minor"]
-  cooldown:
-    default-days: 10
-    exclude:
-      - "@nextcloud/*"
-
-- package-ecosystem: npm
-  target-branch: stable31
   directory: "/"
   commit-message:
     prefix: "build"

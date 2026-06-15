@@ -17,9 +17,9 @@ return RectorConfig::configure()
 		__DIR__ . '/templates',
 		__DIR__ . '/tests',
 	])
-	->withPhpSets(php82: true)
+	->withPhpSets(php83: true)
 	->withSets([
-		PHPUnitSetList::PHPUNIT_110,
-		NextcloudSets::NEXTCLOUD_34,
+		PHPUnitSetList::PHPUNIT_120,
+		NextcloudSets::NEXTCLOUD_35,
 	])
 	->withTypeCoverageLevel(0);

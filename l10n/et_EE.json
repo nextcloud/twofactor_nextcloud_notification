@@ -7,7 +7,7 @@
     "Nextcloud Notification" : "Nextcloudi teavitus",
     "Authenticate using a device that is already logged in to your account" : "Autendi seadmes, kus sa juba oled sellesse Nextcloudi serverisse sisse loginud",
     "Two-Factor Authentication via Nextcloud notification" : "Kaheastmeline autentimine Nextcloudi teavitusega",
-    "Allows using any of your logged in devices as second factor" : "Võimalda kasutada ükspuha missugust sinu seadet kaheastmelise autentimise teise sammuna",
+    "Allows using any of your logged in devices as second factor" : "Võimaldab kasutada ükspuha missugust sinu seadet kaheastmelise autentimise teise sammuna",
     "Please accept the request on one of your logged in devices." : "Palun nõustu selle päringuga mõnes oma seadmes, kus oled sellesse Nextcloudi serverisse sisse loginud.",
     "You will be redirected automatically once this login has been accepted." : "Peale sisselogimisega nõustumist suuname sind automaatselt edasi.",
     "Please wait …" : "Palun oota...",

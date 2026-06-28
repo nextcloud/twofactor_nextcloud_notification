@@ -9,7 +9,7 @@
 	<summary>Allows using any of your logged in devices as second factor</summary>
 	<description>Allows using any of your logged in devices as second factor</description>
 	<version>9.0.0-dev.0</version>
-	<licence>agpl</licence>
+	<licence>AGPL-3.0-or-later</licence>
 
 	<author>Joas Schilling</author>
 	<author>Roeland Jago Douma</author>

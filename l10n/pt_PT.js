@@ -4,6 +4,7 @@ OC.L10N.register(
     "Approve" : "Aprovar",
     "Cancel" : "Cancelar",
     "Login attempt from IP address {ip}" : "Tentativa de login do endereço IP {ip}",
+    "Nextcloud Notification" : "Notificação Nextcloud",
     "Two-Factor Authentication via Nextcloud notification" : "Autenticação de dois fatores via notificação Nextcloud",
     "Please wait …" : "Aguarde..."
 },

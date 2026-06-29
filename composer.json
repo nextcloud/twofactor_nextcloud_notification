@@ -6,7 +6,7 @@
 	},
 	"name": "nextcloud/twofactor_nextcloud_notification",
 	"description": "Twofactor via nextcloud notifications",
-	"license": "AGPL",
+	"license": "AGPL-3.0-or-later",
 	"config": {
 		"optimize-autoloader": true,
 		"classmap-authoritative": true,

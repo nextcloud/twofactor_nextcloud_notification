@@ -4,6 +4,7 @@ OC.L10N.register(
     "Approve" : "Aprovar",
     "Cancel" : "Cancelar",
     "Login attempt from IP address {ip}" : "Tentativa de login do endereço IP {ip}",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Se estiver tentando fazer login de outro dispositivo ou navegador, aprove a solicitação. Se não estiver tentando fazer login no momento, use a opção cancelar para abortar a tentativa de login.",
     "Nextcloud Notification" : "Notificação Nextcloud",
     "Two-Factor Authentication via Nextcloud notification" : "Autenticação de dois fatores via notificação Nextcloud",
     "Please wait …" : "Aguarde..."

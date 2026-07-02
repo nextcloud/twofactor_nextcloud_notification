@@ -5,6 +5,9 @@
     "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Se estiver tentando fazer login de outro dispositivo ou navegador, aprove a solicitação. Se não estiver tentando fazer login no momento, use a opção cancelar para abortar a tentativa de login.",
     "Nextcloud Notification" : "Notificação Nextcloud",
     "Two-Factor Authentication via Nextcloud notification" : "Autenticação de dois fatores via notificação Nextcloud",
-    "Please wait …" : "Aguarde..."
+    "Allows using any of your logged in devices as second factor" : "Permite usar qualquer um dos seus dispositivos conectados como segundo fator",
+    "Please accept the request on one of your logged in devices." : "Por favor, aceite o pedido em um de seus dispositivos conectados.",
+    "Please wait …" : "Aguarde...",
+    "Use two-factor authentication via Nextcloud notifications" : "Use autenticação de dois fatores via notificações do Nextcloud"
 },"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

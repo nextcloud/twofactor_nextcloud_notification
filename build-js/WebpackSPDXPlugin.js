@@ -200,9 +200,11 @@ class WebpackSPDXPlugin {
 			}
 			output = `\n\n${output}`
 			for (const author of [...authors].sort()) {
+				// eslint-disable-next-line no-useless-concat -- avoid unnecessary SPDX parser trigger
 				output = 'SPDX-FileCopy' + `rightText: ${author}\n${output}`
 			}
 			for (const license of [...licenses].sort()) {
+				// eslint-disable-next-line no-useless-concat -- avoid unnecessary SPDX parser trigger
 				output = 'SPDX-License-Id' + `entifier: ${license}\n${output}`
 			}
 

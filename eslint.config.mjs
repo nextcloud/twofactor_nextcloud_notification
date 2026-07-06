@@ -8,4 +8,10 @@ import globals from 'globals'
 
 export default [
 	...recommendedJavascript,
+	{
+		rules: {
+			// TODO: migrate to @nextcloud/logger
+			'no-console': 'off',
+		},
+	},
 ]

@@ -29,6 +29,8 @@ const State = Object.freeze({
 })
 
 export default {
+	// TODO: Rename component to a multi-word
+	// eslint-disable-next-line vue/multi-word-component-names
 	name: 'Challenge',
 
 	data() {

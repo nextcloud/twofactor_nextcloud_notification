@@ -14,4 +14,12 @@ export default [
 			'no-console': 'off',
 		},
 	},
+	{
+		files: ['build-js/**/*.js'],
+		languageOptions: {
+			globals: {
+				...globals.node,
+			},
+		},
+	},
 ]

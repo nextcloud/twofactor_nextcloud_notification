@@ -10,7 +10,7 @@
 	</p>
 	<p v-else-if="state === State.VERIFYING">
 		<span class="icon-loading-small" />
-		{{ t('twofactor_nextcloud_notification', 'Please wait …') }}
+		{{ t('twofactor_nextcloud_notification', 'Please wait …') }}
 	</p>
 	<p v-else-if="state === State.REJECTED">
 		<span class="icon-loading-small" />

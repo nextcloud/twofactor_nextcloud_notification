@@ -17,5 +17,5 @@ export function persist(enabled) {
 	}
 
 	return Axios.post(url, data)
-		.then(resp => resp.data)
+		.then((resp) => resp.data)
 }

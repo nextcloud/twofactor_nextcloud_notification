@@ -2,8 +2,9 @@
  * SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
-const path = require('path')
+
 const webpackConfig = require('@nextcloud/webpack-vue-config')
+const path = require('path')
 const TerserPlugin = require('terser-webpack-plugin')
 const WebpackSPDXPlugin = require('./build-js/WebpackSPDXPlugin.js')
 
@@ -31,7 +32,7 @@ webpackConfig.plugins = [
 			'@nextcloud/axios': 'GPL-3.0-or-later',
 			'@nextcloud/vue': 'AGPL-3.0-or-later',
 			'nextcloud-vue-collections': 'AGPL-3.0-or-later',
-		}
+		},
 	}),
 ]
 

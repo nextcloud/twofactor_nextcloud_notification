@@ -51,7 +51,7 @@ class WebpackSPDXPlugin {
 		const packageJson = `${dir}/package.json`
 		try {
 			await fs.access(packageJson, constants.F_OK)
-		} catch (e) {
+		} catch {
 			return await this.#findPackage(path.dirname(dir))
 		}
 

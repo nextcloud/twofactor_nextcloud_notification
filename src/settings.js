@@ -3,11 +3,10 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
+import { loadState } from '@nextcloud/initial-state'
 import { createApp } from 'vue'
-
 import PersonalSettings from './components/PersonalSettings.vue'
 import store from './store.js'
-import { loadState } from '@nextcloud/initial-state'
 
 const enabled = loadState('twofactor_nextcloud_notification', 'state')
 store.replaceState({

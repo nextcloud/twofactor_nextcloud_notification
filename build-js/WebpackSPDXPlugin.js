@@ -13,7 +13,6 @@ const path = require('node:path')
 const webpack = require('webpack')
 
 class WebpackSPDXPlugin {
-
 	#options
 
 	/**
@@ -41,6 +40,7 @@ class WebpackSPDXPlugin {
 
 	/**
 	 * Find the nearest package.json
+	 *
 	 * @param {string} dir Directory to start checking
 	 */
 	async #findPackage(dir) {
@@ -51,7 +51,7 @@ class WebpackSPDXPlugin {
 		const packageJson = `${dir}/package.json`
 		try {
 			await fs.access(packageJson, constants.F_OK)
-		} catch (e) {
+		} catch {
 			return await this.#findPackage(path.dirname(dir))
 		}
 
@@ -66,6 +66,7 @@ class WebpackSPDXPlugin {
 
 	/**
 	 * Emit licenses found in compilation to '.license' files
+	 *
 	 * @param {webpack.Compilation} compilation Webpack compilation object
 	 * @param {*} callback Callback for old webpack versions
 	 */
@@ -199,9 +200,11 @@ class WebpackSPDXPlugin {
 			}
 			output = `\n\n${output}`
 			for (const author of [...authors].sort()) {
+				// eslint-disable-next-line no-useless-concat -- avoid unnecessary SPDX parser trigger
 				output = 'SPDX-FileCopy' + `rightText: ${author}\n${output}`
 			}
 			for (const license of [...licenses].sort()) {
+				// eslint-disable-next-line no-useless-concat -- avoid unnecessary SPDX parser trigger
 				output = 'SPDX-License-Id' + `entifier: ${license}\n${output}`
 			}
 
@@ -215,7 +218,6 @@ class WebpackSPDXPlugin {
 			return callback()
 		}
 	}
-
 }
 
 module.exports = WebpackSPDXPlugin

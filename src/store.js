@@ -31,6 +31,7 @@ export const actions = {
 }
 
 export default createStore({
+	// eslint-disable-next-line no-undef -- build time defined constant
 	strict: process.env.NODE_ENV !== 'production',
 	state() {
 		return {

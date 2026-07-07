@@ -7,16 +7,22 @@ import Axios from '@nextcloud/axios'
 import { generateOcsUrl } from '@nextcloud/router'
 import { poll } from '../util/poll.js'
 
-const pollProducer = (url) => () => {
-	return Axios.get(url, {})
-		.then(resp => resp.data)
-		.then(({ ocs }) => {
-			if (ocs.data.status === 'pending') {
-				return Promise.reject(ocs.data.status)
-			}
+/**
+ *
+ * @param url
+ */
+function pollProducer(url) {
+	return () => {
+		return Axios.get(url, {})
+			.then((resp) => resp.data)
+			.then(({ ocs }) => {
+				if (ocs.data.status === 'pending') {
+					return Promise.reject(ocs.data.status)
+				}
 
-			return ocs
-		})
+				return ocs
+			})
+	}
 }
 
 /**
@@ -28,14 +34,14 @@ const pollProducer = (url) => () => {
 function challenge(token) {
 	const url = generateOcsUrl('apps/twofactor_nextcloud_notification/api/v1/poll/{token}', { token })
 
-	return poll(pollProducer(url), 800).then(r => {
+	return poll(pollProducer(url), 800).then((r) => {
 		console.debug('polling finished', r)
 		if (r.data.status === 'accepted') {
 			return true
 		} else {
 			return false
 		}
-	}).catch(err => {
+	}).catch((err) => {
 		console.error('polling failed', err)
 		// TODO: properly handle an error
 	})

@@ -2,25 +2,21 @@
   "name": "twofactor_nextcloud_notification",
   "version": "9.0.0-dev.0",
   "description": "The app allows you to use other logged in devices or browser sessions as a second factor.",
+  "license": "AGPL-3.0-or-later",
+  "author": "Joas Schilling <coding@schilljs.com>",
   "scripts": {
-    "build": "NODE_ENV=production webpack --progress --config webpack.js",
+    "build": "NODE_ENV=production webpack --progress",
     "postbuild": "build-js/npm-post-build.sh",
-    "dev": "NODE_ENV=development webpack --progress --config webpack.js",
-    "watch": "NODE_ENV=development webpack --progress --watch --config webpack.js",
-    "lint": "eslint --ext .js,.vue src",
-    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "dev": "NODE_ENV=development webpack --progress",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "stylelint": "stylelint css/*.css css/*.scss src/**/*.scss src/**/*.vue",
-    "stylelint:fix": "stylelint css/*.css css/*.scss src/**/*.scss src/**/*.vue --fix"
-  },
-  "engines": {
-    "node": "^24.0.0",
-    "npm": "^11.3.0"
+    "stylelint:fix": "stylelint css/*.css css/*.scss src/**/*.scss src/**/*.vue --fix",
+    "watch": "NODE_ENV=development webpack --progress --watch"
   },
   "browserslist": [
     "extends @nextcloud/browserslist-config"
   ],
-  "author": "Joas Schilling <coding@schilljs.com>",
-  "license": "AGPL-3.0-or-later",
   "dependencies": {
     "@nextcloud/axios": "^2.6.0",
     "@nextcloud/initial-state": "^3.0.0",
@@ -33,8 +29,13 @@
   "devDependencies": {
     "@nextcloud/babel-config": "^1.3.0",
     "@nextcloud/browserslist-config": "^3.1.2",
-    "@nextcloud/eslint-config": "^8.4.2",
+    "@nextcloud/eslint-config": "^9.0.0",
     "@nextcloud/stylelint-config": "^3.2.2",
-    "@nextcloud/webpack-vue-config": "^7.0.2"
+    "@nextcloud/webpack-vue-config": "^7.0.2",
+    "eslint": "^10.6.0"
+  },
+  "engines": {
+    "node": "^24.0.0",
+    "npm": "^11.3.0"
   }
 }

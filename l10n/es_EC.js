@@ -12,8 +12,8 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "Permite utilizar cualquiera de tus dispositivos con sesión iniciada como segundo factor",
     "Please accept the request on one of your logged in devices." : "Por favor, acepta la solicitud en uno de tus dispositivos con sesión iniciada.",
     "You will be redirected automatically once this login has been accepted." : "Serás redirigido automáticamente una vez que este inicio de sesión haya sido aceptado.",
-    "Please wait …" : "Por favor, espera...",
     "Your login attempt was rejected." : "Tu intento de inicio de sesión fue rechazado.",
-    "Use two-factor authentication via Nextcloud notifications" : "Utilizar la autenticación de dos factores a través de las notificaciones de Nextcloud"
+    "Use two-factor authentication via Nextcloud notifications" : "Utilizar la autenticación de dos factores a través de las notificaciones de Nextcloud",
+    "Please wait …" : "Por favor, espera..."
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

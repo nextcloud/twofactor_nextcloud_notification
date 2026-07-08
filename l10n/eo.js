@@ -10,7 +10,7 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "Ebligas uzon de iu ajn el viaj jam ensalutintaj aparatoj kiel dua fazo",
     "Please accept the request on one of your logged in devices." : "Bv. aprobi la peton ĉe unu el viaj ensalutintaj aparatoj.",
     "You will be redirected automatically once this login has been accepted." : "Vi alidirektiĝos aŭtomate, kiam la ensaluto estos aprobita.",
-    "Please wait …" : "Bv. atendi...",
-    "Use two-factor authentication via Nextcloud notifications" : "Uzi dufazan aŭtentigon per Nextcloud-sciigoj"
+    "Use two-factor authentication via Nextcloud notifications" : "Uzi dufazan aŭtentigon per Nextcloud-sciigoj",
+    "Please wait …" : "Bv. atendi..."
 },
 "nplurals=2; plural=(n != 1);");

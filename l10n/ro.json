@@ -7,7 +7,7 @@
     "Allows using any of your logged in devices as second factor" : "Permite folosirea ca al doilea factor a oricărui dispozitiv personal conectat ",
     "Please accept the request on one of your logged in devices." : "Acceptați cererea de pe unul dintre dispozitivele personale conectate.",
     "You will be redirected automatically once this login has been accepted." : "Veți fi redirectat automat imediat ce autentificarea este acceptată.",
-    "Please wait …" : "Vă rugăm așteptați ...",
-    "Your login attempt was rejected." : "Încercarea de autentificare a fost respinsă."
+    "Your login attempt was rejected." : "Încercarea de autentificare a fost respinsă.",
+    "Please wait …" : "Vă rugăm așteptați ..."
 },"pluralForm" :"nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));"
 }

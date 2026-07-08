@@ -10,8 +10,8 @@
     "Allows using any of your logged in devices as second factor" : "Võimaldab kasutada ükspuha missugust sinu seadet kaheastmelise autentimise teise sammuna",
     "Please accept the request on one of your logged in devices." : "Palun nõustu selle päringuga mõnes oma seadmes, kus oled sellesse Nextcloudi serverisse sisse loginud.",
     "You will be redirected automatically once this login has been accepted." : "Peale sisselogimisega nõustumist suuname sind automaatselt edasi.",
-    "Please wait …" : "Palun oota...",
     "Your login attempt was rejected." : "Sinu sisselogimiskatse lükati tagasi",
-    "Use two-factor authentication via Nextcloud notifications" : "Kasuta kaheastmelist autentimist Nextcloudi teavitusega"
+    "Use two-factor authentication via Nextcloud notifications" : "Kasuta kaheastmelist autentimist Nextcloudi teavitusega",
+    "Please wait …" : "Palun oota..."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

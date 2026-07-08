@@ -12,8 +12,8 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "Mengizinkan menggunakan salah satu perangkat Anda yang masuk sebagai faktor kedua",
     "Please accept the request on one of your logged in devices." : "Harap terima permintaan di salah satu perangkat Anda yang masuk.",
     "You will be redirected automatically once this login has been accepted." : "Anda akan dialihkan otomatis setelah login ini diterima.",
-    "Please wait …" : "Harap tunggu...",
     "Your login attempt was rejected." : "Upaya login Anda ditolak.",
-    "Use two-factor authentication via Nextcloud notifications" : "Gunakan autentikasi dua-faktor melalui notifikasi Nextcloud"
+    "Use two-factor authentication via Nextcloud notifications" : "Gunakan autentikasi dua-faktor melalui notifikasi Nextcloud",
+    "Please wait …" : "Harap tunggu..."
 },
 "nplurals=1; plural=0;");

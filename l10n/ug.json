@@ -10,8 +10,8 @@
     "Allows using any of your logged in devices as second factor" : "تىزىملاتقان ئۈسكۈنىلىرىڭىزنىڭ خالىغان بىرىنى ئىككىنچى ئامىل سۈپىتىدە ئىشلىتىشكە يول قويىدۇ",
     "Please accept the request on one of your logged in devices." : "تىزىمغا كىرگەن ئۈسكۈنىلەرنىڭ بىرىدىكى تەلەپنى قوبۇل قىلىڭ.",
     "You will be redirected automatically once this login has been accepted." : "بۇ كىرىش قوبۇل قىلىنغاندىن كېيىن ئاپتوماتىك قايتا نىشانلىنىسىز.",
-    "Please wait …" : "ساقلاپ تۇرۇڭ…",
     "Your login attempt was rejected." : "كىرىش سىنىقىڭىز رەت قىلىندى.",
-    "Use two-factor authentication via Nextcloud notifications" : "Nextcloud ئۇقتۇرۇشى ئارقىلىق ئىككى ئامىللىق دەلىللەشنى ئىشلىتىڭ"
+    "Use two-factor authentication via Nextcloud notifications" : "Nextcloud ئۇقتۇرۇشى ئارقىلىق ئىككى ئامىللىق دەلىللەشنى ئىشلىتىڭ",
+    "Please wait …" : "ساقلاپ تۇرۇڭ…"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

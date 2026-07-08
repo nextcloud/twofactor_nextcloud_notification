@@ -12,8 +12,8 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "امکان استفاده از هر یک از دستگاه‌های وارد شده شما به عنوان عامل دوم",
     "Please accept the request on one of your logged in devices." : "لطفاً درخواست را در یکی از دستگاه‌های وارد شده خود بپذیرید.",
     "You will be redirected automatically once this login has been accepted." : "پس از پذیرش این ورود، به طور خودکار هدایت خواهید شد.",
-    "Please wait …" : "لطفاً صبر کنید …",
     "Your login attempt was rejected." : "تلاش شما برای ورود رد شد.",
-    "Use two-factor authentication via Nextcloud notifications" : "استفاده از احراز هویت دو مرحله‌ای از طریق اعلان‌های نکست‌کلود"
+    "Use two-factor authentication via Nextcloud notifications" : "استفاده از احراز هویت دو مرحله‌ای از طریق اعلان‌های نکست‌کلود",
+    "Please wait …" : "لطفاً صبر کنید …"
 },
 "nplurals=2; plural=(n > 1);");

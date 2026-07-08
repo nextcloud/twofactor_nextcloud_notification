@@ -10,8 +10,8 @@
     "Allows using any of your logged in devices as second factor" : "Inaruhusu kutumia kifaa chako chochote ulichotumia kama kipengele cha pili.",
     "Please accept the request on one of your logged in devices." : "Tafadhali kubali ombi kwenye mojawapo ya vifaa ulivyotumia kuingia.",
     "You will be redirected automatically once this login has been accepted." : "Utaelekezwa kwingine moja kwa moja mara tu kuingia huku kutakapokubaliwa.",
-    "Please wait …" : "Tafadhali subiri...",
     "Your login attempt was rejected." : "Jaribio lako la kuingia limekataliwa.",
-    "Use two-factor authentication via Nextcloud notifications" : "Tumia uthibitishaji wa sababu mbili kupitia arifa za Nextcloud"
+    "Use two-factor authentication via Nextcloud notifications" : "Tumia uthibitishaji wa sababu mbili kupitia arifa za Nextcloud",
+    "Please wait …" : "Tafadhali subiri..."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

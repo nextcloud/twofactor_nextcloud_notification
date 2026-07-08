@@ -10,8 +10,8 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "Permitit de impreare cale si siat dispositivu tuo registradu comente segundu fatore",
     "Please accept the request on one of your logged in devices." : "Atzeta sa rechesta in unu de is dispositivos tuos registrados.",
     "You will be redirected automatically once this login has been accepted." : "T'ant a torrare a deretare in automàticu cando custa intrada at a èssere aprovada.",
-    "Please wait …" : "Abeta ...",
     "Your login attempt was rejected." : "Su tentativu tuo de intrada est istadu refudadu.",
-    "Use two-factor authentication via Nextcloud notifications" : "Imprea s'autenticatzione a duos fatores cun is notìficas de Nextcloud"
+    "Use two-factor authentication via Nextcloud notifications" : "Imprea s'autenticatzione a duos fatores cun is notìficas de Nextcloud",
+    "Please wait …" : "Abeta ..."
 },
 "nplurals=2; plural=(n != 1);");

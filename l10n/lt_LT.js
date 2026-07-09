@@ -12,6 +12,7 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "Leidžia naudoti bet kurį iš jūsų prisijungusių įrenginių kaip antrąjį autentifikavimo veiksnį",
     "Please accept the request on one of your logged in devices." : "Allows you to use any of your connected devices as a second authentication factor",
     "You will be redirected automatically once this login has been accepted." : "Kai šis prisijungimas bus patvirtintas, jūs būsite automatiškai nukreipti į kitą puslapį.",
+    "Please wait …" : "Prašome palaukti  …",
     "Your login attempt was rejected." : "Jūsų prisijungimo bandymas buvo atmestas.",
     "Use two-factor authentication via Nextcloud notifications" : "Naudokite dviejų veiksnių autentifikavimą per „Nextcloud“ pranešimus",
     "Please wait …" : "Palaukite…"

@@ -12,6 +12,7 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "Allows using any of your logged in devices as second factor",
     "Please accept the request on one of your logged in devices." : "Please accept the request on one of your logged in devices.",
     "You will be redirected automatically once this login has been accepted." : "You will be redirected automatically once this login has been accepted.",
+    "Please wait …" : "Please wait …",
     "Your login attempt was rejected." : "Your login attempt was rejected.",
     "Use two-factor authentication via Nextcloud notifications" : "Use two-factor authentication via Nextcloud notifications",
     "Please wait …" : "Please wait …"

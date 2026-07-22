@@ -10,6 +10,7 @@
     "Allows using any of your logged in devices as second factor" : "Gör det möjligt att använda en redan inloggad enhet som andra autentiseringsfaktor",
     "Please accept the request on one of your logged in devices." : "Godkänn begäran på en av dina inloggade enheter.",
     "You will be redirected automatically once this login has been accepted." : "Du omdirigeras automatiskt när denna inloggning har godkänts.",
+    "Please wait …" : "Vänta …",
     "Your login attempt was rejected." : "Ditt inloggningsförsök avvisades.",
     "Use two-factor authentication via Nextcloud notifications" : "Använd tvåfaktorsautentisering via Nextcloud-aviseringar",
     "Please wait …" : "Vänta …"

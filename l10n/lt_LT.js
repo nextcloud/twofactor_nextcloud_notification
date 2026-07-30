@@ -1,12 +1,12 @@
 OC.L10N.register(
     "twofactor_nextcloud_notification",
     {
-    "TwoFactor Nextcloud notification" : "Dviejų faktorių Nextcloud pranešimas",
+    "TwoFactor Nextcloud notification" : "Dviejų faktorių „Nextcloud“ pranešimas",
     "Approve" : "Patvirtinti",
     "Cancel" : "Atsisakyti",
     "Login attempt from IP address {ip}" : "Prisijungimo bandymas iš IP adreso  {ip}",
     "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Jei šiuo metu bandote prisijungti iš kito įrenginio ar naršyklės, patvirtinkite prašymą. Jei šiuo metu neprisijungiate, turėtumėte pasinaudoti atšaukimo parinktimi, kad nutrauktumėte prisijungimo bandymą.",
-    "Nextcloud Notification" : "Nextcloud pranešimas",
+    "Nextcloud Notification" : "„Nextcloud“ pranešimas",
     "Authenticate using a device that is already logged in to your account" : "Prisijunkite naudodami įrenginį, kuris jau yra prisijungęs prie jūsų paskyros",
     "Two-Factor Authentication via Nextcloud notification" : "Dviejų veiksnių autentifikavimas per „Nextcloud“ pranešimus",
     "Allows using any of your logged in devices as second factor" : "Leidžia naudoti bet kurį iš jūsų prisijungusių įrenginių kaip antrąjį autentifikavimo veiksnį",

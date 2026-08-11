@@ -5,6 +5,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+### Fixed
+- `appinfo/routes.php`: bind the `/api/{apiVersion}/poll/{token}` regex
+  `[a-zA-Z0-9]{40}` under its actual URL placeholder `token`, not under
+  the non-placeholder `attemptId` (silent-no-op bug — the 40-char public
+  token shape was never enforced at the router on stable34 / app 8.0.0).
+  The constraint now forces router-level rejection of over- or
+  under-length poll segments. No change to the `/attempt` routes, which
+  remain numeric-only. (refs #550)
+
 ## 3.10.0 – 2024-07-25
 ### Changed
 - Compatibility with Nextcloud 30

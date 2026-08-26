@@ -1,6 +1,6 @@
 {
   "name": "twofactor_nextcloud_notification",
-  "version": "9.0.0-dev.0",
+  "version": "10.0.0-dev.0",
   "description": "The app allows you to use other logged in devices or browser sessions as a second factor.",
   "license": "AGPL-3.0-or-later",
   "author": "Joas Schilling <coding@schilljs.com>",

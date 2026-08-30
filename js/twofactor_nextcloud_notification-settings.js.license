@@ -14,7 +14,7 @@ This file is generated from multiple sources. Included packages:
 	- version: 7.7.3
 	- license: ISC
 - @nextcloud/vue
-	- version: 8.40.0
+	- version: 8.41.0
 	- license: AGPL-3.0-or-later
 - css-loader
 	- version: 7.1.2

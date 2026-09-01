@@ -39,7 +39,7 @@ return [
 			'verb' => 'GET',
 			'requirements' => [
 				'apiVersion' => 'v1',
-				'attemptId' => '[a-zA-Z0-9]{40}',
+				'token' => '[a-zA-Z0-9]{40}',
 			],
 		],
 	]

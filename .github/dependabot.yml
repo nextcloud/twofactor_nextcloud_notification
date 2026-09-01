@@ -6,6 +6,7 @@ updates:
   directories:
     - "/"
     - "/vendor-bin/csfixer"
+    - "/vendor-bin/openapi-extractor"
     - "/vendor-bin/psalm"
     - "/vendor-bin/rector"
   commit-message:

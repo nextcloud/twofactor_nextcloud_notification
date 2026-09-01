@@ -10,6 +10,7 @@ namespace OCA\TwoFactorNextcloudNotification\Controller;
 
 use OCA\TwoFactorNextcloudNotification\Service\StateManager;
 use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http\Attribute\FrontpageRoute;
 use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\JSONResponse;
 use OCP\IRequest;
@@ -26,6 +27,7 @@ class SettingsController extends Controller {
 	}
 
 	#[NoAdminRequired]
+	#[FrontpageRoute(verb: 'POST', url: '/settings/state')]
 	public function setState(bool $state): JSONResponse {
 		/** @psalm-suppress PossiblyNullArgument */
 		$this->stateManager->setState($this->userSession->getUser(), $state);

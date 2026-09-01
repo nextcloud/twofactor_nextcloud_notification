@@ -13,6 +13,7 @@ use OCA\TwoFactorNextcloudNotification\Exception\TokenExpireException;
 use OCA\TwoFactorNextcloudNotification\Service\TokenManager;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\ApiRoute;
 use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\NoTwoFactorRequired;
 use OCP\AppFramework\Http\Attribute\PublicPage;
@@ -31,6 +32,10 @@ class APIController extends OCSController {
 	}
 
 	#[NoAdminRequired]
+	#[ApiRoute(verb: 'POST', url: '/api/{apiVersion}/attempt/{attemptId}', requirements: [
+		'apiVersion' => 'v1',
+		'attemptId' => '\d+',
+	])]
 	public function approve(int $attemptId): DataResponse {
 		try {
 			$token = $this->tokenManager->getById($attemptId);
@@ -51,6 +56,10 @@ class APIController extends OCSController {
 	}
 
 	#[NoAdminRequired]
+	#[ApiRoute(verb: 'DELETE', url: '/api/{apiVersion}/attempt/{attemptId}', requirements: [
+		'apiVersion' => 'v1',
+		'attemptId' => '\d+',
+	])]
 	public function disapprove(int $attemptId): DataResponse {
 		try {
 			$token = $this->tokenManager->getById($attemptId);
@@ -72,6 +81,10 @@ class APIController extends OCSController {
 
 	#[NoTwoFactorRequired]
 	#[PublicPage]
+	#[ApiRoute(verb: 'GET', url: '/api/{apiVersion}/poll/{token}', requirements: [
+		'apiVersion' => 'v1',
+		'token' => '[a-zA-Z0-9]{40}',
+	])]
 	public function poll(string $token): DataResponse {
 		try {
 			$token = $this->tokenManager->getByToken($token);

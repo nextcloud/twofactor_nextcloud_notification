@@ -19,7 +19,7 @@ return RectorConfig::configure()
 	])
 	->withPhpSets(php83: true)
 	->withSets([
-		PHPUnitSetList::PHPUNIT_120,
+		PHPUnitSetList::COMPOSER_BASED,
 		NextcloudSets::NEXTCLOUD_35,
 	])
 	->withTypeCoverageLevel(0);

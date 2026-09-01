@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace OCA\TwoFactorNextcloudNotification\Service;
 
 use OCA\TwoFactorNextcloudNotification\AppInfo\Application;
+use OCA\TwoFactorNextcloudNotification\ConfigLexicon;
 use OCA\TwoFactorNextcloudNotification\Event\StateChanged;
 use OCP\Config\IUserConfig;
 use OCP\EventDispatcher\IEventDispatcher;
@@ -22,11 +23,11 @@ class StateManager {
 	}
 
 	public function setState(IUser $user, bool $state): void {
-		$this->userConfig->setValueBool($user->getUID(), Application::APP_ID, 'enabled', $state);
+		$this->userConfig->setValueBool($user->getUID(), Application::APP_ID, ConfigLexicon::USER_ENABLED, $state);
 		$this->dispatcher->dispatchTyped(new StateChanged($user, $state));
 	}
 
 	public function getState(IUser $user): bool {
-		return $this->userConfig->getValueBool($user->getUID(), Application::APP_ID, 'enabled');
+		return $this->userConfig->getValueBool($user->getUID(), Application::APP_ID, ConfigLexicon::USER_ENABLED);
 	}
 }

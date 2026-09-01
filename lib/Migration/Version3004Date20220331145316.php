@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace OCA\TwoFactorNextcloudNotification\Migration;
 
 use Closure;
+use OCA\TwoFactorNextcloudNotification\ConfigLexicon;
 use OCP\Config\IUserConfig;
 use OCP\IAppConfig;
 use OCP\Migration\IOutput;
@@ -35,7 +36,7 @@ class Version3004Date20220331145316 extends SimpleMigrationStep {
 				$this->userConfig->setValueBool(
 					substr($key, 0, -8),
 					'twofactor_nextcloud_notification',
-					'enabled',
+					ConfigLexicon::USER_ENABLED,
 					true
 				);
 

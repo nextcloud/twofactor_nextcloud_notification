@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorNextcloudNotification\AppInfo;
 
+use OCA\TwoFactorNextcloudNotification\ConfigLexicon;
 use OCA\TwoFactorNextcloudNotification\Event\StateChanged;
 use OCA\TwoFactorNextcloudNotification\Listener\RegistryUpdater;
 use OCA\TwoFactorNextcloudNotification\Notification\Notifier;
@@ -25,6 +26,7 @@ class Application extends App implements IBootstrap {
 
 	#[\Override]
 	public function register(IRegistrationContext $context): void {
+		$context->registerConfigLexicon(ConfigLexicon::class);
 		$context->registerNotifierService(Notifier::class);
 		$context->registerEventListener(StateChanged::class, RegistryUpdater::class);
 	}

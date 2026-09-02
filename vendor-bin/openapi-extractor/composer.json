@@ -1,0 +1,10 @@
+{
+	"config": {
+		"platform": {
+			"php": "8.3"
+		}
+	},
+	"require-dev": {
+		"nextcloud/openapi-extractor": "^1.9.0"
+	}
+}

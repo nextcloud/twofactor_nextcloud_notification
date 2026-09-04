@@ -12,6 +12,7 @@ OC.L10N.register(
     "Allows using any of your logged in devices as second factor" : "Umožňuje používať ktorékoľvek z vašich prihlásených zariadení ako druhý prvok",
     "Please accept the request on one of your logged in devices." : "Prosím akceptujte požadavku na jednom z vašich prihlásených zariadení.",
     "You will be redirected automatically once this login has been accepted." : "Po akceptovaní tohto prihlásenia budete automaticky presmerovaný.",
+    "Please wait …" : "Počkajte …",
     "Your login attempt was rejected." : "Váš pokus o prihlásenie bol zamietnutý.",
     "Use two-factor authentication via Nextcloud notifications" : "Použite dvojfázové overenie prostredníctvom oznamov Nextcloud",
     "Please wait …" : "Čakajte prosím..."

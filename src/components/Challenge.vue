@@ -6,8 +6,7 @@
 <template>
 	<div v-if="state === State.POLLING" class="challenge-polling">
 		<p>
-			{{ t('twofactor_nextcloud_notification', 'Please accept the request on one of your logged in devices.') }}
-			{{ t('twofactor_nextcloud_notification', 'You will be redirected automatically once this login has been accepted.') }}
+			{{ t('twofactor_nextcloud_notification', 'Approve this login on one of your other devices.') }}
 		</p>
 		<NcLoadingIcon :size="32" />
 	</div>
@@ -64,6 +63,13 @@ export default {
 	flex-direction: column;
 	align-items: center;
 	gap: calc(3 * var(--default-grid-baseline));
+
+	p {
+		font-size: 1.5em;
+		font-weight: bold;
+		text-align: center;
+		line-height: 1em;
+	}
 }
 
 .challenge-verifying {

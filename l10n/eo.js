@@ -8,9 +8,9 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "Aŭtentigi pere de aparato jam ensalutinta per via konto",
     "Two-Factor Authentication via Nextcloud notification" : "Dufaza aŭtentigo per Nextcloud-sciigo",
     "Allows using any of your logged in devices as second factor" : "Ebligas uzon de iu ajn el viaj jam ensalutintaj aparatoj kiel dua fazo",
+    "Use two-factor authentication via Nextcloud notifications" : "Uzi dufazan aŭtentigon per Nextcloud-sciigoj",
     "Please accept the request on one of your logged in devices." : "Bv. aprobi la peton ĉe unu el viaj ensalutintaj aparatoj.",
     "You will be redirected automatically once this login has been accepted." : "Vi alidirektiĝos aŭtomate, kiam la ensaluto estos aprobita.",
-    "Use two-factor authentication via Nextcloud notifications" : "Uzi dufazan aŭtentigon per Nextcloud-sciigoj",
     "Please wait …" : "Bv. atendi..."
 },
 "nplurals=2; plural=(n != 1);");

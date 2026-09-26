@@ -10,10 +10,10 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "Autentikasi menggunakan perangkat yang sudah masuk ke akun Anda",
     "Two-Factor Authentication via Nextcloud notification" : "Autentifikasi Dua-Faktor melalui notifikasi Nextcloud",
     "Allows using any of your logged in devices as second factor" : "Mengizinkan menggunakan salah satu perangkat Anda yang masuk sebagai faktor kedua",
-    "Please accept the request on one of your logged in devices." : "Harap terima permintaan di salah satu perangkat Anda yang masuk.",
-    "You will be redirected automatically once this login has been accepted." : "Anda akan dialihkan otomatis setelah login ini diterima.",
     "Your login attempt was rejected." : "Upaya login Anda ditolak.",
     "Use two-factor authentication via Nextcloud notifications" : "Gunakan autentikasi dua-faktor melalui notifikasi Nextcloud",
+    "Please accept the request on one of your logged in devices." : "Harap terima permintaan di salah satu perangkat Anda yang masuk.",
+    "You will be redirected automatically once this login has been accepted." : "Anda akan dialihkan otomatis setelah login ini diterima.",
     "Please wait …" : "Harap tunggu..."
 },
 "nplurals=1; plural=0;");

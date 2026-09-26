@@ -10,10 +10,10 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "ھېساباتىڭىزغا كىرگەن ئۈسكۈنىنى ئىشلىتىپ دەلىللەڭ",
     "Two-Factor Authentication via Nextcloud notification" : "Nextcloud ئۇقتۇرۇشى ئارقىلىق ئىككى ئامىللىق دەلىللەش",
     "Allows using any of your logged in devices as second factor" : "تىزىملاتقان ئۈسكۈنىلىرىڭىزنىڭ خالىغان بىرىنى ئىككىنچى ئامىل سۈپىتىدە ئىشلىتىشكە يول قويىدۇ",
-    "Please accept the request on one of your logged in devices." : "تىزىمغا كىرگەن ئۈسكۈنىلەرنىڭ بىرىدىكى تەلەپنى قوبۇل قىلىڭ.",
-    "You will be redirected automatically once this login has been accepted." : "بۇ كىرىش قوبۇل قىلىنغاندىن كېيىن ئاپتوماتىك قايتا نىشانلىنىسىز.",
     "Your login attempt was rejected." : "كىرىش سىنىقىڭىز رەت قىلىندى.",
     "Use two-factor authentication via Nextcloud notifications" : "Nextcloud ئۇقتۇرۇشى ئارقىلىق ئىككى ئامىللىق دەلىللەشنى ئىشلىتىڭ",
+    "Please accept the request on one of your logged in devices." : "تىزىمغا كىرگەن ئۈسكۈنىلەرنىڭ بىرىدىكى تەلەپنى قوبۇل قىلىڭ.",
+    "You will be redirected automatically once this login has been accepted." : "بۇ كىرىش قوبۇل قىلىنغاندىن كېيىن ئاپتوماتىك قايتا نىشانلىنىسىز.",
     "Please wait …" : "ساقلاپ تۇرۇڭ…"
 },
 "nplurals=2; plural=(n != 1);");

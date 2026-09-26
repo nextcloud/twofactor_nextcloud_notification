@@ -10,11 +10,11 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "Fíordheimhnigh úsáid gléas atá logáilte isteach i do chuntas cheana féin",
     "Two-Factor Authentication via Nextcloud notification" : "Fíordheimhniú Dhá-Fachtóir trí fhógra Nextcloud",
     "Allows using any of your logged in devices as second factor" : "Is féidir aon cheann de do ghléasanna logáilte isteach a úsáid mar dhara fachtóir",
-    "Please accept the request on one of your logged in devices." : "Glac leis an iarratas ar cheann de do ghléasanna logáilte isteach.",
-    "You will be redirected automatically once this login has been accepted." : "Déanfar tú a atreorú go huathoibríoch nuair a ghlactar leis an logáil isteach seo.",
     "Please wait …" : "Fan le do thoil …",
     "Your login attempt was rejected." : "Diúltaíodh do d'iarracht logáil isteach.",
     "Use two-factor authentication via Nextcloud notifications" : "Bain úsáid as fíordheimhniú dhá-fhachtóir trí fhógraí Nextcloud",
+    "Please accept the request on one of your logged in devices." : "Glac leis an iarratas ar cheann de do ghléasanna logáilte isteach.",
+    "You will be redirected automatically once this login has been accepted." : "Déanfar tú a atreorú go huathoibríoch nuair a ghlactar leis an logáil isteach seo.",
     "Please wait …" : "Fán le do thoil …"
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");

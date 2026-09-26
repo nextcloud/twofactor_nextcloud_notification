@@ -10,10 +10,10 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "Ověřovat pomocí zařízení na kterém už jste přihlášení ke svému účtu",
     "Two-Factor Authentication via Nextcloud notification" : "Dvoufázové ověřování prostřednictvím zpráv posílaných jako upozornění z Nextcloud",
     "Allows using any of your logged in devices as second factor" : "Povolí použití připojených a autorizovaných zařízení pro dvoufaktorové přihlášení",
-    "Please accept the request on one of your logged in devices." : "Přijměte požadavek na některém ze zařízení, na kterém jste přihlášení.",
-    "You will be redirected automatically once this login has been accepted." : "Jakmile bude přihlášení schváleno, budete automaticky přesměrováni.",
     "Your login attempt was rejected." : "Váš pokus o přihlášení byl odmítnut.",
     "Use two-factor authentication via Nextcloud notifications" : "Pro dvoufázové ověřování používat zprávy posílané jako upozornění z Nextcloud",
+    "Please accept the request on one of your logged in devices." : "Přijměte požadavek na některém ze zařízení, na kterém jste přihlášení.",
+    "You will be redirected automatically once this login has been accepted." : "Jakmile bude přihlášení schváleno, budete automaticky přesměrováni.",
     "Please wait …" : "Čekejte …"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

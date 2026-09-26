@@ -10,10 +10,10 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "عرّف نفسك من خلال جهاز سبق أن دخلت منه إلى حسابك",
     "Two-Factor Authentication via Nextcloud notification" : "المصادقة الثنائية من خلال إشعارات نكست كلاود",
     "Allows using any of your logged in devices as second factor" : "إسمح باستخدام أي جهاز سبق أن دخلت منه كسبيلٍ ثانٍ للمصادقة.",
-    "Please accept the request on one of your logged in devices." : "من فضلك، إقبل الطلب على أحد الأجهزة التي سبق أن دخلت إليها.",
-    "You will be redirected automatically once this login has been accepted." : "سوف يتم توجيهك تلقائيّاً بمجرد قبول طلبك للدخول.",
     "Your login attempt was rejected." : "تمّ رفض محاولتك للدخول.",
     "Use two-factor authentication via Nextcloud notifications" : "إستخدم المصادقة الثنائية من خلال إشعارات نكست كلاود",
+    "Please accept the request on one of your logged in devices." : "من فضلك، إقبل الطلب على أحد الأجهزة التي سبق أن دخلت إليها.",
+    "You will be redirected automatically once this login has been accepted." : "سوف يتم توجيهك تلقائيّاً بمجرد قبول طلبك للدخول.",
     "Please wait …" : "يُرجى الانتظار..."
 },
 "nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;");

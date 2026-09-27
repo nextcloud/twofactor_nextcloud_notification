@@ -10,6 +10,7 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "Autendi seadmes, kus sa juba oled sellesse Nextcloudi serverisse sisse loginud",
     "Two-Factor Authentication via Nextcloud notification" : "Kaheastmeline autentimine Nextcloudi teavitusega",
     "Allows using any of your logged in devices as second factor" : "Võimaldab kasutada ükspuha missugust sinu seadet kaheastmelise autentimise teise sammuna",
+    "Approve this login on one of your other devices." : "Kinnita see sisselogimine mõnes sinu muus seadmes.",
     "Please wait …" : "Palun oota...",
     "Your login attempt was rejected." : "Sinu sisselogimiskatse lükati tagasi",
     "Use two-factor authentication via Nextcloud notifications" : "Kasuta kaheastmelist autentimist Nextcloudi teavitusega",

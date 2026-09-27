@@ -10,6 +10,7 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "Authentifiziere dich über ein Gerät, das bereits mit deinem Konto verbunden ist",
     "Two-Factor Authentication via Nextcloud notification" : "Zwei-Faktor-Authentifizierung über Nextcloud-Benachrichtigungen",
     "Allows using any of your logged in devices as second factor" : "Ermöglicht ein an der Nextcloud angemeldetes Gerät als zweiten Faktior zu benutzen.",
+    "Approve this login on one of your other devices." : "Diese Anmeldung auf einem anderen Gerät bestätigen.",
     "Please wait …" : "Bitte warten …",
     "Your login attempt was rejected." : "Dein Anmeldeversuch wurde zurückgewiesen.",
     "Use two-factor authentication via Nextcloud notifications" : "Benutze Zwei-Faktor-Authentifizierung über Nextcloud-Benachrichtigungen",

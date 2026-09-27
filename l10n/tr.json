@@ -8,6 +8,7 @@
     "Authenticate using a device that is already logged in to your account" : "Kimliğinizi hesabınızda oturum açmış bir aygıtı kullanarak doğrulayın",
     "Two-Factor Authentication via Nextcloud notification" : "Nextcloud bildirimi ile iki adımlı doğrulama",
     "Allows using any of your logged in devices as second factor" : "İkinci aşama olarak oturum açmış aygıtlarınızdan biri kullanılır",
+    "Approve this login on one of your other devices." : "Bu oturum açma işlemini diğer aygıtlarınızın birinden onaylayın.",
     "Please wait …" : "Lütfen bekleyin…",
     "Your login attempt was rejected." : "Oturum açma girişiminiz reddedildi.",
     "Use two-factor authentication via Nextcloud notifications" : "Nextcloud bildirimi ile iki adımlı doğrulama kullanılsın",

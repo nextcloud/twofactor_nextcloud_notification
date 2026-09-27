@@ -10,6 +10,7 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "Autentifikovať pomocou zariadenia, ktoré už je prihlásené k vášmu účtu",
     "Two-Factor Authentication via Nextcloud notification" : "Dvojfázové overenie prostredníctvom oznamov Nextcloud",
     "Allows using any of your logged in devices as second factor" : "Umožňuje používať ktorékoľvek z vašich prihlásených zariadení ako druhý prvok",
+    "Approve this login on one of your other devices." : "Schváľte toto prihlásenie na jednom zo svojich ďalších zariadení.",
     "Please wait …" : "Počkajte …",
     "Your login attempt was rejected." : "Váš pokus o prihlásenie bol zamietnutý.",
     "Use two-factor authentication via Nextcloud notifications" : "Použite dvojfázové overenie prostredníctvom oznamov Nextcloud",

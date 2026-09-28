@@ -8,6 +8,7 @@
     "Authenticate using a device that is already logged in to your account" : "Authenticate using a device that is already logged in to your account",
     "Two-Factor Authentication via Nextcloud notification" : "Two-Factor Authentication via Nextcloud notification",
     "Allows using any of your logged in devices as second factor" : "Allows using any of your logged in devices as second factor",
+    "Approve this login on one of your other devices." : "Approve this login on one of your other devices.",
     "Please wait …" : "Please wait …",
     "Your login attempt was rejected." : "Your login attempt was rejected.",
     "Use two-factor authentication via Nextcloud notifications" : "Use two-factor authentication via Nextcloud notifications",

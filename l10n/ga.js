@@ -10,6 +10,7 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "Fíordheimhnigh úsáid gléas atá logáilte isteach i do chuntas cheana féin",
     "Two-Factor Authentication via Nextcloud notification" : "Fíordheimhniú Dhá-Fachtóir trí fhógra Nextcloud",
     "Allows using any of your logged in devices as second factor" : "Is féidir aon cheann de do ghléasanna logáilte isteach a úsáid mar dhara fachtóir",
+    "Approve this login on one of your other devices." : "Ceadaigh an logáil isteach seo ar cheann de do ghléasanna eile.",
     "Please wait …" : "Fan le do thoil …",
     "Your login attempt was rejected." : "Diúltaíodh do d'iarracht logáil isteach.",
     "Use two-factor authentication via Nextcloud notifications" : "Bain úsáid as fíordheimhniú dhá-fhachtóir trí fhógraí Nextcloud",

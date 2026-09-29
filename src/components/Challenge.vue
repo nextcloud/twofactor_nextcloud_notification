@@ -4,6 +4,7 @@
 -->
 
 <template>
+	<img class="two-factor-icon challenge-icon" :src="iconUrl" alt="">
 	<div v-if="state === State.POLLING" class="challenge-polling">
 		<p>
 			{{ t('twofactor_nextcloud_notification', 'Approve this login on one of your other devices.') }}
@@ -21,6 +22,7 @@
 
 <script>
 import { t } from '@nextcloud/l10n'
+import { imagePath } from '@nextcloud/router'
 import NcLoadingIcon from '@nextcloud/vue/components/NcLoadingIcon'
 import { challengeOnLoginForm } from '../services/ChallengeService.js'
 
@@ -43,6 +45,7 @@ export default {
 		return {
 			state: State.POLLING,
 			State,
+			iconUrl: imagePath('twofactor_nextcloud_notification', 'challenge-dark.svg'),
 		}
 	},
 
@@ -58,18 +61,15 @@ export default {
 </script>
 
 <style scoped>
+.challenge-icon {
+	filter: var(--background-invert-if-dark);
+}
+
 .challenge-polling {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: calc(3 * var(--default-grid-baseline));
-
-	p {
-		font-size: 1.5em;
-		font-weight: bold;
-		text-align: center;
-		line-height: 1em;
-	}
 }
 
 .challenge-verifying {

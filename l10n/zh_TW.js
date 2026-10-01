@@ -10,6 +10,7 @@ OC.L10N.register(
     "Authenticate using a device that is already logged in to your account" : "使用已登入到您帳號的裝置進行驗證",
     "Two-Factor Authentication via Nextcloud notification" : "透過 Nextcloud 通知進行兩階段身份驗證",
     "Allows using any of your logged in devices as second factor" : "允許您使用任何已登入的裝置進行第二階段身分驗證",
+    "Approve this login on one of your other devices." : "請在您的其他裝置上核准此次登入。",
     "Please wait …" : "請稍候……",
     "Your login attempt was rejected." : "您的登入動作已被拒絕",
     "Use two-factor authentication via Nextcloud notifications" : "透過 Nextcloud 通知進行兩階段身份驗證",

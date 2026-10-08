@@ -5,7 +5,7 @@ OC.L10N.register(
     "Approve" : "Godkend",
     "Cancel" : "Annuller",
     "Login attempt from IP address {ip}" : "Loginforsøg fra IP-adressen {ip}",
-    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Hvis du aktuelt prøver at logge på fra en anden enhed eller browser, bedes du godkende anmodningen. Hvis du ikke forsøger at logge på i øjeblikket, så skal du bruge annulleringsmuligheden for at afbryde loginforsøget.",
+    "If you are currently trying log in from another device or browser please approve the request. If you are not trying to log in at the moment, you should use the cancel option to abort the login attempt." : "Hvis du er ved at logge ind fra en anden enhed eller browser, så godkend anmodningen. Hvis du ikke er ved at logge ind, så brug muligheden for at annullere for at afbryde loginforsøget.",
     "Nextcloud Notification" : "Notifikation fra Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Godkend ved hjælp af en enhed, der allerede er logget ind på din konto",
     "Two-Factor Authentication via Nextcloud notification" : "To-faktor-godkendelse via Nextcloud notifikation",
@@ -14,7 +14,7 @@ OC.L10N.register(
     "Please wait …" : "Vent …",
     "Your login attempt was rejected." : "Dit loginforsøg blev afvist.",
     "Use two-factor authentication via Nextcloud notifications" : "Brug to-faktorgodkendelse via Nextcloud notifikationer",
-    "Please accept the request on one of your logged in devices." : "Accepter anmodningen på en af dine enheder, der er logget på.",
+    "Please accept the request on one of your logged in devices." : "Accepter anmodningen på en af dine enheder, der er logget ind.",
     "You will be redirected automatically once this login has been accepted." : "Du vil blive omdirigeret automatisk, når dette login er blevet accepteret.",
     "Please wait …" : "Vent …"
 },

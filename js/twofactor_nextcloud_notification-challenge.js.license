@@ -1,26 +1,19 @@
 SPDX-License-Identifier: MIT
 SPDX-License-Identifier: ISC
 SPDX-License-Identifier: AGPL-3.0-or-later
-SPDX-FileCopyrightText: escape-html developers
 SPDX-FileCopyrightText: Tobias Koppers @sokra
 SPDX-FileCopyrightText: Roman Shtylman <shtylman@gmail.com>
 SPDX-FileCopyrightText: Nextcloud GmbH and Nextcloud contributors
+SPDX-FileCopyrightText: Matt Zabriskie
 SPDX-FileCopyrightText: Joas Schilling <coding@schilljs.com>
-SPDX-FileCopyrightText: Guillaume Chau
 SPDX-FileCopyrightText: GitHub Inc.
 SPDX-FileCopyrightText: Evan You
 
 
 This file is generated from multiple sources. Included packages:
-- semver
-	- version: 7.7.3
-	- license: ISC
 - @nextcloud/vue
 	- version: 9.13.1
 	- license: AGPL-3.0-or-later
-- @vue/devtools-api
-	- version: 6.6.4
-	- license: MIT
 - @vue/reactivity
 	- version: 3.5.43
 	- license: MIT
@@ -33,26 +26,23 @@ This file is generated from multiple sources. Included packages:
 - @vue/shared
 	- version: 3.5.43
 	- license: MIT
-- css-loader
-	- version: 7.1.2
+- axios
+	- version: 1.20.0
 	- license: MIT
-- escape-html
-	- version: 1.0.3
+- css-loader
+	- version: 7.1.5
 	- license: MIT
 - process
 	- version: 0.11.10
 	- license: MIT
-- style-loader
-	- version: 4.0.0
-	- license: MIT
-- vue-loader
-	- version: 17.4.2
-	- license: MIT
+- semver
+	- version: 7.8.5
+	- license: ISC
 - vue
 	- version: 3.5.43
 	- license: MIT
 - webpack
-	- version: 5.105.0
+	- version: 5.112.0
 	- license: MIT
 - twofactor_nextcloud_notification
 	- version: 10.0.0-dev.0

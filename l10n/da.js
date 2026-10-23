@@ -9,7 +9,7 @@ OC.L10N.register(
     "Nextcloud Notification" : "Notifikation fra Nextcloud",
     "Authenticate using a device that is already logged in to your account" : "Godkend ved hjælp af en enhed, der allerede er logget ind på din konto",
     "Two-Factor Authentication via Nextcloud notification" : "To-faktor-godkendelse via Nextcloud notifikation",
-    "Allows using any of your logged in devices as second factor" : "Tillader brug af en hvilken som helst af dine påloggede enheder som anden faktor",
+    "Allows using any of your logged in devices as second factor" : "Gør det muligt at bruge enhver af dine enheder, der er logget ind, som anden faktor",
     "Approve this login on one of your other devices." : "Godkend dette login på en af dine andre enheder.",
     "Please wait …" : "Vent …",
     "Your login attempt was rejected." : "Dit loginforsøg blev afvist.",

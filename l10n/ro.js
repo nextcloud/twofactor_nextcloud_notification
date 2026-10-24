@@ -11,7 +11,7 @@ OC.L10N.register(
     "Two-Factor Authentication via Nextcloud notification" : "Autentificare în doi pași prin notificări Nextcloud",
     "Allows using any of your logged in devices as second factor" : "Permite folosirea oricăruia dintre dispozitivele tale conectate ca al doilea factor",
     "Approve this login on one of your other devices." : "Aprobă această autentificare pe unul dintre celelalte dispozitive ale tale.",
-    "Please wait …" : "Așteaptă…",
+    "Please wait …" : "Așteaptă …",
     "Your login attempt was rejected." : "Încercarea de autentificare a fost respinsă.",
     "Use two-factor authentication via Nextcloud notifications" : "Folosește autentificarea în doi pași prin notificări Nextcloud",
     "Please accept the request on one of your logged in devices." : "Acceptă solicitarea pe unul dintre dispozitivele tale conectate.",

@@ -12,7 +12,7 @@ SPDX-FileCopyrightText: Evan You
 
 This file is generated from multiple sources. Included packages:
 - @nextcloud/vue
-	- version: 9.13.1
+	- version: 9.14.0
 	- license: AGPL-3.0-or-later
 - @vue/reactivity
 	- version: 3.5.44

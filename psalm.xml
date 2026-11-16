@@ -22,6 +22,5 @@
 	</projectFiles>
 	<extraFiles>
 		<directory name="vendor" />
-		<directory name="vendor-bin" />
 	</extraFiles>
 </psalm>
